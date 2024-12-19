@@ -1,6 +1,6 @@
 // storage-adapter-import-placeholder
 import { postgresAdapter } from '@payloadcms/db-postgres'
-import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
+import { resendAdapter } from '@payloadcms/email-resend'
 
 import sharp from 'sharp' // sharp-import
 import path from 'path'
@@ -77,17 +77,22 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
-  email: nodemailerAdapter({
-    defaultFromAddress: process.env.SMTP_USER as string,
-    defaultFromName: process.env.SMTP_DEFAULT_FROM_NAME as string,
-    transportOptions: {
-      host: process.env.SMTP_HOST,
-      port: parseInt(process.env.SMTP_PORT as string),
-      secure: process.env.SMTP_SECURE === 'true',
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    },
+  // email: nodemailerAdapter({
+  //   defaultFromAddress: process.env.SMTP_USER as string,
+  //   defaultFromName: process.env.SMTP_DEFAULT_FROM_NAME as string,
+  //   transportOptions: {
+  //     host: process.env.SMTP_HOST,
+  //     port: parseInt(process.env.SMTP_PORT as string),
+  //     secure: process.env.SMTP_SECURE === 'true',
+  //     auth: {
+  //       user: process.env.SMTP_USER,
+  //       pass: process.env.SMTP_PASS,
+  //     },
+  //   },
+  // }),
+  email: resendAdapter({
+    defaultFromAddress: process.env.RESEND_DEFAULT_FROM_ADDRESS as string,
+    defaultFromName: process.env.RESEND_DEFAULT_FROM_NAME as string,
+    apiKey: process.env.RESEND_API_KEY || '',
   }),
 })
