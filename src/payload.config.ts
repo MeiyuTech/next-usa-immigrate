@@ -79,18 +79,14 @@ export default buildConfig({
   },
   email: nodemailerAdapter({
     defaultFromAddress: process.env.SMTP_USER as string,
-    defaultFromName: 'Meiyu Group',
+    defaultFromName: process.env.SMTP_DEFAULT_FROM_NAME as string,
     transportOptions: {
       host: process.env.SMTP_HOST,
-      port: 465,
-      secure: true,
-      secureConnection: false, // TLS requires secureConnection to be false
+      port: parseInt(process.env.SMTP_PORT as string),
+      secure: process.env.SMTP_SECURE === 'true',
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
-      },
-      tls: {
-        ciphers: 'SSLv3',
       },
     },
   }),
