@@ -1,5 +1,6 @@
 // storage-adapter-import-placeholder
 import { postgresAdapter } from '@payloadcms/db-postgres'
+import { resendAdapter } from '@payloadcms/email-resend'
 
 import sharp from 'sharp' // sharp-import
 import path from 'path'
@@ -29,6 +30,11 @@ export default buildConfig({
       // The `BeforeDashboard` component renders the 'welcome' block that you see after logging into your admin panel.
       // Feel free to delete this at any time. Simply remove the line below and the import `BeforeDashboard` statement on line 15.
       beforeDashboard: ['@/components/BeforeDashboard'],
+      // Override the icon and logo for the Admin Panel
+      graphics: {
+        Icon: '@/components/IconMeiyu',
+        Logo: '@/components/LogoMeiyu',
+      },
     },
     importMap: {
       baseDir: path.resolve(dirname),
@@ -56,6 +62,17 @@ export default buildConfig({
         },
       ],
     },
+    // Override the *icon* and *title suffix* in the browser tab for the Admin Panel
+    meta: {
+      titleSuffix: ' - Meiyu CMS',
+      icons: [
+        {
+          fetchPriority: 'high',
+          rel: 'icon',
+          url: '/Meiyu-favicon/favicon.ico',
+        },
+      ],
+    },
   },
   // This config helps us configure global or default features that the other editors can inherit
   editor: defaultLexical,
@@ -76,4 +93,22 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
+  // email: nodemailerAdapter({
+  //   defaultFromAddress: process.env.SMTP_USER as string,
+  //   defaultFromName: process.env.SMTP_DEFAULT_FROM_NAME as string,
+  //   transportOptions: {
+  //     host: process.env.SMTP_HOST,
+  //     port: parseInt(process.env.SMTP_PORT as string),
+  //     secure: process.env.SMTP_SECURE === 'true',
+  //     auth: {
+  //       user: process.env.SMTP_USER,
+  //       pass: process.env.SMTP_PASS,
+  //     },
+  //   },
+  // }),
+  email: resendAdapter({
+    defaultFromAddress: process.env.RESEND_DEFAULT_FROM_ADDRESS as string,
+    defaultFromName: process.env.RESEND_DEFAULT_FROM_NAME as string,
+    apiKey: process.env.RESEND_API_KEY || '',
+  }),
 })
