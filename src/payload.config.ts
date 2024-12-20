@@ -30,6 +30,11 @@ export default buildConfig({
       // The `BeforeDashboard` component renders the 'welcome' block that you see after logging into your admin panel.
       // Feel free to delete this at any time. Simply remove the line below and the import `BeforeDashboard` statement on line 15.
       beforeDashboard: ['@/components/BeforeDashboard'],
+      // Override the icon and logo for the Admin Panel
+      graphics: {
+        Icon: '@/components/IconMeiyu',
+        Logo: '@/components/LogoMeiyu',
+      },
     },
     importMap: {
       baseDir: path.resolve(dirname),
@@ -54,6 +59,17 @@ export default buildConfig({
           name: 'desktop',
           width: 1440,
           height: 900,
+        },
+      ],
+    },
+    // Override the *icon* and *title suffix* in the browser tab for the Admin Panel
+    meta: {
+      titleSuffix: ' - Meiyu CMS',
+      icons: [
+        {
+          fetchPriority: 'high',
+          rel: 'icon',
+          url: '/Meiyu-favicon/favicon.ico',
         },
       ],
     },
