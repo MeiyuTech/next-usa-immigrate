@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react'
 
 import type { Header } from '@/payload-types'
 
-import { Logo } from '@/components/Logo/Logo'
+// import { Logo } from '@/components/Logo/Logo'
 import LogoMeiyu from '@/components/LogoMeiyu/Logo'
 import { HeaderNav } from './Nav'
 
@@ -15,7 +15,6 @@ interface HeaderClientProps {
 }
 
 export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
-  /* Storing the value in a useState to avoid hydration errors */
   const [theme, setTheme] = useState<string | null>(null)
   const { headerTheme, setHeaderTheme } = useHeaderTheme()
   const pathname = usePathname()
@@ -31,8 +30,11 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
   }, [headerTheme])
 
   return (
-    <header className="container relative z-20   " {...(theme ? { 'data-theme': theme } : {})}>
-      <div className="py-8 flex justify-between">
+    <header
+      className="fixed top-0 left-0 right-0 z-50 bg-[#00808033] backdrop-blur-[12px]"
+      {...(theme ? { 'data-theme': theme } : {})}
+    >
+      <div className="container mx-auto py-8 flex justify-between">
         <Link href="/">
           <LogoMeiyu loading="eager" priority="high" />
         </Link>
