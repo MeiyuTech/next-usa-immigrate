@@ -33,7 +33,7 @@ export default buildConfig({
       // Override the icon and logo for the Admin Panel
       graphics: {
         Icon: '@/components/IconMeiyu',
-        Logo: '@/components/LogoMeiyu',
+        Logo: '@/components/LogoMeiyu/Logo',
       },
     },
     importMap: {

@@ -20,7 +20,7 @@ export const homeStatic: Page = {
                 format: 0,
                 mode: 'normal',
                 style: '',
-                text: 'Payload Website Template',
+                text: 'Meiyu Website Template',
                 version: 1,
               },
             ],
@@ -81,8 +81,8 @@ export const homeStatic: Page = {
     },
   },
   meta: {
-    description: 'An open-source website built with Payload and Next.js.',
-    title: 'Payload Website Template',
+    description: 'An open-source website built with Meiyu CMS and Next.js.',
+    title: 'Meiyu Website Template',
   },
   title: 'Home',
 }
