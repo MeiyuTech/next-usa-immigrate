@@ -33,11 +33,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body>
         <Providers>
-          <AdminBar
+          {/* I don't want to show the admin bar to marketing people */}
+          {/* <AdminBar
             adminBarProps={{
               preview: isEnabled,
             }}
-          />
+          /> */}
 
           <Header />
           {children}
