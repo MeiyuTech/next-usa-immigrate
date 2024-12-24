@@ -7,14 +7,14 @@ import { Button } from '@/components/ui/button'
 
 interface MobileNavProps {
   isOpen: boolean
-  setIsOpen: (open: boolean) => void
+  setIsOpenAction: (open: boolean) => void
 }
 
-export function MobileNav({ isOpen, setIsOpen }: MobileNavProps) {
+export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
   const [showProduct, setShowProduct] = useState(false)
 
   return (
-    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+    <Sheet open={isOpen} onOpenChange={setIsOpenAction}>
       <SheetContent side="right" className="w-full border-none bg-background p-0">
         <SheetHeader className="border-b border-border/10 p-4">
           <SheetTitle className="flex items-center justify-between">
@@ -34,7 +34,7 @@ export function MobileNav({ isOpen, setIsOpen }: MobileNavProps) {
               variant="ghost"
               size="icon"
               className="rounded-full"
-              onClick={() => setIsOpen(false)}
+              onClick={() => setIsOpenAction(false)}
             >
               <X className="h-4 w-4" />
             </Button>
