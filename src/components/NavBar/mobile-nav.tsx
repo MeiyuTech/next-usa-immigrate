@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronRight, X } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
 
@@ -30,14 +30,6 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
             ) : (
               <span className="text-base font-normal">Menu</span>
             )}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="rounded-full"
-              onClick={() => setIsOpenAction(false)}
-            >
-              <X className="h-4 w-4" />
-            </Button>
           </SheetTitle>
         </SheetHeader>
 
