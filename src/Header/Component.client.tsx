@@ -20,7 +20,6 @@ import {
   DocsMegaMenu,
 } from '@/components/NavBar/mega-menu'
 import { MobileNav } from '@/components/NavBar/mobile-nav'
-// import { NavBar } from '@/components/NavBar/nav-bar'
 import { cn } from 'src/utilities/cn'
 
 interface HeaderClientProps {
@@ -60,11 +59,12 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
   }
 
   return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 bg-[#00808033] backdrop-blur-[12px]"
-      {...(theme ? { 'data-theme': theme } : {})}
-    >
-      <div className="container mx-auto py-8 flex justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <div className="absolute inset-0 bg-[#00808033] backdrop-blur-[12px]" />
+      <div
+        className="relative container mx-auto py-8 flex justify-between"
+        {...(theme ? { 'data-theme': theme } : {})}
+      >
         <Link href="/">
           <LogoMeiyu loading="eager" priority="high" />
         </Link>
@@ -98,6 +98,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
                 </div>
               ))}
             </div>
+            <HeaderNav data={data} />
             <Button
               variant="ghost"
               size="icon"
