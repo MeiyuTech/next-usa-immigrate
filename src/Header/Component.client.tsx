@@ -71,7 +71,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
         <nav className="container flex h-16 items-center justify-end">
           <div className="flex items-center gap-6">
             <div className="hidden items-center gap-6 lg:flex">
-              {['Product', 'Why Payload', 'Developers', 'Enterprise', 'Docs'].map((item) => (
+              {['移民服务', '成功案例', '项目展示', '移民知识', '关于我们'].map((item) => (
                 <div
                   key={item}
                   onMouseEnter={() => handleMouseEnter(item)}
@@ -88,11 +88,11 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
                   </button>
                   {activeMenu === item && (
                     <>
-                      {item === 'Product' && <ProductMegaMenu />}
-                      {item === 'Why Payload' && <WhyPayloadMegaMenu />}
-                      {item === 'Developers' && <DevelopersMegaMenu />}
-                      {item === 'Enterprise' && <EnterpriseMegaMenu />}
-                      {item === 'Docs' && <DocsMegaMenu />}
+                      {item === '移民服务' && <ProductMegaMenu />}
+                      {item === '成功案例' && <WhyPayloadMegaMenu />}
+                      {item === '项目展示' && <DevelopersMegaMenu />}
+                      {item === '移民知识' && <EnterpriseMegaMenu />}
+                      {item === '关于我们' && <DocsMegaMenu />}
                     </>
                   )}
                 </div>
