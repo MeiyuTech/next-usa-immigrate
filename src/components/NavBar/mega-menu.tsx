@@ -4,9 +4,12 @@ interface MegaMenuWrapperProps {
 
 function MegaMenuWrapper({ children }: MegaMenuWrapperProps) {
   return (
-    <div className="absolute left-0 right-0 top-full bg-[#00808033] backdrop-blur-[12px]">
-      <div className="container mx-auto grid grid-cols-3 gap-8 py-8 text-[15px] text-white">
-        {children}
+    <div className="absolute left-0 right-0 top-full">
+      <div className="absolute inset-0 bg-[#00808033] backdrop-blur-[12px]" />
+      <div className="relative mega-menu-enter">
+        <div className="container mx-auto grid grid-cols-3 gap-8 py-8 text-[15px] text-white">
+          {children}
+        </div>
       </div>
     </div>
   )

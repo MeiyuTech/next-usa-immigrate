@@ -61,8 +61,9 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ _data }) => {
                 >
                   <button
                     className={cn(
-                      'px-2 py-1 text-[15px] font-medium text-white/90 transition-colors hover:text-white',
-                      activeMenu === item && 'text-white font-semibold'
+                      'relative px-2 py-1 text-[15px] font-medium text-white/90 transition-colors hover:text-white',
+                      'after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all hover:after:w-full',
+                      activeMenu === item && 'text-white font-semibold after:w-full'
                     )}
                   >
                     {item}
