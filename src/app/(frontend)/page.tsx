@@ -1,5 +1,4 @@
-'use client'
-
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { AnimatedTitle } from '@/components/AnimatedTitle'
@@ -42,9 +41,15 @@ export default function HomePage() {
       </main>
 
       {/* 添加动画标题部分 */}
-      <AnimatedTitle />
+      {/* <AnimatedTitle /> */}
 
       {/* 这里可以添加更多的内容部分 */}
     </>
   )
+}
+
+export function generateMetadata(): Metadata {
+  return {
+    title: '首页 | 美域佳华',
+  }
 }

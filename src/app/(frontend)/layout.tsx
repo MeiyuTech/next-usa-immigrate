@@ -50,10 +50,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 }
 
 export const metadata: Metadata = {
+  title: {
+    template: '%s | 美域佳华',
+    default: '美域佳华',
+  },
   metadataBase: new URL(getServerSideURL()),
   openGraph: mergeOpenGraph(),
   twitter: {
     card: 'summary_large_image',
-    creator: '@payloadcms',
+    creator: '@meiyugroup',
   },
 }
