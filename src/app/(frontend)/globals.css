@@ -126,3 +126,10 @@ html[data-theme='light'] {
 .mega-menu-enter {
   animation: menuSlideDown 0.2s ease-out forwards;
 }
+
+@layer utilities {
+  .mask-fade {
+    mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+  }
+}
