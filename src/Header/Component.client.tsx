@@ -1,46 +1,30 @@
 'use client'
 
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useState, useRef } from 'react'
+import { Menu, SearchIcon } from 'lucide-react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
-import { useHeaderTheme } from '@/providers/HeaderTheme'
 import type { Header } from '@/payload-types'
+import { cn } from 'src/utilities/cn'
+// import { HeaderNav } from './Nav'
 
 // import { Logo } from '@/components/Logo/Logo'
 import LogoMeiyu from '@/components/LogoMeiyu/Logo'
-import { HeaderNav } from './Nav'
-import { Menu } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
-  ProductMegaMenu,
-  WhyPayloadMegaMenu,
-  DevelopersMegaMenu,
-  EnterpriseMegaMenu,
-  DocsMegaMenu,
+  ServiceMegaMenu,
+  SuccessStoriesMegaMenu,
+  ProjectShowcaseMegaMenu,
+  ImmigrationResourcesMegaMenu,
+  AboutUsMegaMenu,
 } from '@/components/NavBar/mega-menu'
 import { MobileNav } from '@/components/NavBar/mobile-nav'
-import { cn } from 'src/utilities/cn'
 
 interface HeaderClientProps {
-  data: Header
+  _data: Header
 }
 
-export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
-  const [theme, setTheme] = useState<string | null>(null)
-  const { headerTheme, setHeaderTheme } = useHeaderTheme()
-  const pathname = usePathname()
-
-  useEffect(() => {
-    setHeaderTheme(null)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname])
-
-  useEffect(() => {
-    if (headerTheme && headerTheme !== theme) setTheme(headerTheme)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [headerTheme])
-
+export const HeaderClient: React.FC<HeaderClientProps> = ({ _data }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeMenu, setActiveMenu] = useState<string | null>(null)
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null)
@@ -61,10 +45,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <div className="absolute inset-0 bg-[#00808033] backdrop-blur-[12px]" />
-      <div
-        className="relative container mx-auto py-8 flex justify-between"
-        {...(theme ? { 'data-theme': theme } : {})}
-      >
+      <div className="relative container mx-auto py-8 flex justify-between text-white">
         <Link href="/">
           <LogoMeiyu loading="eager" priority="high" />
         </Link>
@@ -80,29 +61,34 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
                 >
                   <button
                     className={cn(
-                      'px-2 py-1 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground',
-                      activeMenu === item && 'text-foreground'
+                      'relative px-2 py-1 text-[15px] font-medium text-white/90 transition-colors hover:text-white',
+                      'after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all hover:after:w-full',
+                      activeMenu === item && 'text-white font-semibold after:w-full'
                     )}
                   >
                     {item}
                   </button>
                   {activeMenu === item && (
                     <>
-                      {item === '移民服务' && <ProductMegaMenu />}
-                      {item === '成功案例' && <WhyPayloadMegaMenu />}
-                      {item === '项目展示' && <DevelopersMegaMenu />}
-                      {item === '移民知识' && <EnterpriseMegaMenu />}
-                      {item === '关于我们' && <DocsMegaMenu />}
+                      {item === '移民服务' && <ServiceMegaMenu />}
+                      {item === '成功案例' && <SuccessStoriesMegaMenu />}
+                      {item === '项目展示' && <ProjectShowcaseMegaMenu />}
+                      {item === '移民知识' && <ImmigrationResourcesMegaMenu />}
+                      {item === '关于我们' && <AboutUsMegaMenu />}
                     </>
                   )}
                 </div>
               ))}
             </div>
-            <HeaderNav data={data} />
+            {/* <HeaderNav data={_data} /> */}
+            <Link href="/search">
+              <span className="sr-only">Search</span>
+              <SearchIcon className="w-5 text-white" />
+            </Link>
             <Button
               variant="ghost"
               size="icon"
-              className="lg:hidden"
+              className="lg:hidden text-white"
               onClick={() => setIsMobileMenuOpen(true)}
             >
               <Menu className="h-5 w-5" />

@@ -16,13 +16,14 @@ export default function LogoMeiyu(props: Props) {
 
   return (
     <Image
-      src="/Meiyu-favicon/favicon-208x166.png"
+      src="/Meiyu-favicon/favicon.svg"
       alt="Meiyu Logo"
-      width={150}
-      height={150}
+      width={80}
+      height={64}
       loading={loading}
       fetchPriority={priority}
-      className={clsx('max-w-[9.375rem] w-full h-[34px]', className)}
+      // className={clsx('max-w-[15rem] w-full h-[34px]', className)}
+      className={clsx('max-w-[15rem]', className)}
     />
   )
 }
