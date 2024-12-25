@@ -1,30 +1,30 @@
 'use client'
 
 import React, { useState, useRef } from 'react'
-import { Menu } from 'lucide-react'
+import { Menu, SearchIcon } from 'lucide-react'
 import Link from 'next/link'
 
 import type { Header } from '@/payload-types'
 import { cn } from 'src/utilities/cn'
-import { HeaderNav } from './Nav'
+// import { HeaderNav } from './Nav'
 
 // import { Logo } from '@/components/Logo/Logo'
 import LogoMeiyu from '@/components/LogoMeiyu/Logo'
 import { Button } from '@/components/ui/button'
 import {
   ServiceMegaMenu,
-  WhyPayloadMegaMenu,
-  DevelopersMegaMenu,
-  EnterpriseMegaMenu,
-  DocsMegaMenu,
+  SuccessStoriesMegaMenu,
+  ProjectShowcaseMegaMenu,
+  ImmigrationResourcesMegaMenu,
+  AboutUsMegaMenu,
 } from '@/components/NavBar/mega-menu'
 import { MobileNav } from '@/components/NavBar/mobile-nav'
 
 interface HeaderClientProps {
-  data: Header
+  _data: Header
 }
 
-export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
+export const HeaderClient: React.FC<HeaderClientProps> = ({ _data }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [activeMenu, setActiveMenu] = useState<string | null>(null)
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null)
@@ -70,16 +70,20 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
                   {activeMenu === item && (
                     <>
                       {item === '移民服务' && <ServiceMegaMenu />}
-                      {item === '成功案例' && <WhyPayloadMegaMenu />}
-                      {item === '项目展示' && <DevelopersMegaMenu />}
-                      {item === '移民知识' && <EnterpriseMegaMenu />}
-                      {item === '关于我们' && <DocsMegaMenu />}
+                      {item === '成功案例' && <SuccessStoriesMegaMenu />}
+                      {item === '项目展示' && <ProjectShowcaseMegaMenu />}
+                      {item === '移民知识' && <ImmigrationResourcesMegaMenu />}
+                      {item === '关于我们' && <AboutUsMegaMenu />}
                     </>
                   )}
                 </div>
               ))}
             </div>
-            <HeaderNav data={data} />
+            {/* <HeaderNav data={_data} /> */}
+            <Link href="/search">
+              <span className="sr-only">Search</span>
+              <SearchIcon className="w-5 text-white" />
+            </Link>
             <Button
               variant="ghost"
               size="icon"

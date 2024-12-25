@@ -17,85 +17,178 @@ export function ServiceMegaMenu() {
     <MegaMenuWrapper>
       <div>
         <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Use Cases
+          投资移民 (EB-5)
         </h3>
         <div className="space-y-3">
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Headless CMS
+            项目介绍
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Enterprise App Builder
+            申请条件
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Headless E-Commerce
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Digital Asset Management
+            签证流程
           </a>
         </div>
       </div>
       <div>
         <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Features
+          职业移民 (EB-1/2/3)
         </h3>
         <div className="space-y-3">
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Multi-Tenancy
+            适用对象
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            White Label
+            申请条件
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Localization
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Access Control
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Auth
+            签证流程
           </a>
         </div>
       </div>
       <div>
         <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Case Studies
+          在线评估
         </h3>
         <div className="space-y-4">
           <h4 className="text-[22px] font-semibold leading-tight text-white">
-            See what others are building with Payload.
+            只需 10 分钟，
+            <br />
+            快速了解最适合您的移民项目。
           </h4>
           <a
             href="#"
             className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
           >
-            Browse Case Studies
+            立即评估
+            <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
+          其他服务
+        </h3>
+        <div className="space-y-3">
+          <a
+            href="#"
+            className="block font-medium text-white/80 hover:text-white transition-colors"
+          >
+            家庭移民
+          </a>
+          <a
+            href="#"
+            className="block font-medium text-white/80 hover:text-white transition-colors"
+          >
+            学生签证 （F-1）
+          </a>
+          <a
+            href="#"
+            className="block font-medium text-white/80 hover:text-white transition-colors"
+          >
+            访问学者 （J-1）
+          </a>
+          <a
+            href="#"
+            className="block font-medium text-white/80 hover:text-white transition-colors"
+          >
+            工作签证 （H-1B）
+          </a>
+        </div>
+      </div>
+    </MegaMenuWrapper>
+  )
+}
+
+export function SuccessStoriesMegaMenu() {
+  return (
+    <MegaMenuWrapper>
+      <div>
+        <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
+          成功案例
+        </h3>
+        <div className="space-y-3">
+          <a
+            href="#"
+            className="block font-medium text-white/80 hover:text-white transition-colors"
+          >
+            投资移民案例
+          </a>
+          <a
+            href="#"
+            className="block font-medium text-white/80 hover:text-white transition-colors"
+          >
+            职业移民案例
+          </a>
+          <a
+            href="#"
+            className="block font-medium text-white/80 hover:text-white transition-colors"
+          >
+            家庭移民案例
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
+          客户反馈
+        </h3>
+        <div className="space-y-3">
+          <a
+            href="#"
+            className="block font-medium text-white/80 hover:text-white transition-colors"
+          >
+            服务评价
+          </a>
+          <a
+            href="#"
+            className="block font-medium text-white/80 hover:text-white transition-colors"
+          >
+            客户推荐
+          </a>
+          <a
+            href="#"
+            className="block font-medium text-white/80 hover:text-white transition-colors"
+          >
+            成功数据
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
+          了解更多
+        </h3>
+        <div className="space-y-4">
+          <h4 className="text-[22px] font-semibold leading-tight text-white">
+            探索我们的成功故事，
+            <br />
+            了解客户如何实现移民梦想。
+          </h4>
+          <a
+            href="#"
+            className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
+          >
+            查看所有案例
             <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -106,78 +199,74 @@ export function ServiceMegaMenu() {
   )
 }
 
-export function WhyPayloadMegaMenu() {
+export function ProjectShowcaseMegaMenu() {
   return (
     <MegaMenuWrapper>
       <div>
         <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Benefits
+          热门项目
         </h3>
         <div className="space-y-3">
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Flexibility
+            区域中心项目
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Scalability
+            直接投资项目
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Performance
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Security
+            特殊人才机会
           </a>
         </div>
       </div>
       <div>
         <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Comparisons
+          项目分析
         </h3>
         <div className="space-y-3">
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Payload vs. Traditional CMS
+            投资回报分析
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Payload vs. Other Headless CMS
+            风险评估报告
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Payload vs. Custom Solutions
+            项目进度追踪
           </a>
         </div>
       </div>
       <div>
         <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Success Stories
+          最新动态
         </h3>
         <div className="space-y-4">
           <h4 className="text-[22px] font-semibold leading-tight text-white">
-            Discover how companies succeed with Payload.
+            发现最新的投资机会，
+            <br />
+            助您实现事业和移民双赢。
           </h4>
           <a
             href="#"
             className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
           >
-            Read Success Stories
+            浏览所有项目
             <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -188,84 +277,74 @@ export function WhyPayloadMegaMenu() {
   )
 }
 
-export function DevelopersMegaMenu() {
+export function ImmigrationResourcesMegaMenu() {
   return (
     <MegaMenuWrapper>
       <div>
         <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Resources
+          移民百科
         </h3>
         <div className="space-y-3">
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Documentation
+            签证类别介绍
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            API Reference
+            申请流程指南
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Tutorials
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Blog
+            材料清单
           </a>
         </div>
       </div>
       <div>
         <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Community
+          政策解析
         </h3>
         <div className="space-y-3">
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            GitHub
+            最新政策动态
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Discord
+            政策影响分析
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Stack Overflow
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Twitter
+            常见问题解答
           </a>
         </div>
       </div>
       <div>
         <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Tools
+          专业文章
         </h3>
         <div className="space-y-4">
           <h4 className="text-[22px] font-semibold leading-tight text-white">
-            Explore developer tools and resources.
+            深入了解美国移民，
+            <br />
+            获取最新资讯与专业指导。
           </h4>
           <a
             href="#"
             className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
           >
-            View All Tools
+            阅读更多
             <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -276,172 +355,74 @@ export function DevelopersMegaMenu() {
   )
 }
 
-export function EnterpriseMegaMenu() {
+export function AboutUsMegaMenu() {
   return (
     <MegaMenuWrapper>
       <div>
         <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Solutions
+          公司介绍
         </h3>
         <div className="space-y-3">
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Enterprise CMS
+            公司历史
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Digital Experience Platform
+            愿景使命
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            E-commerce
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Intranet
+            服务优势
           </a>
         </div>
       </div>
       <div>
         <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Services
+          专业团队
         </h3>
         <div className="space-y-3">
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Consulting
+            顾问团队
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Implementation
+            法律团队
           </a>
           <a
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            Training
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Support
+            合作伙伴
           </a>
         </div>
       </div>
       <div>
         <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Contact
+          联系我们
         </h3>
         <div className="space-y-4">
           <h4 className="text-[22px] font-semibold leading-tight text-white">
-            Ready to scale your business with Payload?
+            专业团队随时为您服务，
+            <br />
+            开启您的移民之旅。
           </h4>
           <a
             href="#"
             className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
           >
-            Contact Sales
-            <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 024 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </MegaMenuWrapper>
-  )
-}
-
-export function DocsMegaMenu() {
-  return (
-    <MegaMenuWrapper>
-      <div>
-        <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Getting Started
-        </h3>
-        <div className="space-y-3">
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Installation
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Configuration
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Authentication
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Fields
-          </a>
-        </div>
-      </div>
-      <div>
-        <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Advanced Topics
-        </h3>
-        <div className="space-y-3">
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Access Control
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            Hooks
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            GraphQL
-          </a>
-          <a
-            href="#"
-            className="block font-medium text-white/80 hover:text-white transition-colors"
-          >
-            REST API
-          </a>
-        </div>
-      </div>
-      <div>
-        <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-          Resources
-        </h3>
-        <div className="space-y-4">
-          <h4 className="text-[22px] font-semibold leading-tight text-white">
-            Explore our comprehensive documentation.
-          </h4>
-          <a
-            href="#"
-            className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
-          >
-            View Full Documentation
+            预约咨询
             <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
