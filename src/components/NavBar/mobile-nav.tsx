@@ -21,14 +21,14 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
             {showProduct ? (
               <Button
                 variant="ghost"
-                className="flex items-center gap-2 px-0 font-normal"
+                className="flex items-center gap-2 px-0 font-medium text-[15px]"
                 onClick={() => setShowProduct(false)}
               >
                 <ChevronRight className="h-4 w-4 rotate-180" />
                 Back
               </Button>
             ) : (
-              <span className="text-base font-normal">Menu</span>
+              <span className="text-[15px] font-medium">Menu</span>
             )}
           </SheetTitle>
         </SheetHeader>
@@ -63,7 +63,7 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
           ) : (
             <div className="space-y-6 p-4">
               <div>
-                <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-foreground/50">
+                <h3 className="mb-2 text-[13px] font-semibold uppercase tracking-wide text-foreground/60">
                   Use Cases
                 </h3>
                 <div className="grid gap-2">

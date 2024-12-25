@@ -12,7 +12,7 @@ export default function HomePage() {
           src="/golden-gate-bridge.jpg"
           alt="Golden Gate Bridge"
           fill
-          className="object-cover brightness-75"
+          className="object-cover"
           priority
         />
       </div>
