@@ -1,36 +1,50 @@
 'use client'
 
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { useTheme } from '@/providers/Theme'
 
 export function AnimatedTitle() {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const { theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
   const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end start'],
+    offset: ['start start', '80vh start'],
   })
 
-  // 调整缩放范围从20倍到1倍
-  const scale = useTransform(scrollYProgress, [0, 1], [2, 1])
-  const y = useTransform(scrollYProgress, [0, 1], ['50%', '0%'])
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
-  const blur = useTransform(scrollYProgress, [0, 1], [0, 4])
+  // Animation transforms
+  const scale = useTransform(scrollYProgress, [0, 1], [12, 1])
+  // 从中心开始 (0)，最终位置在顶部偏下 (20vh)
+  const y = useTransform(scrollYProgress, [0, 1], ['-100vh', '-40vh'])
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1])
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
-    <div ref={containerRef} className="relative h-[200vh] w-full">
-      <div className="sticky top-0 flex h-screen items-center justify-center">
+    <div className="absolute inset-x-0 h-[80vh] pointer-events-none z-50">
+      <motion.div
+        className="flex h-screen items-center justify-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
         <motion.div
-          className="text-center"
+          className="text-center w-screen px-4 origin-center"
           style={{
             scale,
             y,
             opacity,
-            filter: `blur(${blur}px)`,
           }}
         >
-          <span className="block text-6xl font-bold text-white md:text-8xl">美域佳华</span>
+          <span
+            className={`block text-6xl font-bold md:text-8xl ${
+              mounted ? (theme === 'dark' ? 'text-white' : 'text-black') : 'text-black'
+            }`}
+          >
+            美域佳华
+          </span>
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   )
 }
