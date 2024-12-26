@@ -41,7 +41,7 @@ export default function HomePage() {
       </main>
 
       {/* 添加动画标题部分 */}
-      {/* <AnimatedTitle /> */}
+      <AnimatedTitle />
 
       {/* 这里可以添加更多的内容部分 */}
     </>
