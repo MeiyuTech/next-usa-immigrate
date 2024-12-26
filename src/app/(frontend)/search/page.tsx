@@ -84,6 +84,6 @@ export default async function Page({ searchParams: searchParamsPromise }: Args) 
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Meiyu Website Template Search`,
+    title: `搜索`,
   }
 }
