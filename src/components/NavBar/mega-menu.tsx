@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 interface MegaMenuWrapperProps {
   children: React.ReactNode
 }
@@ -421,15 +423,15 @@ export function AboutUsMegaMenu() {
             <br />
             开启您的移民之旅。
           </h4>
-          <a
-            href="#"
+          <Link
+            href="/contact"
             className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
           >
             预约咨询
             <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </MegaMenuWrapper>

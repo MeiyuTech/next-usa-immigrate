@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { ChevronRight } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 interface MobileNavProps {
   isOpen: boolean
@@ -346,9 +347,16 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
                     <h4 className="mb-2 text-lg font-semibold">
                       专业团队随时为您服务，开启您的移民之旅。
                     </h4>
-                    <Button variant="ghost" className="h-auto justify-start px-0 py-2">
-                      预约咨询
-                      <ChevronRight className="ml-1 h-4 w-4" />
+                    <Button
+                      asChild
+                      variant="ghost"
+                      className="h-auto justify-start px-0 py-2"
+                      onClick={() => setIsOpenAction(false)}
+                    >
+                      <Link href="/contact">
+                        预约咨询
+                        <ChevronRight className="ml-1 h-4 w-4" />
+                      </Link>
                     </Button>
                   </div>
                 </>

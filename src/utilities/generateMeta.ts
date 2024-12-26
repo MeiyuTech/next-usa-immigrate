@@ -26,9 +26,7 @@ export const generateMeta = async (args: {
 
   const ogImage = getImageURL(doc?.meta?.image)
 
-  const title = doc?.meta?.title
-    ? doc?.meta?.title + ' | Meiyu Website Template'
-    : 'Meiyu Website Template'
+  const title = doc?.meta?.title ? doc?.meta?.title : 'Meiyu Website Template'
 
   return {
     description: doc?.meta?.description,
