@@ -41,11 +41,13 @@ export default function HomePage() {
 
       {/* Animated Title Section */}
       <AnimatedTitle />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <div className="hidden md:block">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
 
       {/* Company Introduction Section */}
       <section className="bg-background py-24">
