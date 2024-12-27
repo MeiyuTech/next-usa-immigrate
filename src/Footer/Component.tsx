@@ -40,15 +40,36 @@ export async function Footer() {
             </p>
           </div>
 
+          {/* Services */}
+          <div>
+            <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
+              服务项目
+            </h3>
+            <nav className="grid gap-2">
+              <Link href="/services/eb5" className="text-sm text-white/70 hover:text-white">
+                投资移民 (EB-5)
+              </Link>
+              <Link href="/services/eb123" className="text-sm text-white/70 hover:text-white">
+                职业移民 (EB-1/2/3)
+              </Link>
+              <Link href="/services/family" className="text-sm text-white/70 hover:text-white">
+                家庭移民
+              </Link>
+              <Link href="/services/student" className="text-sm text-white/70 hover:text-white">
+                留学服务
+              </Link>
+              <Link href="/services/work" className="text-sm text-white/70 hover:text-white">
+                工作签证
+              </Link>
+            </nav>
+          </div>
+
           {/* Quick Links */}
           <div>
             <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
               快速链接
             </h3>
             <nav className="grid gap-2">
-              <Link href="/services" className="text-sm text-white/70 hover:text-white">
-                移民服务
-              </Link>
               <Link href="/cases" className="text-sm text-white/70 hover:text-white">
                 成功案例
               </Link>
@@ -60,30 +81,6 @@ export async function Footer() {
               </Link>
               <Link href="/about" className="text-sm text-white/70 hover:text-white">
                 关于我们
-              </Link>
-            </nav>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60">
-              服务项目
-            </h3>
-            <nav className="grid gap-2">
-              <Link href="/services/eb5" className="text-sm text-white/70 hover:text-white">
-                投资移民 (EB-5)
-              </Link>
-              <Link href="/services/eb1" className="text-sm text-white/70 hover:text-white">
-                杰出人才 (EB-1)
-              </Link>
-              <Link href="/services/eb2" className="text-sm text-white/70 hover:text-white">
-                职业移民 (EB-2)
-              </Link>
-              <Link href="/services/family" className="text-sm text-white/70 hover:text-white">
-                家庭移民
-              </Link>
-              <Link href="/services/student" className="text-sm text-white/70 hover:text-white">
-                留学服务
               </Link>
             </nav>
           </div>
