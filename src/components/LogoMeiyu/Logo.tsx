@@ -16,7 +16,7 @@ export default function LogoMeiyu(props: Props) {
 
   return (
     <Image
-      src="/Meiyu-favicon/favicon.svg"
+      src="/favicon.svg"
       alt="Meiyu Logo"
       width={80}
       height={64}

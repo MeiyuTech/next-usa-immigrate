@@ -69,7 +69,27 @@ export default buildConfig({
         {
           fetchPriority: 'high',
           rel: 'icon',
-          url: '/Meiyu-favicon/favicon.ico',
+          type: 'image/svg+xml',
+          url: '/favicon.svg',
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '96x96',
+          url: '/favicon-96x96.png',
+        },
+        {
+          rel: 'shortcut icon',
+          url: '/favicon.ico',
+        },
+        {
+          rel: 'apple-touch-icon',
+          sizes: '180x180',
+          url: '/apple-touch-icon.png',
+        },
+        {
+          rel: 'manifest',
+          url: '/site.webmanifest',
         },
       ],
     },
