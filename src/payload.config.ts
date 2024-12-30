@@ -109,7 +109,9 @@ export default buildConfig({
     ...plugins,
     s3Storage({
       collections: {
-        media: true,
+        media: {
+          prefix: 'media',
+        },
       },
       bucket: process.env.S3_BUCKET as string,
       config: {
