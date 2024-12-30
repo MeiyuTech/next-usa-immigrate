@@ -1,13 +1,13 @@
-import { getCachedGlobal } from '@/utilities/getGlobals'
-import Link from 'next/link'
 import React from 'react'
+import clsx from 'clsx'
+import Image from 'next/image'
+import Link from 'next/link'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
+import { getCachedGlobal } from '@/utilities/getGlobals'
 import type { Footer } from '@/payload-types'
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 import { CMSLink } from '@/components/Link'
-// import { Logo } from '@/components/Logo/Logo'
-import LogoMeiyuTitle from '@/components/LogoMeiyuTitle/Logo'
 
 export async function Footer() {
   const footerData: Footer = await getCachedGlobal('footer', 1)()
@@ -33,7 +33,19 @@ export async function Footer() {
           {/* Logo and Company Info */}
           <div className="space-y-6">
             <Link href="/" className="block">
-              <LogoMeiyuTitle />
+              <div className={clsx('flex items-center gap-3')}>
+                <Image
+                  src="/favicon.svg"
+                  alt="Meiyu Logo"
+                  width={150}
+                  height={100}
+                  loading="lazy"
+                  fetchPriority="low"
+                  // className={clsx('max-w-[15rem] w-full h-[34px]', className)}
+                  className={clsx('max-w-[15rem]')}
+                />
+                <span className="text-3xl font-medium">美域佳华</span>
+              </div>
             </Link>
             <p className="text-sm text-white/70">
               美域佳华是您值得信赖的美国移民顾问，我们提供专业的投资移民、职业移民等服务，助您实现美国梦。
@@ -114,7 +126,7 @@ export async function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-white/10 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-white/60 md:flex-row">
-            <p>© {new Date().getFullYear()} 美域佳华. 保留所有权利.</p>
+            <p>© {new Date().getFullYear()} 美域集团. 保留所有权利.</p>
             <div className="flex gap-6">
               <Link href="/privacy" className="hover:text-white">
                 隐私政策

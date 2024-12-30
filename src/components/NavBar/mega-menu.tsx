@@ -29,7 +29,8 @@ export function ServiceMegaMenu() {
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
-            项目介绍
+            {/* 换一个措辞 */}
+            介绍
           </a>
           <a
             href="#"
@@ -41,6 +42,7 @@ export function ServiceMegaMenu() {
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
+            {/* 申请流程： 境内申请流程，境外申请流程 */}
             签证流程
           </a>
         </div>

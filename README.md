@@ -1,11 +1,12 @@
 # TODO:
 
 - [ ] Create 'projects' and 'cases' pages, like Posts Page (or just add metadata('Related PAges' and 'Categories') for Pages? )
-- [ ] Which logo should we use? One is darker (witth text "美域佳华"), one's color looks better yet the bg is not perfectly deleted.
-- [ ] Create a form and show the email resender, submission record.
+- [ ] Which logo should we use? One is darker (witth text "美域佳华"), one's color looks better yet the bg is not perfectly deleted. 暂定为天蓝色。
+- [x] Create a form and show the email resender, submission record.
 - [x] AnimatedTitle disappears in mobile mode!!!
 - [ ] Theme selector shows layout mess in mobile mode!!!
-- [ ] 提供的图片没有背景，在黑色主题下文字看不清！！！
+- [x] 提供的图片没有背景，在黑色主题下文字看不清！！！ 和王艳沟通，让 潘总 zhangfeng 帮忙改 (changed the ImageMedia ‘style’, )
+- [ ] Need a better method to change the bg of ImageMedia programmatically
 - [ ] Homepage 我希望图片都能占满整个屏幕的宽度（留白部分写文字），目前的图片尺寸太小了不好看。
 
 # Github Workflow

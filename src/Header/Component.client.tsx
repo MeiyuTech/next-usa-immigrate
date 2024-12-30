@@ -3,13 +3,13 @@
 import React, { useState, useRef } from 'react'
 import { Menu, SearchIcon } from 'lucide-react'
 import Link from 'next/link'
+import clsx from 'clsx'
+import Image from 'next/image'
 
 import type { Header } from '@/payload-types'
 import { cn } from 'src/utilities/cn'
 // import { HeaderNav } from './Nav'
 
-// import { Logo } from '@/components/Logo/Logo'
-import LogoMeiyu from '@/components/LogoMeiyu/Logo'
 import { Button } from '@/components/ui/button'
 import {
   ServiceMegaMenu,
@@ -47,7 +47,18 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ _data }) => {
       <div className="absolute inset-0 bg-[#00808033] backdrop-blur-[12px]" />
       <div className="relative container mx-auto py-8 flex justify-between text-white">
         <Link href="/">
-          <LogoMeiyu loading="eager" priority="high" />
+          <div className={clsx('flex items-center gap-3')}>
+            <Image
+              src="/favicon.svg"
+              alt="Meiyu Logo"
+              width={80}
+              height={64}
+              loading="eager"
+              fetchPriority="high"
+              className={clsx('max-w-[80px]')}
+            />
+            <span className="text-xl font-medium">美域佳华</span>
+          </div>
         </Link>
         <nav className="container flex h-16 items-center justify-end">
           <div className="flex items-center gap-6">
