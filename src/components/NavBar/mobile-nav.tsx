@@ -88,13 +88,13 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
                     </h3>
                     <div className="grid gap-2">
                       <Button variant="ghost" className="justify-start px-0">
-                        项目介绍
+                        政策介绍
                       </Button>
                       <Button variant="ghost" className="justify-start px-0">
                         申请条件
                       </Button>
                       <Button variant="ghost" className="justify-start px-0">
-                        签证流程
+                        申请流程
                       </Button>
                     </div>
                   </div>
