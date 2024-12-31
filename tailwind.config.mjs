@@ -1,13 +1,16 @@
+import tailwindAnimate from 'tailwindcss-animate'
+import tailwindTypography from '@tailwindcss/typography'
+
 /** @type {import('tailwindcss').Config} */
-export default {
+const config = {
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
-  darkMode: ['selector', '[data-theme="dark"]'],
-  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
+  darkMode: ['selector', '[data-theme="dark"]', 'class'],
+  plugins: [tailwindAnimate, tailwindTypography],
   prefix: '',
   safelist: [
     'lg:col-span-4',
@@ -89,6 +92,16 @@ export default {
         success: 'hsl(var(--success))',
         error: 'hsl(var(--error))',
         warning: 'hsl(var(--warning))',
+        sidebar: {
+          DEFAULT: 'hsl(var(--sidebar-background))',
+          foreground: 'hsl(var(--sidebar-foreground))',
+          primary: 'hsl(var(--sidebar-primary))',
+          'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+          accent: 'hsl(var(--sidebar-accent))',
+          'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+          border: 'hsl(var(--sidebar-border))',
+          ring: 'hsl(var(--sidebar-ring))',
+        },
       },
       fontFamily: {
         mono: ['var(--font-geist-mono)'],
@@ -96,12 +109,20 @@ export default {
       },
       keyframes: {
         'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
+          from: {
+            height: '0',
+          },
+          to: {
+            height: 'var(--radix-accordion-content-height)',
+          },
         },
         'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
+          from: {
+            height: 'var(--radix-accordion-content-height)',
+          },
+          to: {
+            height: '0',
+          },
         },
       },
       typography: ({ theme }) => ({
@@ -146,3 +167,5 @@ export default {
     },
   },
 }
+
+export default config

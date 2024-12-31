@@ -9,6 +9,77 @@
 - [ ] Need a better method to change the bg of ImageMedia programmatically
 - [ ] Homepage 我希望图片都能占满整个屏幕的宽度（留白部分写文字），目前的图片尺寸太小了不好看。
 
+# Install Shadcn Sidebar
+
+1. Modify `components.json`
+
+```json
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.mjs",
+    "css": "src/app/(frontend)/globals.css",
+    "baseColor": "slate",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/utilities"
+  }
+}
+```
+
+2. Modify `tailwind.config.mjs`
+   Comment this part:
+
+```typescript
+typography: ({ theme }) => ({
+        DEFAULT: {
+          css: [
+            {
+              '--tw-prose-body': 'var(--text)',
+              '--tw-prose-headings': 'var(--text)',
+              h1: {
+                fontWeight: 'normal',
+                marginBottom: '0.25em',
+              },
+            },
+          ],
+        },
+        base: {
+          css: [
+            {
+              h1: {
+                fontSize: '2.5rem',
+              },
+              h2: {
+                fontSize: '1.25rem',
+                fontWeight: 600,
+              },
+            },
+          ],
+        },
+        md: {
+          css: [
+            {
+              h1: {
+                fontSize: '3.5rem',
+              },
+              h2: {
+                fontSize: '1.5rem',
+              },
+            },
+          ],
+        },
+      }),
+```
+
+3. https://ui.shadcn.com/docs/components/sidebar#installation
+
 # Github Workflow
 
 [Github-Workflow.md](./Github-Workflow.md)

@@ -1,8 +1,7 @@
-/* eslint-disable react/button-has-type */
 import type { ButtonProps } from '@/components/ui/button'
 
 import { buttonVariants } from '@/components/ui/button'
-import { cn } from 'src/utilities/cn'
+import { cn } from '@/utilities/cn'
 import { ChevronLeft, ChevronRight, MoreHorizontal } from 'lucide-react'
 import * as React from 'react'
 
@@ -19,12 +18,12 @@ Pagination.displayName = 'Pagination'
 const PaginationContent = React.forwardRef<HTMLUListElement, React.ComponentProps<'ul'>>(
   ({ className, ...props }, ref) => (
     <ul className={cn('flex flex-row items-center gap-1', className)} ref={ref} {...props} />
-  ),
+  )
 )
 PaginationContent.displayName = 'PaginationContent'
 
 const PaginationItem = React.forwardRef<HTMLLIElement, React.ComponentProps<'li'>>(
-  ({ className, ...props }, ref) => <li className={cn('', className)} ref={ref} {...props} />,
+  ({ className, ...props }, ref) => <li className={cn('', className)} ref={ref} {...props} />
 )
 PaginationItem.displayName = 'PaginationItem'
 
@@ -41,7 +40,7 @@ const PaginationLink = ({ className, isActive, size = 'icon', ...props }: Pagina
         size,
         variant: isActive ? 'outline' : 'ghost',
       }),
-      className,
+      className
     )}
     {...props}
   />

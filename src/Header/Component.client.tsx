@@ -7,7 +7,7 @@ import clsx from 'clsx'
 import Image from 'next/image'
 
 import type { Header } from '@/payload-types'
-import { cn } from 'src/utilities/cn'
+import { cn } from '@/utilities/cn'
 // import { HeaderNav } from './Nav'
 
 import { Button } from '@/components/ui/button'

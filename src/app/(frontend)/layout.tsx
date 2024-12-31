@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 
-import { cn } from 'src/utilities/cn'
 import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
 import React from 'react'
@@ -11,6 +10,7 @@ import { Header } from '@/Header/Component'
 import { Providers } from '@/providers'
 import { InitTheme } from '@/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
+import { cn } from '@/utilities/cn'
 // import { draftMode } from 'next/headers'
 
 import './globals.css'
