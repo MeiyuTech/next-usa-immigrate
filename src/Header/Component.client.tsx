@@ -57,7 +57,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ _data }) => {
               fetchPriority="high"
               className={clsx('max-w-[80px]')}
             />
-            <span className="text-xl font-medium">美域佳华</span>
+            <span className="text-xl font-medium w-[80px]">美域佳华</span>
           </div>
         </Link>
         <nav className="container flex h-16 items-center justify-end">
