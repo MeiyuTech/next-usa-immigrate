@@ -25,25 +25,25 @@ export function ServiceMegaMenu() {
           投资移民 (EB-5)
         </h3>
         <div className="space-y-3">
-          <a
-            href="#"
+          <Link
+            href="/posts/eb-5-introduction"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
             政策介绍
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
             申请条件
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
             {/* 申请流程： 境内申请流程，境外申请流程 */}
             申请流程
-          </a>
+          </Link>
         </div>
       </div>
       <div>
@@ -51,24 +51,24 @@ export function ServiceMegaMenu() {
           职业移民 (EB-1/2/3)
         </h3>
         <div className="space-y-3">
-          <a
+          <Link
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
             适用对象
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
             申请条件
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
             className="block font-medium text-white/80 hover:text-white transition-colors"
           >
             签证流程
-          </a>
+          </Link>
         </div>
       </div>
       <div>

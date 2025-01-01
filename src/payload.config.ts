@@ -17,7 +17,7 @@ import { Footer } from './Footer/config'
 import { Header } from './Header/config'
 import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
-import { getServerSideURL } from './utilities/getURL'
+import { getServerSideURL } from '@/utilities/getURL'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -95,16 +95,54 @@ export default buildConfig({
       ],
     },
   },
-  // This config helps us configure global or default features that the other editors can inherit
-  editor: defaultLexical,
+  collections: [Pages, Posts, Media, Categories, Users],
+  cors: [getServerSideURL()].filter(Boolean),
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URI || '',
     },
   }),
-  collections: [Pages, Posts, Media, Categories, Users],
-  cors: [getServerSideURL()].filter(Boolean),
+  // This config helps us configure global or default features that the other editors can inherit
+  editor: defaultLexical,
+  // email: nodemailerAdapter({
+  //   defaultFromAddress: process.env.SMTP_USER as string,
+  //   defaultFromName: process.env.SMTP_DEFAULT_FROM_NAME as string,
+  //   transportOptions: {
+  //     host: process.env.SMTP_HOST,
+  //     port: parseInt(process.env.SMTP_PORT as string),
+  //     secure: process.env.SMTP_SECURE === 'true',
+  //     auth: {
+  //       user: process.env.SMTP_USER,
+  //       pass: process.env.SMTP_PASS,
+  //     },
+  //   },
+  // }),
+  email: resendAdapter({
+    defaultFromAddress: process.env.RESEND_DEFAULT_FROM_ADDRESS as string,
+    defaultFromName: process.env.RESEND_DEFAULT_FROM_NAME as string,
+    apiKey: process.env.RESEND_API_KEY || '',
+  }),
   globals: [Header, Footer],
+  localization: {
+    locales: [
+      {
+        label: {
+          en: 'English',
+          zh: '英文',
+        },
+        code: 'en',
+      },
+      {
+        label: {
+          en: 'Chinese',
+          zh: '中文',
+        },
+        code: 'zh',
+      },
+    ],
+    defaultLocale: 'en',
+    fallback: true,
+  },
   plugins: [
     ...plugins,
     s3Storage({
@@ -131,22 +169,4 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
-  // email: nodemailerAdapter({
-  //   defaultFromAddress: process.env.SMTP_USER as string,
-  //   defaultFromName: process.env.SMTP_DEFAULT_FROM_NAME as string,
-  //   transportOptions: {
-  //     host: process.env.SMTP_HOST,
-  //     port: parseInt(process.env.SMTP_PORT as string),
-  //     secure: process.env.SMTP_SECURE === 'true',
-  //     auth: {
-  //       user: process.env.SMTP_USER,
-  //       pass: process.env.SMTP_PASS,
-  //     },
-  //   },
-  // }),
-  email: resendAdapter({
-    defaultFromAddress: process.env.RESEND_DEFAULT_FROM_ADDRESS as string,
-    defaultFromName: process.env.RESEND_DEFAULT_FROM_NAME as string,
-    apiKey: process.env.RESEND_API_KEY || '',
-  }),
 })

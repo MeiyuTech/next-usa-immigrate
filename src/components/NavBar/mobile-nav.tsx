@@ -88,7 +88,7 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
                     </h3>
                     <div className="grid gap-2">
                       <Button variant="ghost" className="justify-start px-0">
-                        政策介绍
+                        <Link href="/posts/eb-5-introduction">政策介绍</Link>
                       </Button>
                       <Button variant="ghost" className="justify-start px-0">
                         申请条件

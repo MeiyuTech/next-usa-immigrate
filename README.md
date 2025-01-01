@@ -1,5 +1,7 @@
 # TODO:
 
+- [ ] Add i18n and localization, which could help with the SEO and ToC (Table of Contents) in posts.
+- [ ] Do we need ‘src/utilities/serialize.ts’? Try to find the build in function in Payload.
 - [ ] Create 'projects' and 'cases' pages, like Posts Page (or just add metadata('Related PAges' and 'Categories') for Pages? )
 - [ ] Which logo should we use? One is darker (witth text "美域佳华"), one's color looks better yet the bg is not perfectly deleted. 暂定为天蓝色。
 - [x] Create a form and show the email resender, submission record.
@@ -8,6 +10,153 @@
 - [x] 提供的图片没有背景，在黑色主题下文字看不清！！！ 和王艳沟通，让 潘总 zhangfeng 帮忙改 (changed the ImageMedia ‘style’, )
 - [ ] Need a better method to change the bg of ImageMedia programmatically
 - [ ] Homepage 我希望图片都能占满整个屏幕的宽度（留白部分写文字），目前的图片尺寸太小了不好看。
+
+# i18n and localization
+
+1. Modify `payload.config.ts`
+
+```typescript
+i18n: {
+    fallbackLanguage: 'en',
+  },
+  localization: {
+    locales: [
+      {
+        label: {
+          en: 'English',
+          zh: '英文',
+        },
+        code: 'en',
+      },
+      {
+        label: {
+          en: 'Chinese',
+          zh: '中文',
+        },
+        code: 'zh',
+      },
+    ],
+    defaultLocale: 'en',
+    fallback: true,
+  },
+```
+
+2. And after that, it goes:
+
+```bash
++ snapshot column will be created
+
++ published_locale column will be created
+--- all columns conflicts in _posts_v table resolved ---
+
+
++ snapshot column will be created
+
++ published_locale column will be created
+--- all columns conflicts in _pages_v table resolved ---
+
+? Warnings detected during schema push:
+
+· You're about to add not-null _locale column without default value, which contains 9 items
+· You're about to delete meta_title column in pages table with 3 items
+· You're about to delete meta_image_id column in pages table with 3 items
+· You're about to delete meta_description column in pages table with 3 items
+· You're about to delete meta_title column in posts table with 5 items
+· You're about to delete meta_image_id column in posts table with 5 items
+· You're about to delete meta_description column in posts table with 5 items
+· You're about to delete subject column in forms_emails table with 1 items
+· You're about to delete message column in forms_emails table with 1 items
+· You're about to delete submit_button_label column in forms table with 1 items
+· You're about to delete confirmation_message column in forms table with 1 items
+· You're about to delete version_meta_title column in _posts_v table with 69 items
+· You're about to delete version_meta_image_id column in _posts_v table with 69 items
+· You're about to delete version_meta_description column in _posts_v table with 69 items
+· You're about to delete version_meta_title column in _pages_v table with 43 items
+· You're about to delete version_meta_image_id column in _pages_v table with 43 items
+· You're about to delete version_meta_description column in _pages_v table with 43 items
+· You're about to delete title column in search table with 5 items
+· You're about to delete label column in forms_blocks_textarea table with 1 items
+· You're about to delete default_value column in forms_blocks_textarea table with 1 items
+· You're about to delete label column in forms_blocks_text table with 1 items
+· You're about to delete default_value column in forms_blocks_text table with 1 items
+· You're about to delete label column in forms_blocks_email table with 1 items
+· You're about to delete label column in forms_blocks_number table with 1 items
+
+DATA LOSS WARNING: Possible data loss detected if schema is pushed.
+
+Accept warnings and push schema to database? › (y/N)
+```
+
+# Install Shadcn Sidebar
+
+1. Modify `components.json`
+
+```json
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.mjs",
+    "css": "src/app/(frontend)/globals.css",
+    "baseColor": "slate",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/utilities"
+  }
+}
+```
+
+2. Modify `tailwind.config.mjs`
+   Comment this part:
+
+```typescript
+typography: ({ theme }) => ({
+        DEFAULT: {
+          css: [
+            {
+              '--tw-prose-body': 'var(--text)',
+              '--tw-prose-headings': 'var(--text)',
+              h1: {
+                fontWeight: 'normal',
+                marginBottom: '0.25em',
+              },
+            },
+          ],
+        },
+        base: {
+          css: [
+            {
+              h1: {
+                fontSize: '2.5rem',
+              },
+              h2: {
+                fontSize: '1.25rem',
+                fontWeight: 600,
+              },
+            },
+          ],
+        },
+        md: {
+          css: [
+            {
+              h1: {
+                fontSize: '3.5rem',
+              },
+              h2: {
+                fontSize: '1.5rem',
+              },
+            },
+          ],
+        },
+      }),
+```
+
+3. https://ui.shadcn.com/docs/components/sidebar#installation
 
 # Github Workflow
 
