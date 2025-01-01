@@ -51,7 +51,7 @@ export default async function Post({ params: paramsPromise }: Args) {
   if (!post) return <PayloadRedirects url={url} />
 
   const serialized = serialize(post.content)
-  console.log('Serialized content:', serialized)
+  // console.log('Serialized content:', serialized)
   const headings = extractHeadings(serialized)
 
   return (
@@ -135,23 +135,25 @@ function extractHeadings(content: string): Array<{ level: number; id: string; te
     .replace(/\s+/g, ' ') // 合并多个空白字符
     .trim() // 移除首尾空白
 
-  // 使用更简单的正则表达式，只匹配 h2、h3、h4 标签
-  const matches = cleanContent.match(/<h[234].*?<\/h[234]>/g) || []
+  // 使用更简单的正则表达式，匹配 h1-h4 标签
+  const matches = cleanContent.match(/<h[1-4].*?<\/h[1-4]>/g) || []
 
-  console.log('Original content:', content)
-  console.log('Cleaned content:', cleanContent)
-  console.log('Found headings:', matches)
+  // console.log('Original content:', content)
+  // console.log('Cleaned content:', cleanContent)
+  // console.log('Found headings:', matches)
 
-  // 将匹配到的标题转换为所需格式
-  return matches.map((match) => {
-    // 提取级别 (2,3,4)
-    const level = parseInt(match.charAt(2))
-    // 提取 ID
-    const id = match.match(/id="([^"]*)"/)?.[1] || ''
-    // 提取文本（移除任何HTML标签）
-    const text = match.replace(/<[^>]*>/g, '').trim()
+  // 将匹配到的标题转换为所需格式，并过滤掉空标题
+  return matches
+    .map((match) => {
+      // 提取级别 (1,2,3,4)
+      const level = parseInt(match.charAt(2))
+      // 提取 ID
+      const id = match.match(/id="([^"]*)"/)?.[1] || ''
+      // 提取文本（移除任何HTML标签）并清理空白
+      const text = match.replace(/<[^>]*>/g, '').trim()
 
-    console.log('Processed heading:', { level, id, text })
-    return { level, id, text }
-  })
+      // console.log('Processed heading:', { level, id, text })
+      return { level, id, text }
+    })
+    .filter((heading) => heading.text !== '') // 过滤掉空标题
 }

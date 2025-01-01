@@ -38,7 +38,7 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
       rootMargin: '0px 0px -40% 0px',
     })
 
-    const headingElements = Array.from(document.querySelectorAll('h2, h3, h4'))
+    const headingElements = Array.from(document.querySelectorAll('h1, h2, h3, h4'))
     headingElements.forEach((element) => observer.observe(element))
 
     return () => observer.disconnect()
@@ -48,7 +48,20 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
     <nav className="relative">
       <ul className="space-y-2 text-sm">
         {headings.map((heading) => (
-          <li key={heading.id} style={{ paddingLeft: `${(heading.level - 2) * 1}rem` }}>
+          <li
+            key={heading.id}
+            style={{
+              paddingLeft: `${(heading.level - 1) * 1}rem`,
+              fontSize:
+                heading.level === 1
+                  ? '1.1em'
+                  : heading.level === 2
+                    ? '1em'
+                    : heading.level === 3
+                      ? '0.9em'
+                      : '0.85em',
+            }}
+          >
             <a
               href={`#${heading.id}`}
               onClick={(e) => {
