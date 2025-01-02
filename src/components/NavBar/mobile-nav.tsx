@@ -84,7 +84,7 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
                 <>
                   <div>
                     <h3 className="mb-2 text-[13px] font-semibold uppercase tracking-wide text-foreground/60">
-                      投资移民 (EB-5)
+                      <Link href="/eb-5">投资移民 (EB-5)</Link>
                     </h3>
                     <div className="grid gap-2">
                       <Button variant="ghost" className="justify-start px-0">

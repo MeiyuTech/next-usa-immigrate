@@ -10,8 +10,8 @@ export default function HomePage() {
         {/* Hero Section */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/golden-gate-bridge-view.jpg"
-            alt="Golden Gate Bridge View"
+            src="/golden-gate-bridge.jpg"
+            alt="Golden Gate Bridge"
             fill
             className="object-cover"
             priority
@@ -21,33 +21,23 @@ export default function HomePage() {
         {/* Content */}
         <div className="relative z-10 flex min-h-screen items-center pt-16">
           <div className="container mx-auto px-4">
-            <div className="ml-auto max-w-2xl pr-8 md:pr-0">
-              <h1
-                className="mb-6 text-5xl font-medium text-white md:text-7xl 
-                drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] transition-all duration-300
-                text-right"
-              >
-                Lorem ipsum <br /> dolor sit
+            <div className="max-w-2xl">
+              <h1 className="mb-6 text-5xl font-medium text-white md:text-7xl drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] transition-all duration-300">
+                EB-5
               </h1>
-              <p
-                className="mb-8 max-w-lg text-lg text-white 
-                drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] transition-all duration-300
-                text-right ml-auto"
-              >
+              <p className="mb-8 max-w-lg text-lg text-white/90 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] transition-all duration-300">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <div className="flex justify-end">
-                <Button
-                  className="px-8 py-6 text-base border-2 border-white 
+              <Button
+                className="px-8 py-6 text-base border-2 border-white 
                     bg-transparent text-white 
                     hover:bg-white/10 hover:backdrop-blur-sm hover:text-white
                     transition-all duration-300 
                     shadow-lg"
-                  variant="outline"
-                >
-                  免费评估
-                </Button>
-              </div>
+                variant="outline"
+              >
+                免费评估
+              </Button>
             </div>
           </div>
         </div>
@@ -119,6 +109,6 @@ export default function HomePage() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: '首页 | 美域佳华',
+    title: '投资移民 (EB-5) | 美域佳华',
   }
 }

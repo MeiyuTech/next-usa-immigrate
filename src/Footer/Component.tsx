@@ -44,7 +44,7 @@ export async function Footer() {
                   // className={clsx('max-w-[15rem] w-full h-[34px]', className)}
                   className={clsx('max-w-[15rem]')}
                 />
-                <span className="text-3xl font-medium">美域佳华</span>
+                <span className="text-3xl font-medium w-[120px]">美域佳华</span>
               </div>
             </Link>
             <p className="text-sm text-white/70">
