@@ -80,70 +80,18 @@ export default function HomePage() {
         <br />
       </div> */}
 
-      {/* Company Introduction Section */}
-      <section className="bg-background py-24">
-        <div className="container mx-auto px-4">
-          {/* First Row */}
-          <div className="flex flex-col md:flex-row items-center gap-12 mb-24">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">专业的移民顾问服务</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-            <div className="w-full md:w-1/2">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
-                <Image
-                  src="/office-changzhou.jpg"
-                  alt="Office in Changzhou"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Second Row */}
-          <div className="flex flex-col md:flex-row-reverse items-center gap-12">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">全方位的定制申请方案</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div className="w-full md:w-1/2">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
-                <Image
-                  src="/office-irvine.jpg"
-                  alt="Office in Irvine"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Immigration Pathways Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-4">多元化移民方案</h2>
           <p className="text-lg text-center mb-16 max-w-3xl mx-auto">
             我们深知每位客户的背景与需求各不相同，因此，美域佳华提供多元化、个性化的移民方案，
-            <br />
             确保您的移民之旅顺畅无忧，实现事业发展与家庭幸福双丰收。
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* L1/EB-1C Card */}
-            <Card className="hover:shadow-xl transition-shadow">
+            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
               <CardHeader>
                 <CardTitle className="text-[#d4b675]">L1/EB-1C 高管移民</CardTitle>
                 <CardDescription>适合人群：跨国企业高管或创业者</CardDescription>
@@ -162,7 +110,7 @@ export default function HomePage() {
             </Card>
 
             {/* EB-5 Card */}
-            <Card className="hover:shadow-xl transition-shadow">
+            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
               <CardHeader>
                 <CardTitle className="text-[#d4b675]">EB-5 投资移民</CardTitle>
                 <CardDescription>适合人群：具备合法资金，寻求稳定投资机会的投资者</CardDescription>
@@ -181,7 +129,7 @@ export default function HomePage() {
             </Card>
 
             {/* EB-2/3 Card */}
-            <Card className="hover:shadow-xl transition-shadow">
+            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
               <CardHeader>
                 <CardTitle className="text-[#d4b675]">EB-2/3 雇主担保移民</CardTitle>
                 <CardDescription>适合人群：本科及以上学历人才</CardDescription>
@@ -198,6 +146,137 @@ export default function HomePage() {
                 <p className="text-[#d4b675] font-medium">以才华立足美国，事业家庭两不误</p>
               </CardFooter>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Investment Projects Section */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-4">多领域投资项目</h2>
+          <p className="text-lg text-center mb-16 max-w-3xl mx-auto">
+            美域佳华不仅专注于移民服务，更致力于为客户提供涵盖投资、商业运营和教育等多维度的项目支持。
+            无论您处于事业初创期、扩展期，或是希望为家人提供更优质的教育与生活条件，我们都能为您匹配合适的项目，
+            助力您和家人的长远发展。
+          </p>
+
+          {/* Business Investment Projects */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold mb-8 text-center">商业投资项目</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <span>🚚</span>
+                    <span>联邦快递独立投资项目</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <h4 className="font-semibold mb-2">项目亮点：</h4>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                    <li>加入全球物流巨头网络，业务覆盖全球220多个国家和地区</li>
+                    <li>参与FedEx独立承运商模式，投资回报稳定</li>
+                    <li>灵活的商业模式，适合追求长期收益的投资者</li>
+                  </ul>
+                  <p className="text-[#d4b675] font-medium">
+                    与全球物流巨头并肩，构建可持续收益体系
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <span>🥗</span>
+                    <span>高级素食餐厅投资项目</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <h4 className="font-semibold mb-2">项目亮点：</h4>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                    <li>依托团队20年餐饮经验，打造高端素食品牌</li>
+                    <li>总店位于加州橙县，分店位于洛杉矶好莱坞，市场潜力巨大</li>
+                    <li>符合当下健康饮食趋势，稳健回报与品牌溢价并存</li>
+                  </ul>
+                  <p className="text-[#d4b675] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Real Estate Projects */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold mb-8 text-center">教育与不动产投资项目</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <span>🏙️</span>
+                    <span>加州大学河滨分校公寓项目</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <h4 className="font-semibold mb-2">项目亮点：</h4>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                    <li>位于60号和91号高速交汇处，地理位置优越，紧邻安大略机场</li>
+                    <li>项目获得河滨县政府推荐信，配套设施成熟，适合学生和家庭居住</li>
+                    <li>随着洛杉矶发展东移，该区域成为潜力股，未来增值空间大</li>
+                  </ul>
+                  <p className="text-[#d4b675] font-medium">投资教育与未来，坐享优质房产升值空间</p>
+                </CardContent>
+              </Card>
+
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <span>🏗️</span>
+                    <span>福克斯物业开发项目</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <h4 className="font-semibold mb-2">项目亮点：</h4>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                    <li>位于南加州圣贝纳迪诺市中心，城市核心区域发展迅速</li>
+                    <li>距洛杉矶市中心仅一小时车程，辐射范围广泛</li>
+                    <li>投资成本低至80万美元（TEA区域），市场估值高达1500-2000万美元</li>
+                  </ul>
+                  <p className="text-[#d4b675] font-medium">坐拥黄金地段，为未来储备优质资产</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Why Choose Us */}
+          <div className="bg-muted/50 rounded-lg p-8">
+            <h3 className="text-2xl font-bold mb-6 text-center">为什么选择这些项目？</h3>
+            <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <div className="text-center">
+                <p className="text-4xl mb-4">🌟</p>
+                <h4 className="font-semibold mb-2">安全稳健</h4>
+                <p className="text-muted-foreground">项目筛选严谨，风险可控，投资回报透明可期</p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl mb-4">🤝</p>
+                <h4 className="font-semibold mb-2">全程协助</h4>
+                <p className="text-muted-foreground">
+                  提供从项目选择、实地考察到后续运营的全方位服务
+                </p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl mb-4">🌐</p>
+                <h4 className="font-semibold mb-2">多领域覆盖</h4>
+                <p className="text-muted-foreground">满足事业投资、资产配置、教育保障等多种需求</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button
+              className="px-8 py-6 text-base bg-[#d4b675] hover:bg-[#c4a665] text-white"
+              size="lg"
+            >
+              了解更多投资项目，开启成功之路
+            </Button>
           </div>
         </div>
       </section>
