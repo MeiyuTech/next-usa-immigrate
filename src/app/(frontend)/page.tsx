@@ -162,87 +162,103 @@ export default function HomePage() {
 
           {/* Business Investment Projects */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">商业投资项目</h3>
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <span>🚚</span>
-                    <span>联邦快递独立投资项目</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <h4 className="font-semibold mb-2">项目亮点：</h4>
-                  <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                    <li>加入全球物流巨头网络，业务覆盖全球220多个国家和地区</li>
-                    <li>参与FedEx独立承运商模式，投资回报稳定</li>
-                    <li>灵活的商业模式，适合追求长期收益的投资者</li>
-                  </ul>
-                  <p className="text-[#d4b675] font-medium">
-                    与全球物流巨头并肩，构建可持续收益体系
-                  </p>
-                </CardContent>
-              </Card>
+              {/* Local Logistics Card */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">本地物流</h3>
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <CardHeader>
+                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                      <span>🚚</span>
+                      <span>联邦快递独立投资项目</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="font-semibold mb-2">项目亮点：</h4>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                      <li>加入全球物流巨头网络，业务覆盖全球220多个国家和地区</li>
+                      <li>参与FedEx独立承运商模式，投资回报稳定</li>
+                      <li>灵活的商业模式，适合追求长期收益的投资者</li>
+                    </ul>
+                    <p className="text-[#d4b675] font-medium">
+                      与全球物流巨头并肩，构建可持续收益体系
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
 
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <span>🥗</span>
-                    <span>高级素食餐厅投资项目</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <h4 className="font-semibold mb-2">项目亮点：</h4>
-                  <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                    <li>依托团队20年餐饮经验，打造高端素食品牌</li>
-                    <li>总店位于加州橙县，分店位于洛杉矶好莱坞，市场潜力巨大</li>
-                    <li>符合当下健康饮食趋势，稳健回报与品牌溢价并存</li>
-                  </ul>
-                  <p className="text-[#d4b675] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
-                </CardContent>
-              </Card>
+              {/* Health Food Card */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">健康餐饮</h3>
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <CardHeader>
+                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                      <span>🥗</span>
+                      <span>高级素食餐厅投资项目</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="font-semibold mb-2">项目亮点：</h4>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                      <li>依托团队20年餐饮经验，打造高端素食品牌</li>
+                      <li>总店位于加州橙县，分店位于洛杉矶好莱坞，市场潜力巨大</li>
+                      <li>符合当下健康饮食趋势，稳健回报与品牌溢价并存</li>
+                    </ul>
+                    <p className="text-[#d4b675] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
 
           {/* Real Estate Projects */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">教育与不动产投资项目</h3>
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <span>🏙️</span>
-                    <span>加州大学河滨分校公寓项目</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <h4 className="font-semibold mb-2">项目亮点：</h4>
-                  <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                    <li>位于60号和91号高速交汇处，地理位置优越，紧邻安大略机场</li>
-                    <li>项目获得河滨县政府推荐信，配套设施成熟，适合学生和家庭居住</li>
-                    <li>随着洛杉矶发展东移，该区域成为潜力股，未来增值空间大</li>
-                  </ul>
-                  <p className="text-[#d4b675] font-medium">投资教育与未来，坐享优质房产升值空间</p>
-                </CardContent>
-              </Card>
+              {/* Student Housing Card */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">学生公寓</h3>
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <CardHeader>
+                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                      <span>🏙️</span>
+                      <span>加州大学河滨分校公寓项目</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="font-semibold mb-2">项目亮点：</h4>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                      <li>位于60号和91号高速交汇处，地理位置优越，紧邻安大略机场</li>
+                      <li>项目获得河滨县政府推荐信，配套设施成熟，适合学生和家庭居住</li>
+                      <li>随着洛杉矶发展东移，该区域成为潜力股，未来增值空间大</li>
+                    </ul>
+                    <p className="text-[#d4b675] font-medium">
+                      投资教育与未来，坐享优质房产升值空间
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
 
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <span>🏗️</span>
-                    <span>福克斯物业开发项目</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <h4 className="font-semibold mb-2">项目亮点：</h4>
-                  <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                    <li>位于南加州圣贝纳迪诺市中心，城市核心区域发展迅速</li>
-                    <li>距洛杉矶市中心仅一小时车程，辐射范围广泛</li>
-                    <li>投资成本低至80万美元（TEA区域），市场估值高达1500-2000万美元</li>
-                  </ul>
-                  <p className="text-[#d4b675] font-medium">坐拥黄金地段，为未来储备优质资产</p>
-                </CardContent>
-              </Card>
+              {/* Early Education Card */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">学前教育</h3>
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <CardHeader>
+                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                      <span>🎨</span>
+                      <span>橙县艺术幼儿园投资项目</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="font-semibold mb-2">项目亮点：</h4>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                      <li>位于洛杉矶橙县核心地段，毗邻全美顶尖教育资源</li>
+                      <li>创造19个就业机会，符合EB-5投资移民要求</li>
+                      <li>前期投入120万美元，年利润估算高达324万美元</li>
+                    </ul>
+                    <p className="text-[#d4b675] font-medium">深耕优质教育市场，抢占高端幼教蓝海</p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
 
