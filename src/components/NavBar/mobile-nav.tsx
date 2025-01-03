@@ -125,13 +125,13 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
                         家庭移民
                       </Button>
                       <Button variant="ghost" className="justify-start px-0">
-                        学生签证 （F-1）
+                        <Link href="/posts/f-1">学生签证 （F-1）</Link>
                       </Button>
                       <Button variant="ghost" className="justify-start px-0">
-                        访问学者 （J-1）
+                        <Link href="/posts/j-1">访问学者 （J-1）</Link>
                       </Button>
                       <Button variant="ghost" className="justify-start px-0">
-                        工作签证 （H-1B）
+                        <Link href="/posts/h-1b">工作签证 （H-1B）</Link>
                       </Button>
                     </div>
                   </div>
