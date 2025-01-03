@@ -1,7 +1,24 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { AnimatedTitle } from '@/components/AnimatedTitle'
+// import { AnimatedTitle } from '@/components/AnimatedTitle'
+import Link from 'next/link'
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from '@/components/ui/card'
 
 export default function HomePage() {
   return (
@@ -27,14 +44,16 @@ export default function HomePage() {
                 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] transition-all duration-300
                 text-right"
               >
-                Lorem ipsum <br /> dolor sit
+                开启您的美国梦之旅
               </h1>
               <p
                 className="mb-8 max-w-lg text-lg text-white 
                 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] transition-all duration-300
-                text-right ml-auto"
+                text-left ml-auto"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                🌟 量身定制移民路径，助您实现家庭与事业双赢 <br />
+                🏙️ 覆盖投资、商业、教育多领域，满足不同阶段需求 <br />
+                🌐 中美多地团队协作，提供一站式全链路服务
               </p>
               <div className="flex justify-end">
                 <Button
@@ -54,63 +73,365 @@ export default function HomePage() {
       </main>
 
       {/* Animated Title Section */}
-      <AnimatedTitle />
+      {/* <AnimatedTitle />
       <div className="hidden md:block">
         <br />
         <br />
         <br />
         <br />
         <br />
-      </div>
+      </div> */}
 
-      {/* Company Introduction Section */}
-      <section className="bg-background py-24">
+      {/* Immigration Pathways Section */}
+      <section className="py-24">
         <div className="container mx-auto px-4">
-          {/* First Row */}
-          <div className="flex flex-col md:flex-row items-center gap-12 mb-24">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">专业的移民顾问服务</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-            <div className="w-full md:w-1/2">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+          <h2 className="text-4xl font-bold text-center mb-4">多元化移民方案</h2>
+          <p className="text-lg text-center mb-16 max-w-3xl mx-auto">
+            我们深知每位客户的背景与需求各不相同，因此，美域佳华提供多元化、个性化的移民方案，
+            确保您的移民之旅顺畅无忧，实现事业发展与家庭幸福双丰收。
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* L1/EB-1C Card */}
+            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+              <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                <Image src="/eb-1c-l-1.jpg" alt="L1/EB-1C 高管移民" fill className="object-cover" />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-[#d4b675]">L1/EB-1C 高管移民</CardTitle>
+                <CardDescription>适合人群：跨国企业高管或创业者</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <h4 className="font-semibold mb-2">亮点：</h4>
+                <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                  <li>无排期、无抽签，一步到位绿卡</li>
+                  <li>适用于有三年以上经营历史的企业</li>
+                  <li>配偶合法工作，子女享公立教育</li>
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <p className="text-[#d4b675] font-medium">快速通道，开启全球事业版图</p>
+              </CardFooter>
+            </Card>
+
+            {/* EB-5 Card */}
+            <Link href="/eb-5">
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                  <Image
+                    src="/eb-5-investment.jpg"
+                    alt="EB-5 投资移民"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-[#d4b675]">EB-5 投资移民</CardTitle>
+                  <CardDescription>
+                    适合人群：具备合法资金，寻求稳定投资机会的投资者
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <h4 className="font-semibold mb-2">亮点：</h4>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                    <li>低风险投资，稳健回报</li>
+                    <li>无需学历、语言要求</li>
+                    <li>带领全家一步到位获得美国身份</li>
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <p className="text-[#d4b675] font-medium">投资未来，搭建家庭稳固桥梁</p>
+                </CardFooter>
+              </Card>
+            </Link>
+            {/* EB-2/3 Card */}
+            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+              <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                 <Image
-                  src="/office-changzhou.jpg"
-                  alt="Office in Changzhou"
+                  src="/eb-2-3-employer-sponsorship.jpg"
+                  alt="EB-2/3 雇主担保移民"
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-[#d4b675]">EB-2/3 雇主担保移民</CardTitle>
+                <CardDescription>适合人群：本科及以上学历人才</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <h4 className="font-semibold mb-2">亮点：</h4>
+                <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                  <li>H1B抽签可跳过排期，快速获批</li>
+                  <li>适合各类技术、管理和专业人才</li>
+                  <li>低成本，高性价比移民途径</li>
+                </ul>
+              </CardContent>
+              <CardFooter>
+                <p className="text-[#d4b675] font-medium">以才华立足美国，事业家庭两不误</p>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Investment Projects Section */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-4">多领域投资项目</h2>
+          <p className="text-lg text-center mb-16 max-w-3xl mx-auto">
+            美域佳华不仅专注于移民服务，更致力于为客户提供涵盖投资、商业运营和教育等多维度的项目支持。
+            无论您处于事业初创期、扩展期，或是希望为家人提供更优质的教育与生活条件，我们都能为您匹配合适的项目，
+            助力您和家人的长远发展。
+          </p>
+
+          {/* Business Investment Projects */}
+          <div className="mb-16">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Local Logistics Card */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">本地物流</h3>
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                    <Image
+                      src="/fedex.png"
+                      alt="fedex"
+                      fill
+                      className="object-cover object-[center_25px]"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                      <span>🚚</span>
+                      <span>联邦快递独立投资项目</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="font-semibold mb-2">项目亮点：</h4>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                      <li>加入全球物流巨头网络，业务覆盖全球220多个国家和地区</li>
+                      <li>参与FedEx独立承运商模式，投资回报稳定</li>
+                      <li>灵活的商业模式，适合追求长期收益的投资者</li>
+                    </ul>
+                    <p className="text-[#d4b675] font-medium">
+                      与全球物流巨头并肩，构建可持续收益体系
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Health Food Card */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">健康餐饮</h3>
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                    <Image
+                      src="/taste-of-beauty.jpg"
+                      alt="taste-of-beauty"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                      <span>🥗</span>
+                      <span>高级素食餐厅投资项目</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="font-semibold mb-2">项目亮点：</h4>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                      <li>依托团队20年餐饮经验，打造高端素食品牌</li>
+                      <li>总店位于加州橙县，分店位于洛杉矶好莱坞，市场潜力巨大</li>
+                      <li>符合当下健康饮食趋势，稳健回报与品牌溢价并存</li>
+                    </ul>
+                    <p className="text-[#d4b675] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
 
-          {/* Second Row */}
-          <div className="flex flex-col md:flex-row-reverse items-center gap-12">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">全方位的定制申请方案</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-            <div className="w-full md:w-1/2">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
-                <Image
-                  src="/office-irvine.jpg"
-                  alt="Office in Irvine"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
+          {/* Real Estate Projects */}
+          <div className="mb-16">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Student Housing Card */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">学生公寓</h3>
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                    <Image
+                      src="/uc-student-housing.jpg"
+                      alt="uc-student-housing"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                      <span>🏠</span>
+                      <span>加州大学河滨分校公寓项目</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="font-semibold mb-2">项目亮点：</h4>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                      <li>位于60号和91号高速交汇处，地理位置优越，紧邻安大略机场</li>
+                      <li>项目获得河滨县政府推荐信，配套设施成熟，适合学生和家庭居住</li>
+                      <li>随着洛杉矶发展东移，该区域成为潜力股，未来增值空间大</li>
+                    </ul>
+                    <p className="text-[#d4b675] font-medium">
+                      投资教育与未来，坐享优质房产升值空间
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Early Education Card */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">学前教育</h3>
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                    <Image
+                      src="/orange-county-kindergarten.png"
+                      alt="orange-county-kindergarten"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                      <span>🎨</span>
+                      <span>橙县艺术幼儿园投资项目</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="font-semibold mb-2">项目亮点：</h4>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                      <li>位于洛杉矶橙县核心地段，毗邻全美顶尖教育资源</li>
+                      <li>创造19个就业机会，符合EB-5投资移民要求</li>
+                      <li>前期投入120万美元，年利润估算高达324万美元</li>
+                    </ul>
+                    <p className="text-[#d4b675] font-medium">深耕优质教育市场，抢占高端幼教蓝海</p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
+
+          {/* Why Choose Us */}
+          <div className="bg-muted/50 rounded-lg p-8">
+            <h3 className="text-2xl font-bold mb-6 text-center">为什么选择这些项目？</h3>
+            <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <div className="text-center">
+                <p className="text-4xl mb-4">🌟</p>
+                <h4 className="font-semibold mb-2">安全稳健</h4>
+                <p className="text-muted-foreground">项目筛选严谨，风险可控，投资回报透明可期</p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl mb-4">🤝</p>
+                <h4 className="font-semibold mb-2">全程协助</h4>
+                <p className="text-muted-foreground">
+                  提供从项目选择、实地考察到后续运营的全方位服务
+                </p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl mb-4">🌐</p>
+                <h4 className="font-semibold mb-2">多领域覆盖</h4>
+                <p className="text-muted-foreground">满足事业投资、资产配置、教育保障等多种需求</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button
+              className="px-8 py-6 text-base bg-[#d4b675] hover:bg-[#c4a665] text-white"
+              size="lg"
+            >
+              了解更多投资项目，开启成功之路
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Global Network Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-4">中美多地团队协作</h2>
+          <h3 className="text-2xl text-center mb-4">一站式的全链路服务</h3>
+          <p className="text-lg text-center mb-16">北京/成都/常州 - 旧金山/洛杉矶/波士顿/迈阿密</p>
+          {/* World Map */}
+          <div className="relative w-full aspect-[2/1] mb-16">
+            <Image
+              src="/AmCan-global-network.jpeg"
+              alt="Meiyu Global Network"
+              fill
+              className="object-contain"
+            />
+          </div>
+          {/* Office Locations Carousel */}
+          <Carousel
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {[
+                {
+                  src: '/office-beijing.jpg',
+                  alt: 'Office Beijing',
+                  title: '中国-北京办公室',
+                },
+                {
+                  src: '/office-irvine.jpg',
+                  alt: 'Office Invine',
+                  title: '美国-洛杉矶办公室',
+                },
+                {
+                  src: '/office-sf.jpg',
+                  alt: 'Office San Francisco',
+                  title: '美国-旧金山办公室',
+                },
+                {
+                  src: '/office-miami.jpg',
+                  alt: 'Office Miami',
+                  title: '美国-迈阿密办公室',
+                },
+                {
+                  src: '/office-boston.jpg',
+                  alt: 'Office Boston',
+                  title: '美国-波士顿办公室',
+                },
+                {
+                  src: '/office-chengdu.jpg',
+                  alt: 'Office Chengdu',
+                  title: '中国-成都办公室',
+                },
+                {
+                  src: '/office-changzhou.jpg',
+                  alt: 'Office Changzhou',
+                  title: '中国-常州办公室',
+                },
+              ].map((office, index) => (
+                <CarouselItem key={index} className="pl-4 md:basis-1/3">
+                  <div className="relative aspect-video rounded-lg overflow-hidden group">
+                    <Image
+                      src={office.src}
+                      alt={office.alt}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-[#d4b675] py-2 px-4">
+                      <p className="text-center text-white">{office.title}</p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
       </section>
     </>
