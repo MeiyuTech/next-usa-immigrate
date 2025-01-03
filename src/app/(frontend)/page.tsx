@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 // import { AnimatedTitle } from '@/components/AnimatedTitle'
+import Link from 'next/link'
+
 import {
   Carousel,
   CarouselContent,
@@ -92,6 +94,9 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* L1/EB-1C Card */}
             <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+              <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                <Image src="/eb-1c-l-1.jpg" alt="L1/EB-1C 高管移民" fill className="object-cover" />
+              </div>
               <CardHeader>
                 <CardTitle className="text-[#d4b675]">L1/EB-1C 高管移民</CardTitle>
                 <CardDescription>适合人群：跨国企业高管或创业者</CardDescription>
@@ -110,26 +115,45 @@ export default function HomePage() {
             </Card>
 
             {/* EB-5 Card */}
-            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
-              <CardHeader>
-                <CardTitle className="text-[#d4b675]">EB-5 投资移民</CardTitle>
-                <CardDescription>适合人群：具备合法资金，寻求稳定投资机会的投资者</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <h4 className="font-semibold mb-2">亮点：</h4>
-                <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                  <li>低风险投资，稳健回报</li>
-                  <li>无需学历、语言要求</li>
-                  <li>带领全家一步到位获得美国身份</li>
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <p className="text-[#d4b675] font-medium">投资未来，搭建家庭稳固桥梁</p>
-              </CardFooter>
-            </Card>
-
+            <Link href="/eb-5">
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                  <Image
+                    src="/eb-5-investment.jpg"
+                    alt="EB-5 投资移民"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-[#d4b675]">EB-5 投资移民</CardTitle>
+                  <CardDescription>
+                    适合人群：具备合法资金，寻求稳定投资机会的投资者
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <h4 className="font-semibold mb-2">亮点：</h4>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                    <li>低风险投资，稳健回报</li>
+                    <li>无需学历、语言要求</li>
+                    <li>带领全家一步到位获得美国身份</li>
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <p className="text-[#d4b675] font-medium">投资未来，搭建家庭稳固桥梁</p>
+                </CardFooter>
+              </Card>
+            </Link>
             {/* EB-2/3 Card */}
             <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+              <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                <Image
+                  src="/eb-2-3-employer-sponsorship.jpg"
+                  alt="EB-2/3 雇主担保移民"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <CardHeader>
                 <CardTitle className="text-[#d4b675]">EB-2/3 雇主担保移民</CardTitle>
                 <CardDescription>适合人群：本科及以上学历人才</CardDescription>
@@ -167,6 +191,14 @@ export default function HomePage() {
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">本地物流</h3>
                 <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                    <Image
+                      src="/fedex.png"
+                      alt="fedex"
+                      fill
+                      className="object-cover object-[center_25px]"
+                    />
+                  </div>
                   <CardHeader>
                     <CardTitle className="text-[#d4b675] flex items-center gap-2">
                       <span>🚚</span>
@@ -191,6 +223,14 @@ export default function HomePage() {
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">健康餐饮</h3>
                 <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                    <Image
+                      src="/taste-of-beauty.jpg"
+                      alt="taste-of-beauty"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <CardHeader>
                     <CardTitle className="text-[#d4b675] flex items-center gap-2">
                       <span>🥗</span>
@@ -218,9 +258,17 @@ export default function HomePage() {
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">学生公寓</h3>
                 <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                    <Image
+                      src="/uc-student-housing.jpg"
+                      alt="uc-student-housing"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <CardHeader>
                     <CardTitle className="text-[#d4b675] flex items-center gap-2">
-                      <span>🏙️</span>
+                      <span>🏠</span>
                       <span>加州大学河滨分校公寓项目</span>
                     </CardTitle>
                   </CardHeader>
@@ -242,6 +290,14 @@ export default function HomePage() {
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">学前教育</h3>
                 <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                    <Image
+                      src="/orange-county-kindergarten.png"
+                      alt="orange-county-kindergarten"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <CardHeader>
                     <CardTitle className="text-[#d4b675] flex items-center gap-2">
                       <span>🎨</span>
