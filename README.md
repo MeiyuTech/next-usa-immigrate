@@ -10,6 +10,8 @@
 - [x] 提供的图片没有背景，在黑色主题下文字看不清！！！ 和王艳沟通，让 潘总 zhangfeng 帮忙改 (changed the ImageMedia ‘style’, )
 - [ ] Need a better method to change the bg of ImageMedia programmatically
 - [ ] Homepage 我希望图片都能占满整个屏幕的宽度（留白部分写文字），目前的图片尺寸太小了不好看。
+- [ ] EB-5 更高质量的视频
+- [ ] 改一下排班
 
 # i18n and localization
 

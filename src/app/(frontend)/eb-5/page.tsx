@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function EB5Page() {
   return (
@@ -49,15 +50,145 @@ export default function EB5Page() {
         </div>
       </main>
 
-      {/* Animated Title Section */}
-      {/* <AnimatedTitle /> */}
-      <div className="hidden md:block">
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-      </div>
+      {/* EB-5 Introduction Section */}
+      <section className="py-24 bg-gradient-to-b from-background to-muted/30">
+        <div className="container mx-auto px-4">
+          {/* EB-5 Introduction */}
+          <div className="max-w-6xl mx-auto mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">EB-5 项目简介</h2>
+            <p className="text-lg text-center mb-16 max-w-3xl mx-auto">
+              EB-5
+              是美国政府推出的投资移民项目，旨在通过外资促进美国经济增长并创造就业机会。投资者在满足规定的投资金额和创造就业条件后，可申请获得美国永久居留权（绿卡）。
+            </p>
+          </div>
+
+          {/* AmCan Advantages */}
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">美域佳华的优势</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Advantage 1 */}
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <CardHeader className="text-center">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
+                    <svg
+                      className="w-6 h-6 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <CardTitle className="text-xl mb-2">双轨并行</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-center">
+                    美域佳华提供 EB-5 <span className="text-[#d4b675]">独立投资项目</span> 和
+                    <span className="text-[#d4b675]">区域中心投资项目</span>{' '}
+                    的双重选择，满足不同投资人的需求。
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Advantage 2 */}
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <CardHeader className="text-center">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
+                    <svg
+                      className="w-6 h-6 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
+                    </svg>
+                  </div>
+                  <CardTitle className="text-xl mb-2">跨项策略</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-center">
+                    美域佳华独有的 <span className="text-[#d4b675]">EB-5</span> 与
+                    <span className="text-[#d4b675]">L1/EB-1C</span> 跨国高管移民结合策略，100
+                    万美元投资可为 2-3 位投资者同步办理绿卡，一举多得。
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Advantage 3 */}
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <CardHeader className="text-center">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
+                    <svg
+                      className="w-6 h-6 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <CardTitle className="text-xl mb-2">中美联动</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-center">
+                    美域佳华在北美和中国大陆均设有办公室，可以为EB-5投资人提供{' '}
+                    <span className="text-[#d4b675]">中美两岸全链路服务</span>
+                    ，包括项目选择、投资、移民、税务规划、子女教育、生活规划等。
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Add Project Showcase Section */}
+      <section className="relative min-h-screen">
+        {/* Video Background */}
+        {/* TODO: find a high quality video */}
+        <div className="absolute inset-0 z-0">
+          <video autoPlay loop muted playsInline className="object-cover w-full h-full">
+            <source src="/videos/fedex-intro.mp4" type="video/mp4" />
+          </video>
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 py-24">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">北美最具影响力的 EB-5 项目公司</h2>
+            <h3 className="text-2xl md:text-3xl mb-8">Fedex 项目 | 第一顺位 | 无排期</h3>
+            <p className="text-lg md:text-xl mb-6">无排期南加州联邦项目全球首发</p>
+            <p className="text-lg md:text-xl mb-12">526E 获批担保/项目完工担保</p>
+            <Button
+              className="px-8 py-6 text-base border-2 border-white 
+                bg-transparent text-white 
+                hover:bg-white/10 hover:backdrop-blur-sm hover:text-white
+                transition-all duration-300 
+                shadow-lg"
+              variant="outline"
+            >
+              查看我们的EB-5项目
+            </Button>
+          </div>
+        </div>
+      </section>
 
       {/* Company Introduction Section */}
       <section className="bg-background py-24">
