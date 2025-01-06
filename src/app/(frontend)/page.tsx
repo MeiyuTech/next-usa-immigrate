@@ -93,12 +93,12 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* L1/EB-1C Card */}
-            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
               <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                 <Image src="/eb-1c-l-1.jpg" alt="L1/EB-1C 高管移民" fill className="object-cover" />
               </div>
               <CardHeader>
-                <CardTitle className="text-[#d4b675]">L1/EB-1C 高管移民</CardTitle>
+                <CardTitle className="text-[#008080]">L1/EB-1C 高管移民</CardTitle>
                 <CardDescription>适合人群：跨国企业高管或创业者</CardDescription>
               </CardHeader>
               <CardContent>
@@ -110,13 +110,13 @@ export default function HomePage() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <p className="text-[#d4b675] font-medium">快速通道，开启全球事业版图</p>
+                <p className="text-[#008080] font-medium">快速通道，开启全球事业版图</p>
               </CardFooter>
             </Card>
 
             {/* EB-5 Card */}
             <Link href="/eb-5">
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                   <Image
                     src="/eb-5-investment.jpg"
@@ -126,7 +126,7 @@ export default function HomePage() {
                   />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-[#d4b675]">EB-5 投资移民</CardTitle>
+                  <CardTitle className="text-[#008080]">EB-5 投资移民</CardTitle>
                   <CardDescription>
                     适合人群：具备合法资金，寻求稳定投资机会的投资者
                   </CardDescription>
@@ -140,12 +140,12 @@ export default function HomePage() {
                   </ul>
                 </CardContent>
                 <CardFooter>
-                  <p className="text-[#d4b675] font-medium">投资未来，搭建家庭稳固桥梁</p>
+                  <p className="text-[#008080] font-medium">投资未来，搭建家庭稳固桥梁</p>
                 </CardFooter>
               </Card>
             </Link>
             {/* EB-2/3 Card */}
-            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
               <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                 <Image
                   src="/eb-2-3-employer-sponsorship.jpg"
@@ -155,7 +155,7 @@ export default function HomePage() {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-[#d4b675]">EB-2/3 雇主担保移民</CardTitle>
+                <CardTitle className="text-[#008080]">EB-2/3 雇主担保移民</CardTitle>
                 <CardDescription>适合人群：本科及以上学历人才</CardDescription>
               </CardHeader>
               <CardContent>
@@ -167,7 +167,7 @@ export default function HomePage() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <p className="text-[#d4b675] font-medium">以才华立足美国，事业家庭两不误</p>
+                <p className="text-[#008080] font-medium">以才华立足美国，事业家庭两不误</p>
               </CardFooter>
             </Card>
           </div>
@@ -190,7 +190,7 @@ export default function HomePage() {
               {/* Local Logistics Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">本地物流</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/fedex.png"
@@ -200,7 +200,7 @@ export default function HomePage() {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                    <CardTitle className="text-[#008080] flex items-center gap-2">
                       <span>🚚</span>
                       <span>联邦快递独立投资项目</span>
                     </CardTitle>
@@ -212,7 +212,7 @@ export default function HomePage() {
                       <li>参与FedEx独立承运商模式，投资回报稳定</li>
                       <li>灵活的商业模式，适合追求长期收益的投资者</li>
                     </ul>
-                    <p className="text-[#d4b675] font-medium">
+                    <p className="text-[#008080] font-medium">
                       与全球物流巨头并肩，构建可持续收益体系
                     </p>
                   </CardContent>
@@ -222,7 +222,7 @@ export default function HomePage() {
               {/* Health Food Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">健康餐饮</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/taste-of-beauty.jpg"
@@ -232,7 +232,7 @@ export default function HomePage() {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                    <CardTitle className="text-[#008080] flex items-center gap-2">
                       <span>🥗</span>
                       <span>高级素食餐厅投资项目</span>
                     </CardTitle>
@@ -244,7 +244,7 @@ export default function HomePage() {
                       <li>总店位于加州橙县，分店位于洛杉矶好莱坞，市场潜力巨大</li>
                       <li>符合当下健康饮食趋势，稳健回报与品牌溢价并存</li>
                     </ul>
-                    <p className="text-[#d4b675] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
+                    <p className="text-[#008080] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
                   </CardContent>
                 </Card>
               </div>
@@ -257,7 +257,7 @@ export default function HomePage() {
               {/* Student Housing Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">学生公寓</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/uc-student-housing.jpg"
@@ -267,7 +267,7 @@ export default function HomePage() {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                    <CardTitle className="text-[#008080] flex items-center gap-2">
                       <span>🏠</span>
                       <span>加州大学河滨分校公寓项目</span>
                     </CardTitle>
@@ -279,7 +279,7 @@ export default function HomePage() {
                       <li>项目获得河滨县政府推荐信，配套设施成熟，适合学生和家庭居住</li>
                       <li>随着洛杉矶发展东移，该区域成为潜力股，未来增值空间大</li>
                     </ul>
-                    <p className="text-[#d4b675] font-medium">
+                    <p className="text-[#008080] font-medium">
                       投资教育与未来，坐享优质房产升值空间
                     </p>
                   </CardContent>
@@ -289,7 +289,7 @@ export default function HomePage() {
               {/* Early Education Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">学前教育</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/orange-county-kindergarten.png"
@@ -299,7 +299,7 @@ export default function HomePage() {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                    <CardTitle className="text-[#008080] flex items-center gap-2">
                       <span>🎨</span>
                       <span>橙县艺术幼儿园投资项目</span>
                     </CardTitle>
@@ -311,40 +311,16 @@ export default function HomePage() {
                       <li>创造19个就业机会，符合EB-5投资移民要求</li>
                       <li>前期投入120万美元，年利润估算高达324万美元</li>
                     </ul>
-                    <p className="text-[#d4b675] font-medium">深耕优质教育市场，抢占高端幼教蓝海</p>
+                    <p className="text-[#008080] font-medium">深耕优质教育市场，抢占高端幼教蓝海</p>
                   </CardContent>
                 </Card>
               </div>
             </div>
           </div>
 
-          {/* Why Choose Us */}
-          <div className="bg-muted/50 rounded-lg p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">为什么选择这些项目？</h3>
-            <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="text-center">
-                <p className="text-4xl mb-4">🌟</p>
-                <h4 className="font-semibold mb-2">安全稳健</h4>
-                <p className="text-muted-foreground">项目筛选严谨，风险可控，投资回报透明可期</p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl mb-4">🤝</p>
-                <h4 className="font-semibold mb-2">全程协助</h4>
-                <p className="text-muted-foreground">
-                  提供从项目选择、实地考察到后续运营的全方位服务
-                </p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl mb-4">🌐</p>
-                <h4 className="font-semibold mb-2">多领域覆盖</h4>
-                <p className="text-muted-foreground">满足事业投资、资产配置、教育保障等多种需求</p>
-              </div>
-            </div>
-          </div>
-
           <div className="text-center mt-12">
             <Button
-              className="px-8 py-6 text-base bg-[#d4b675] hover:bg-[#c4a665] text-white"
+              className="px-8 py-6 text-base bg-[#008080] hover:bg-[#008080] text-white"
               size="lg"
             >
               了解更多投资项目，开启成功之路
@@ -356,8 +332,8 @@ export default function HomePage() {
       {/* Global Network Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4">中美多地团队协作</h2>
-          <h3 className="text-2xl text-center mb-4">一站式的全链路服务</h3>
+          <h2 className="text-4xl font-bold text-center mb-4">多时区团队协作</h2>
+          <h3 className="text-2xl text-center mb-4">为您中美两岸一站式的全链路服务</h3>
           <p className="text-lg text-center mb-16">北京/成都/常州 - 旧金山/洛杉矶/波士顿/迈阿密</p>
           {/* World Map */}
           <div className="relative w-full aspect-[2/1] mb-16">
@@ -422,7 +398,7 @@ export default function HomePage() {
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-110"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-[#d4b675] py-2 px-4">
+                    <div className="absolute bottom-0 left-0 right-0 bg-[#008080] py-2 px-4">
                       <p className="text-center text-white">{office.title}</p>
                     </div>
                   </div>
