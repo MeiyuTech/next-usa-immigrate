@@ -217,3 +217,8 @@ This setup ensures:
 - Better connection management
 - Improved stability
 - Automatic connection handling
+
+## Posts can't be published
+
+1. e+1(without S3) works well. Is it because of S3?
+2. seems like it is about localization and Related Posts and Categories?
