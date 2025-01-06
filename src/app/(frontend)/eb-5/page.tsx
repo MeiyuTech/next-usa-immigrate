@@ -77,7 +77,7 @@ export default function EB5Page() {
                   <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
                     {/* Step 1 */}
                     <div className="relative group">
-                      <div className="bg-[#8B0000] text-white p-2 clip-path-triangle mb-4">
+                      <div className="bg-[#008080] text-white p-2 clip-path-triangle mb-4">
                         <span className="font-medium">第一步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
@@ -85,7 +85,7 @@ export default function EB5Page() {
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
-                          className="w-6 h-6 text-[#8B0000]"
+                          className="w-6 h-6 text-[#008080]"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -96,7 +96,7 @@ export default function EB5Page() {
 
                     {/* Step 2 */}
                     <div className="relative group">
-                      <div className="bg-[#8B0000] text-white p-2 clip-path-triangle mb-4">
+                      <div className="bg-[#008080] text-white p-2 clip-path-triangle mb-4">
                         <span className="font-medium">第二步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
@@ -104,7 +104,7 @@ export default function EB5Page() {
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
-                          className="w-6 h-6 text-[#8B0000]"
+                          className="w-6 h-6 text-[#008080]"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -115,7 +115,7 @@ export default function EB5Page() {
 
                     {/* Step 3 */}
                     <div className="relative group">
-                      <div className="bg-[#8B0000] text-white p-2 clip-path-triangle mb-4">
+                      <div className="bg-[#008080] text-white p-2 clip-path-triangle mb-4">
                         <span className="font-medium">第三步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
@@ -123,7 +123,7 @@ export default function EB5Page() {
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
-                          className="w-6 h-6 text-[#8B0000]"
+                          className="w-6 h-6 text-[#008080]"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -134,7 +134,7 @@ export default function EB5Page() {
 
                     {/* Step 4 */}
                     <div className="relative group">
-                      <div className="bg-[#8B0000] text-white p-2 clip-path-triangle mb-4">
+                      <div className="bg-[#008080] text-white p-2 clip-path-triangle mb-4">
                         <span className="font-medium">第四步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
@@ -142,7 +142,7 @@ export default function EB5Page() {
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
-                          className="w-6 h-6 text-[#8B0000]"
+                          className="w-6 h-6 text-[#008080]"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -153,7 +153,7 @@ export default function EB5Page() {
 
                     {/* Step 5 */}
                     <div className="relative group">
-                      <div className="bg-[#8B0000] text-white p-2 clip-path-triangle mb-4">
+                      <div className="bg-[#008080] text-white p-2 clip-path-triangle mb-4">
                         <span className="font-medium">第五步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
@@ -170,7 +170,7 @@ export default function EB5Page() {
                   <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
                     {/* Step 1 */}
                     <div className="relative group">
-                      <div className="bg-[#8B0000] text-white p-2 clip-path-triangle mb-4">
+                      <div className="bg-[#008080] text-white p-2 clip-path-triangle mb-4">
                         <span className="font-medium">第一步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
@@ -178,7 +178,7 @@ export default function EB5Page() {
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
-                          className="w-6 h-6 text-[#8B0000]"
+                          className="w-6 h-6 text-[#008080]"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -189,7 +189,7 @@ export default function EB5Page() {
 
                     {/* Step 2 */}
                     <div className="relative group">
-                      <div className="bg-[#8B0000] text-white p-2 clip-path-triangle mb-4">
+                      <div className="bg-[#008080] text-white p-2 clip-path-triangle mb-4">
                         <span className="font-medium">第二步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
@@ -197,7 +197,7 @@ export default function EB5Page() {
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
-                          className="w-6 h-6 text-[#8B0000]"
+                          className="w-6 h-6 text-[#008080]"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -208,7 +208,7 @@ export default function EB5Page() {
 
                     {/* Step 3 */}
                     <div className="relative group">
-                      <div className="bg-[#8B0000] text-white p-2 clip-path-triangle mb-4">
+                      <div className="bg-[#008080] text-white p-2 clip-path-triangle mb-4">
                         <span className="font-medium">第三步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
@@ -216,7 +216,7 @@ export default function EB5Page() {
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
-                          className="w-6 h-6 text-[#8B0000]"
+                          className="w-6 h-6 text-[#008080]"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -227,7 +227,7 @@ export default function EB5Page() {
 
                     {/* Step 4 */}
                     <div className="relative group">
-                      <div className="bg-[#8B0000] text-white p-2 clip-path-triangle mb-4">
+                      <div className="bg-[#008080] text-white p-2 clip-path-triangle mb-4">
                         <span className="font-medium">第四步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
@@ -235,7 +235,7 @@ export default function EB5Page() {
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
-                          className="w-6 h-6 text-[#8B0000]"
+                          className="w-6 h-6 text-[#008080]"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -246,7 +246,7 @@ export default function EB5Page() {
 
                     {/* Step 5 */}
                     <div className="relative group">
-                      <div className="bg-[#8B0000] text-white p-2 clip-path-triangle mb-4">
+                      <div className="bg-[#008080] text-white p-2 clip-path-triangle mb-4">
                         <span className="font-medium">第五步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
@@ -262,7 +262,7 @@ export default function EB5Page() {
             <div className="text-center mt-12">
               <Button
                 variant="outline"
-                className="px-8 py-2 border-[#8B0000] text-[#8B0000] hover:bg-[#8B0000] hover:text-white transition-all duration-300"
+                className="px-8 py-2 border-[#008080] text-[#008080] hover:bg-[#008080] hover:text-white transition-all duration-300"
               >
                 详情
               </Button>
@@ -276,7 +276,7 @@ export default function EB5Page() {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Advantage 1 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -297,15 +297,15 @@ export default function EB5Page() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-center">
-                    美域佳华提供 EB-5 <span className="text-[#d4b675]">独立投资项目</span> 和
-                    <span className="text-[#d4b675]">区域中心投资项目</span>{' '}
+                    美域佳华提供 EB-5 <span className="text-[#008080]">独立投资项目</span> 和
+                    <span className="text-[#008080]">区域中心投资项目</span>{' '}
                     的双重选择，满足不同投资人的需求。
                   </p>
                 </CardContent>
               </Card>
 
               {/* Advantage 2 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -326,15 +326,15 @@ export default function EB5Page() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-center">
-                    美域佳华独有的 <span className="text-[#d4b675]">EB-5</span> 与
-                    <span className="text-[#d4b675]">L1/EB-1C</span> 跨国高管移民结合策略，100
+                    美域佳华独有的 <span className="text-[#008080]">EB-5</span> 与
+                    <span className="text-[#008080]">L1/EB-1C</span> 跨国高管移民结合策略，100
                     万美元投资可为 2-3 位投资者同步办理绿卡，一举多得。
                   </p>
                 </CardContent>
               </Card>
 
               {/* Advantage 3 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -356,14 +356,14 @@ export default function EB5Page() {
                 <CardContent>
                   <p className="text-muted-foreground text-center">
                     美域佳华在北美和中国大陆均设有办公室，可以为EB-5投资人提供{' '}
-                    <span className="text-[#d4b675]">中美两岸全链路服务</span>
+                    <span className="text-[#008080]">中美两岸全链路服务</span>
                     ，包括项目选择、投资、移民、税务规划、子女教育、生活规划等。
                   </p>
                 </CardContent>
               </Card>
 
               {/* Advantage 4 - 已获得美国移民局批准 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -390,7 +390,7 @@ export default function EB5Page() {
               </Card>
 
               {/* Advantage 5 - 政府支持 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -417,7 +417,7 @@ export default function EB5Page() {
               </Card>
 
               {/* Advantage 6 - 成功经验 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -441,7 +441,7 @@ export default function EB5Page() {
                     自 xxxx 年起，已经成功完成超过 xxxx 期项目
                     <br />
                     符合条件的投资人获得临时绿卡(I-526E)和永久绿卡(I-829)申请保持{' '}
-                    <span className="text-[#d4b675]">100%</span> 通过率
+                    <span className="text-[#008080]">100%</span> 通过率
                     <br />
                     超过 xxxx 位投资人已收回投资款
                   </p>
@@ -449,7 +449,7 @@ export default function EB5Page() {
               </Card>
 
               {/* Advantage 7 - 就业机会 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -471,13 +471,13 @@ export default function EB5Page() {
                 <CardContent>
                   <p className="text-muted-foreground text-center">
                     按过去经验，成功创造超过移民局要求的就业机会，
-                    <span className="text-[#d4b675]">为投资人提供更多保障</span>
+                    <span className="text-[#008080]">为投资人提供更多保障</span>
                   </p>
                 </CardContent>
               </Card>
 
               {/* Advantage 8 - 合作伙伴 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -499,7 +499,7 @@ export default function EB5Page() {
                 <CardContent>
                   <p className="text-muted-foreground text-center">
                     与美国大型连锁零售企业有紧密的合作关系，
-                    <span className="text-[#d4b675]">确保项目稳定运营</span>
+                    <span className="text-[#008080]">确保项目稳定运营</span>
                   </p>
                 </CardContent>
               </Card>
@@ -557,7 +557,7 @@ export default function EB5Page() {
               {/* Local Logistics Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">本地物流</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/fedex.png"
@@ -567,7 +567,7 @@ export default function EB5Page() {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                    <CardTitle className="text-[#008080] flex items-center gap-2">
                       <span>🚚</span>
                       <span>联邦快递独立投资项目</span>
                     </CardTitle>
@@ -579,7 +579,7 @@ export default function EB5Page() {
                       <li>参与FedEx独立承运商模式，投资回报稳定</li>
                       <li>灵活的商业模式，适合追求长期收益的投资者</li>
                     </ul>
-                    <p className="text-[#d4b675] font-medium">
+                    <p className="text-[#008080] font-medium">
                       与全球物流巨头并肩，构建可持续收益体系
                     </p>
                   </CardContent>
@@ -589,7 +589,7 @@ export default function EB5Page() {
               {/* Health Food Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">健康餐饮</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/taste-of-beauty.jpg"
@@ -599,7 +599,7 @@ export default function EB5Page() {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                    <CardTitle className="text-[#008080] flex items-center gap-2">
                       <span>🥗</span>
                       <span>高级素食餐厅投资项目</span>
                     </CardTitle>
@@ -611,7 +611,7 @@ export default function EB5Page() {
                       <li>总店位于加州橙县，分店位于洛杉矶好莱坞，市场潜力巨大</li>
                       <li>符合当下健康饮食趋势，稳健回报与品牌溢价并存</li>
                     </ul>
-                    <p className="text-[#d4b675] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
+                    <p className="text-[#008080] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
                   </CardContent>
                 </Card>
               </div>
@@ -624,7 +624,7 @@ export default function EB5Page() {
               {/* Student Housing Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">学生公寓</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/uc-student-housing.jpg"
@@ -634,7 +634,7 @@ export default function EB5Page() {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                    <CardTitle className="text-[#008080] flex items-center gap-2">
                       <span>🏠</span>
                       <span>加州大学河滨分校公寓项目</span>
                     </CardTitle>
@@ -646,7 +646,7 @@ export default function EB5Page() {
                       <li>项目获得河滨县政府推荐信，配套设施成熟，适合学生和家庭居住</li>
                       <li>随着洛杉矶发展东移，该区域成为潜力股，未来增值空间大</li>
                     </ul>
-                    <p className="text-[#d4b675] font-medium">
+                    <p className="text-[#008080] font-medium">
                       投资教育与未来，坐享优质房产升值空间
                     </p>
                   </CardContent>
@@ -656,7 +656,7 @@ export default function EB5Page() {
               {/* Early Education Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">学前教育</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/orange-county-kindergarten.png"
@@ -666,7 +666,7 @@ export default function EB5Page() {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                    <CardTitle className="text-[#008080] flex items-center gap-2">
                       <span>🎨</span>
                       <span>橙县艺术幼儿园投资项目</span>
                     </CardTitle>
@@ -678,7 +678,7 @@ export default function EB5Page() {
                       <li>创造19个就业机会，符合EB-5投资移民要求</li>
                       <li>前期投入120万美元，年利润估算高达324万美元</li>
                     </ul>
-                    <p className="text-[#d4b675] font-medium">深耕优质教育市场，抢占高端幼教蓝海</p>
+                    <p className="text-[#008080] font-medium">深耕优质教育市场，抢占高端幼教蓝海</p>
                   </CardContent>
                 </Card>
               </div>
@@ -711,7 +711,7 @@ export default function EB5Page() {
 
           <div className="text-center mt-12">
             <Button
-              className="px-8 py-6 text-base bg-[#d4b675] hover:bg-[#c4a665] text-white"
+              className="px-8 py-6 text-base bg-[#008080] hover:bg-[#008080] text-white"
               size="lg"
             >
               了解更多投资项目，开启成功之路
