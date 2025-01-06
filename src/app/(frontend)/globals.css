@@ -151,3 +151,7 @@ html[data-theme='light'] {
     -webkit-mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
   }
 }
+
+.clip-path-triangle {
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
