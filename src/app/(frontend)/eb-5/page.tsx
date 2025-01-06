@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -55,6 +56,17 @@ export default function EB5Page() {
               EB-5
               是美国政府推出的投资移民项目，旨在通过外资促进美国经济增长并创造就业机会。投资者在满足规定的投资金额和创造就业条件后，可申请获得美国永久居留权（绿卡）。
             </p>
+            {/* Details Button */}
+            <div className="text-center mt-12">
+              <Link href="/posts/eb-5-introduction">
+                <Button
+                  variant="outline"
+                  className="px-8 py-2 border-[#008080] text-[#008080] hover:bg-[#008080] hover:text-white transition-all duration-300"
+                >
+                  具体政策介绍
+                </Button>
+              </Link>
+            </div>
           </div>
 
           {/* EB-5 Application Process */}
@@ -81,7 +93,7 @@ export default function EB5Page() {
                         <span className="font-medium">第一步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
-                        <p>投资80万美元在已获准的项目</p>
+                        <p>投资已获准的美国项目</p>
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
@@ -100,7 +112,7 @@ export default function EB5Page() {
                         <span className="font-medium">第二步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
-                        <p>提交I-526E 移民申请书</p>
+                        <p>提交 I-526E （移民申请书）</p>
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
@@ -138,7 +150,7 @@ export default function EB5Page() {
                         <span className="font-medium">第四步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
-                        <p>提交I-829 撤销条件申请书</p>
+                        <p>提交 I-829 （撤销条件申请书）</p>
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
@@ -174,7 +186,7 @@ export default function EB5Page() {
                         <span className="font-medium">第一步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
-                        <p>投资80万美元在已获准的项目</p>
+                        <p>投资已获准的美国项目</p>
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
@@ -193,7 +205,7 @@ export default function EB5Page() {
                         <span className="font-medium">第二步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
-                        <p>提交I-526E 移民申请书</p>
+                        <p>提交 I-526E （移民申请书）</p>
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
@@ -212,7 +224,7 @@ export default function EB5Page() {
                         <span className="font-medium">第三步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
-                        <p>提交I-485 身份调整申请</p>
+                        <p>提交 I-485 （身份调整申请）</p>
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
@@ -231,7 +243,7 @@ export default function EB5Page() {
                         <span className="font-medium">第四步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
-                        <p>提交I-829 撤销条件申请书</p>
+                        <p>提交 I-829 （撤销条件申请书）</p>
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
@@ -260,12 +272,14 @@ export default function EB5Page() {
 
             {/* Details Button */}
             <div className="text-center mt-12">
-              <Button
-                variant="outline"
-                className="px-8 py-2 border-[#008080] text-[#008080] hover:bg-[#008080] hover:text-white transition-all duration-300"
-              >
-                详情
-              </Button>
+              <Link href="/posts/eb-5-application">
+                <Button
+                  variant="outline"
+                  className="px-8 py-2 border-[#008080] text-[#008080] hover:bg-[#008080] hover:text-white transition-all duration-300"
+                >
+                  详情
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -470,7 +484,7 @@ export default function EB5Page() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-center">
-                    按过去经验，成功创造超过移民局要求的就业机会，
+                    成功创造远超移民局要求的就业机会，
                     <span className="text-[#008080]">为投资人提供更多保障</span>
                   </p>
                 </CardContent>
@@ -498,8 +512,36 @@ export default function EB5Page() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-center">
-                    与美国大型连锁零售企业有紧密的合作关系，
+                    与美国大型物流企业有紧密的合作关系，公司持续壮大，
                     <span className="text-[#008080]">确保项目稳定运营</span>
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Advantage - 施工竣工保证 */}
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                <CardHeader className="text-center">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
+                    <svg
+                      className="w-6 h-6 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                      />
+                    </svg>
+                  </div>
+                  <CardTitle className="text-xl mb-2">施工竣工保证</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-center">
+                    开发商拥有<span className="text-[#008080]">100%完工纪录</span>， 项目享受
+                    <span className="text-[#008080]">开发商完工担保</span>， 确保项目顺利完成
                   </p>
                 </CardContent>
               </Card>
@@ -509,34 +551,37 @@ export default function EB5Page() {
       </section>
 
       {/* Add Project Showcase Section */}
-      <section className="relative min-h-screen">
+      <section className="relative min-h-screen flex items-center">
         {/* Video Background */}
-        {/* TODO: find a high quality video */}
         <div className="absolute inset-0 z-0">
           <video autoPlay loop muted playsInline className="object-cover w-full h-full">
-            <source src="/videos/fedex-intro.mp4" type="video/mp4" />
+            <source src="/videos/fedex20240106.mp4" type="video/mp4" />
           </video>
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/20" />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 py-24">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">北美最具影响力的 EB-5 项目公司</h2>
-            <h3 className="text-2xl md:text-3xl mb-8">Fedex 项目 | 第一顺位 | 无排期</h3>
-            <p className="text-lg md:text-xl mb-6">无排期南加州联邦项目全球首发</p>
-            <p className="text-lg md:text-xl mb-12">526E 获批担保/项目完工担保</p>
-            <Button
-              className="px-8 py-6 text-base border-2 border-white 
-                bg-transparent text-white 
-                hover:bg-white/10 hover:backdrop-blur-sm hover:text-white
-                transition-all duration-300 
-                shadow-lg"
-              variant="outline"
-            >
-              查看我们的EB-5项目
-            </Button>
+        <div className="relative z-10 w-full">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center text-white">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6">
+                北美最具影响力的 EB-5 项目公司
+              </h2>
+              <h3 className="text-2xl md:text-3xl mb-8">Fedex 项目 | 第一顺位 | 无排期</h3>
+              <p className="text-lg md:text-xl mb-6">无排期南加州联邦项目全球首发</p>
+              <p className="text-lg md:text-xl mb-12">526E 获批担保/项目完工担保</p>
+              <Button
+                className="px-8 py-6 text-base border-2 border-white 
+                  bg-transparent text-white 
+                  hover:bg-white/10 hover:backdrop-blur-sm hover:text-white
+                  transition-all duration-300 
+                  shadow-lg"
+                variant="outline"
+              >
+                查看我们的EB-5项目
+              </Button>
+            </div>
           </div>
         </div>
       </section>
