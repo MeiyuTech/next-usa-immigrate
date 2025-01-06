@@ -318,30 +318,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Why Choose Us */}
-          <div className="bg-muted/50 rounded-lg p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">为什么选择这些项目？</h3>
-            <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="text-center">
-                <p className="text-4xl mb-4">🌟</p>
-                <h4 className="font-semibold mb-2">安全稳健</h4>
-                <p className="text-muted-foreground">项目筛选严谨，风险可控，投资回报透明可期</p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl mb-4">🤝</p>
-                <h4 className="font-semibold mb-2">全程协助</h4>
-                <p className="text-muted-foreground">
-                  提供从项目选择、实地考察到后续运营的全方位服务
-                </p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl mb-4">🌐</p>
-                <h4 className="font-semibold mb-2">多领域覆盖</h4>
-                <p className="text-muted-foreground">满足事业投资、资产配置、教育保障等多种需求</p>
-              </div>
-            </div>
-          </div>
-
           <div className="text-center mt-12">
             <Button
               className="px-8 py-6 text-base bg-[#d4b675] hover:bg-[#c4a665] text-white"
@@ -356,8 +332,8 @@ export default function HomePage() {
       {/* Global Network Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4">中美多地团队协作</h2>
-          <h3 className="text-2xl text-center mb-4">一站式的全链路服务</h3>
+          <h2 className="text-4xl font-bold text-center mb-4">多时区团队协作</h2>
+          <h3 className="text-2xl text-center mb-4">为您中美两岸一站式的全链路服务</h3>
           <p className="text-lg text-center mb-16">北京/成都/常州 - 旧金山/洛杉矶/波士顿/迈阿密</p>
           {/* World Map */}
           <div className="relative w-full aspect-[2/1] mb-16">

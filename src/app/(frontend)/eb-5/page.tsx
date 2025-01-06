@@ -1,13 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel'
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function EB5Page() {
@@ -55,7 +49,7 @@ export default function EB5Page() {
         <div className="container mx-auto px-4">
           {/* EB-5 Introduction */}
           <div className="max-w-6xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">EB-5 项目简介</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">EB-5 简介</h2>
             <p className="text-lg text-center mb-16 max-w-3xl mx-auto">
               EB-5
               是美国政府推出的投资移民项目，旨在通过外资促进美国经济增长并创造就业机会。投资者在满足规定的投资金额和创造就业条件后，可申请获得美国永久居留权（绿卡）。
@@ -64,8 +58,10 @@ export default function EB5Page() {
 
           {/* AmCan Advantages */}
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">美域佳华的优势</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              美域佳华 EB-5 的项目优势
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Advantage 1 */}
               <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
                 <CardHeader className="text-center">
@@ -152,6 +148,148 @@ export default function EB5Page() {
                   </p>
                 </CardContent>
               </Card>
+
+              {/* Advantage 4 - 已获得美国移民局批准 */}
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <CardHeader className="text-center">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
+                    <svg
+                      className="w-6 h-6 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <CardTitle className="text-xl mb-2">已获得美国移民局批准</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-center">
+                    南加州最大的投资移民区域中心之一，少数获得永久绿卡批准(I-829)的区域中心之一
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Advantage 5 - 政府支持 */}
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <CardHeader className="text-center">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
+                    <svg
+                      className="w-6 h-6 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                      />
+                    </svg>
+                  </div>
+                  <CardTitle className="text-xl mb-2">政府支持</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-center">
+                    配合当地政府推动都市开发项目，获得联邦、州及市政府的支持
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Advantage 6 - 成功经验 */}
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <CardHeader className="text-center">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
+                    <svg
+                      className="w-6 h-6 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                      />
+                    </svg>
+                  </div>
+                  <CardTitle className="text-xl mb-2">成功经验</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-center">
+                    自 xxxx 年起，已经成功完成超过 xxxx 期项目
+                    <br />
+                    符合条件的投资人获得临时绿卡(I-526E)和永久绿卡(I-829)申请保持{' '}
+                    <span className="text-[#d4b675]">100%</span> 通过率
+                    <br />
+                    超过 xxxx 位投资人已收回投资款
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Advantage 7 - 就业机会 */}
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <CardHeader className="text-center">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
+                    <svg
+                      className="w-6 h-6 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M16 8v8m-4-5v5M8 8v8m-4-5v5m0-5h20"
+                      />
+                    </svg>
+                  </div>
+                  <CardTitle className="text-xl mb-2">就业机会</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-center">
+                    按过去经验，成功创造超过移民局要求的就业机会，
+                    <span className="text-[#d4b675]">为投资人提供更多保障</span>
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Advantage 8 - 合作伙伴 */}
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                <CardHeader className="text-center">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
+                    <svg
+                      className="w-6 h-6 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                  </div>
+                  <CardTitle className="text-xl mb-2">合作伙伴</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-center">
+                    与美国大型连锁零售企业有紧密的合作关系，
+                    <span className="text-[#d4b675]">确保项目稳定运营</span>
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
@@ -190,134 +328,182 @@ export default function EB5Page() {
         </div>
       </section>
 
-      {/* Company Introduction Section */}
-      <section className="bg-background py-24">
+      {/* Investment Projects Section */}
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          {/* First Row */}
-          <div className="flex flex-col md:flex-row items-center gap-12 mb-24">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">
-                中国已取代墨西哥成为美国移民的第一来源国
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                其中，美国EB-5项目是中国投资人普遍参与的移民计划。EB-5项目既可以投资移民局批准的区域中心项目，也可以自主选择项目进行独立投资。由于独立投资项目与大家普遍熟知的区域中心项目相比有很多优势，特别是其无需排期，因此美域佳华推荐有意移民的中国投资者联系独立项目投资。
-              </p>
-            </div>
-            <div className="w-full md:w-1/2">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
-                <Image
-                  src="/China-top-source-US-immigrants.png"
-                  alt="China-top-source-US-immigrants"
-                  fill
-                  sizes="(max-width: 78px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
+          <h2 className="text-4xl font-bold text-center mb-4">多领域投资项目</h2>
+          <p className="text-lg text-center mb-16 max-w-3xl mx-auto">
+            美域佳华不仅专注于移民服务，更致力于为客户提供涵盖投资、商业运营和教育等多维度的项目支持。
+            无论您处于事业初创期、扩展期，或是希望为家人提供更优质的教育与生活条件，我们都能为您匹配合适的项目，
+            助力您和家人的长远发展。
+          </p>
 
-          {/* Second Row */}
-          <div className="flex flex-col md:flex-row-reverse items-center gap-12">
-            <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-6 text-foreground">美域佳华的重要优势</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                我们可以将EB-5独立项目投资移民和EB-1C跨国高管移民结合起来，一石二鸟或数鸟，一笔100万美元的独立投资项目同时可以办理两三家绿卡。其中1个投资人通过EB-5的方式得到绿卡，其他1个或2个投资人则可通过L1/EB-1C跨国高管移民走快车道。值得一提的是：与通过EB-5投资移民相比，通过L1/EB-1C跨国高管移民获得绿卡的步骤少，等待时间起码少4年，无需通过2年临时绿卡过渡，一步到位拿到永久绿卡。
-              </p>
-            </div>
-            <div className="w-full md:w-1/2">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
-                <Image
-                  src="/Individual-vs-RegionalCenter.png"
-                  alt="Individual-vs-RegionalCenter"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Global Network Section */}
-      <section className="py-24">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4">选择美域佳华</h2>
-          <h3 className="text-2xl text-center mb-4">实现中美联动的全链路覆盖服务</h3>
-          <p className="text-lg text-center mb-16">北京/成都/常州 - 旧金山/洛杉矶/波士顿/迈阿密</p>
-          {/* World Map */}
-          <div className="relative w-full aspect-[2/1] mb-16">
-            <Image
-              src="/AmCan-global-network.jpeg"
-              alt="Meiyu Global Network"
-              fill
-              className="object-contain"
-            />
-          </div>
-          {/* Office Locations Carousel */}
-          <Carousel
-            opts={{
-              align: 'start',
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-4">
-              {[
-                {
-                  src: '/office-beijing.jpg',
-                  alt: 'Office Beijing',
-                  title: '中国-北京办公室',
-                },
-                {
-                  src: '/office-irvine.jpg',
-                  alt: 'Office Invine',
-                  title: '美国-洛杉矶办公室',
-                },
-                {
-                  src: '/office-sf.jpg',
-                  alt: 'Office San Francisco',
-                  title: '美国-旧金山办公室',
-                },
-                {
-                  src: '/office-miami.jpg',
-                  alt: 'Office Miami',
-                  title: '美国-迈阿密办公室',
-                },
-                {
-                  src: '/office-boston.jpg',
-                  alt: 'Office Boston',
-                  title: '美国-波士顿办公室',
-                },
-                {
-                  src: '/office-chengdu.jpg',
-                  alt: 'Office Chengdu',
-                  title: '中国-成都办公室',
-                },
-                {
-                  src: '/office-changzhou.jpg',
-                  alt: 'Office Changzhou',
-                  title: '中国-常州办公室',
-                },
-              ].map((office, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/3">
-                  <div className="relative aspect-video rounded-lg overflow-hidden group">
+          {/* Business Investment Projects */}
+          <div className="mb-16">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Local Logistics Card */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">本地物流</h3>
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
-                      src={office.src}
-                      alt={office.alt}
+                      src="/fedex.png"
+                      alt="fedex"
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                      className="object-cover object-[center_25px]"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-[#d4b675] py-2 px-4">
-                      <p className="text-center text-white">{office.title}</p>
-                    </div>
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
+                  <CardHeader>
+                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                      <span>🚚</span>
+                      <span>联邦快递独立投资项目</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="font-semibold mb-2">项目亮点：</h4>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                      <li>加入全球物流巨头网络，业务覆盖全球220多个国家和地区</li>
+                      <li>参与FedEx独立承运商模式，投资回报稳定</li>
+                      <li>灵活的商业模式，适合追求长期收益的投资者</li>
+                    </ul>
+                    <p className="text-[#d4b675] font-medium">
+                      与全球物流巨头并肩，构建可持续收益体系
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Health Food Card */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">健康餐饮</h3>
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                    <Image
+                      src="/taste-of-beauty.jpg"
+                      alt="taste-of-beauty"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                      <span>🥗</span>
+                      <span>高级素食餐厅投资项目</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="font-semibold mb-2">项目亮点：</h4>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                      <li>依托团队20年餐饮经验，打造高端素食品牌</li>
+                      <li>总店位于加州橙县，分店位于洛杉矶好莱坞，市场潜力巨大</li>
+                      <li>符合当下健康饮食趋势，稳健回报与品牌溢价并存</li>
+                    </ul>
+                    <p className="text-[#d4b675] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+
+          {/* Real Estate Projects */}
+          <div className="mb-16">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Student Housing Card */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">学生公寓</h3>
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                    <Image
+                      src="/uc-student-housing.jpg"
+                      alt="uc-student-housing"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                      <span>🏠</span>
+                      <span>加州大学河滨分校公寓项目</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="font-semibold mb-2">项目亮点：</h4>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                      <li>位于60号和91号高速交汇处，地理位置优越，紧邻安大略机场</li>
+                      <li>项目获得河滨县政府推荐信，配套设施成熟，适合学生和家庭居住</li>
+                      <li>随着洛杉矶发展东移，该区域成为潜力股，未来增值空间大</li>
+                    </ul>
+                    <p className="text-[#d4b675] font-medium">
+                      投资教育与未来，坐享优质房产升值空间
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Early Education Card */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-8 text-center">学前教育</h3>
+                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#d4b675]/30 border border-transparent">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                    <Image
+                      src="/orange-county-kindergarten.png"
+                      alt="orange-county-kindergarten"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-[#d4b675] flex items-center gap-2">
+                      <span>🎨</span>
+                      <span>橙县艺术幼儿园投资项目</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <h4 className="font-semibold mb-2">项目亮点：</h4>
+                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                      <li>位于洛杉矶橙县核心地段，毗邻全美顶尖教育资源</li>
+                      <li>创造19个就业机会，符合EB-5投资移民要求</li>
+                      <li>前期投入120万美元，年利润估算高达324万美元</li>
+                    </ul>
+                    <p className="text-[#d4b675] font-medium">深耕优质教育市场，抢占高端幼教蓝海</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+
+          {/* Why Choose Us */}
+          <div className="bg-muted/50 rounded-lg p-8">
+            <h3 className="text-2xl font-bold mb-6 text-center">为什么选择这些项目？</h3>
+            <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <div className="text-center">
+                <p className="text-4xl mb-4">🌟</p>
+                <h4 className="font-semibold mb-2">安全稳健</h4>
+                <p className="text-muted-foreground">项目筛选严谨，风险可控，投资回报透明可期</p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl mb-4">🤝</p>
+                <h4 className="font-semibold mb-2">全程协助</h4>
+                <p className="text-muted-foreground">
+                  提供从项目选择、实地考察到后续运营的全方位服务
+                </p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl mb-4">🌐</p>
+                <h4 className="font-semibold mb-2">多领域覆盖</h4>
+                <p className="text-muted-foreground">满足事业投资、资产配置、教育保障等多种需求</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button
+              className="px-8 py-6 text-base bg-[#d4b675] hover:bg-[#c4a665] text-white"
+              size="lg"
+            >
+              了解更多投资项目，开启成功之路
+            </Button>
+          </div>
         </div>
       </section>
     </>
