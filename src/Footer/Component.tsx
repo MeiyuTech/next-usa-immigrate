@@ -58,20 +58,29 @@ export async function Footer() {
               服务项目
             </h3>
             <nav className="grid gap-2">
-              <Link href="/services/eb5" className="text-sm text-white/70 hover:text-white">
+              <Link href="/eb-5" className="text-sm text-white/70 hover:text-white">
                 投资移民 (EB-5)
               </Link>
               <Link href="/services/eb123" className="text-sm text-white/70 hover:text-white">
                 职业移民 (EB-1/2/3)
               </Link>
-              <Link href="/services/family" className="text-sm text-white/70 hover:text-white">
+              <Link
+                href="/posts/family-based-immigration-introduction"
+                className="text-sm text-white/70 hover:text-white"
+              >
                 家庭移民
               </Link>
-              <Link href="/services/student" className="text-sm text-white/70 hover:text-white">
-                留学服务
+              <Link
+                href="/posts/f-1-introduction"
+                className="text-sm text-white/70 hover:text-white"
+              >
+                留学服务 (F-1)
               </Link>
-              <Link href="/services/work" className="text-sm text-white/70 hover:text-white">
-                工作签证
+              <Link
+                href="/posts/h-1b-introduction"
+                className="text-sm text-white/70 hover:text-white"
+              >
+                工作签证 (H-1B)
               </Link>
             </nav>
           </div>

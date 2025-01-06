@@ -34,11 +34,10 @@ export function ServiceMegaMenu() {
           <Link href="/posts/eb-5-introduction" className={linkStyles}>
             政策介绍
           </Link>
-          <Link href="#" className={linkStyles}>
+          <Link href="/posts/eb-5-application" className={linkStyles}>
             申请条件
           </Link>
-          <Link href="#" className={linkStyles}>
-            {/* 申请流程： 境内申请流程，境外申请流程 */}
+          <Link href="/posts/eb-5-application" className={linkStyles}>
             申请流程
           </Link>
         </div>
@@ -79,16 +78,16 @@ export function ServiceMegaMenu() {
       <div>
         <h3 className={headingStyles}>其他服务</h3>
         <div className="space-y-3">
-          <Link href="/posts/family-immigration" className={linkStyles}>
+          <Link href="/posts/family-based-immigration-introduction" className={linkStyles}>
             家庭移民
           </Link>
-          <Link href="/posts/f-1" className={linkStyles}>
+          <Link href="/posts/f-1-introduction" className={linkStyles}>
             学生签证 （F-1）
           </Link>
-          <Link href="/posts/j-1" className={linkStyles}>
+          <Link href="/posts/j-1-introduction" className={linkStyles}>
             访问学者 （J-1）
           </Link>
-          <Link href="/posts/h-1b" className={linkStyles}>
+          <Link href="/posts/h-1b-introduction" className={linkStyles}>
             工作签证 （H-1B）
           </Link>
         </div>
