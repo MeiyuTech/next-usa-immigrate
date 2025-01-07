@@ -115,7 +115,7 @@ export default function HomePage() {
             </Card>
 
             {/* EB-5 Card */}
-            <Link href="/eb-5">
+            <Link href="/services/eb-5">
               <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                   <Image
