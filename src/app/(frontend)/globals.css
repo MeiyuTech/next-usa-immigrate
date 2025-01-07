@@ -155,3 +155,65 @@ html[data-theme='light'] {
 .clip-path-triangle {
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
 }
+
+/* 进度条动画 */
+@keyframes progress {
+  from {
+    width: 0;
+  }
+}
+
+/* 数字动画 */
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: var(--value);
+  }
+}
+
+/* 应用数字动画的元素 */
+[class*='animate-counter'] {
+  animation: counter 2s ease-out forwards;
+  counter-reset: num var(--num);
+}
+[class*='animate-counter']::before {
+  content: counter(num);
+}
+
+/* 卡片动画 */
+@keyframes scale-in {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-card {
+  animation: scale-in 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.animate-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.animate-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.animate-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.animate-card:nth-child(4) {
+  animation-delay: 0.4s;
+}

@@ -569,7 +569,7 @@ export default function FedexGroundPage() {
           <div className="grid md:grid-cols-12 gap-8">
             {/* Left Side - Main Info Card */}
             <div className="md:col-span-5">
-              <Card className="h-full bg-[#008080] text-white">
+              <Card className="h-full bg-[#008080] text-white animate-card">
                 <CardHeader className="border-b border-white/20">
                   <div className="space-y-2">
                     <CardTitle className="text-2xl">橙县 FedEx 项目</CardTitle>
@@ -617,7 +617,9 @@ export default function FedexGroundPage() {
                 </CardHeader>
                 <CardContent className="space-y-6 pt-6">
                   <div className="flex items-center gap-4">
-                    <span className="text-4xl font-bold">$2.52M</span>
+                    <span className="text-4xl font-bold animate-[counter_2s_ease-out] [counter-set:_number_2520795]">
+                      $2.52M
+                    </span>
                     <div className="text-sm opacity-90">
                       <p>上一财年总收入</p>
                       <p>17条线路</p>
@@ -720,7 +722,7 @@ export default function FedexGroundPage() {
                       <p className="text-muted-foreground">每条线路年均收入</p>
                     </div>
                     <div className="flex-1 h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                      <div className="h-full bg-[#008080] w-[85%] rounded-full" />
+                      <div className="h-full bg-[#008080] w-[85%] rounded-full animate-[progress_2s_ease-out]" />
                     </div>
                   </div>
                 </CardContent>
@@ -742,32 +744,55 @@ export default function FedexGroundPage() {
           <div className="grid md:grid-cols-12 gap-8 mb-12">
             {/* Left: Key Metrics */}
             <div className="md:col-span-5 grid grid-cols-2 gap-4">
-              <Card className="col-span-2 bg-[#008080] text-white">
+              <Card className="col-span-2 bg-[#008080] text-white animate-card">
                 <CardHeader>
                   <CardTitle>总收入</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-4xl font-bold">$417,146</div>
-                  <p className="text-sm opacity-80 mt-2">物流服务收入</p>
+                  <div className="flex items-center gap-4">
+                    <span className="text-4xl font-bold">
+                      $
+                      <span
+                        className="animate-counter"
+                        style={{ '--value': 2520795 } as React.CSSProperties}
+                      ></span>
+                    </span>
+                    <div className="text-sm opacity-90">
+                      <p>上一财年总收入</p>
+                      <p>17条线路</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white">
+              <Card className="bg-white animate-card">
                 <CardHeader>
                   <CardTitle className="text-[#008080]">运营成本</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold text-[#008080]">$97,824</div>
+                  <div className="text-2xl font-bold text-[#008080]">
+                    $
+                    <span
+                      className="animate-counter"
+                      style={{ '--value': 97824 } as React.CSSProperties}
+                    ></span>
+                  </div>
                   <p className="text-sm text-muted-foreground">23.4% 占比</p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white">
+              <Card className="bg-white animate-card">
                 <CardHeader>
                   <CardTitle className="text-[#008080]">净利润</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold text-[#008080]">$42,527</div>
+                  <div className="text-2xl font-bold text-[#008080]">
+                    $
+                    <span
+                      className="animate-counter"
+                      style={{ '--value': 42527 } as React.CSSProperties}
+                    ></span>
+                  </div>
                   <p className="text-sm text-muted-foreground">10.2% 利润率</p>
                 </CardContent>
               </Card>
@@ -775,7 +800,7 @@ export default function FedexGroundPage() {
 
             {/* Right: Cost Breakdown */}
             <div className="md:col-span-7">
-              <Card>
+              <Card className="animate-card">
                 <CardHeader>
                   <CardTitle>成本构成</CardTitle>
                 </CardHeader>
@@ -785,10 +810,16 @@ export default function FedexGroundPage() {
                     <div className="space-y-2">
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">员工工资支出</span>
-                        <span className="font-medium">$223,682</span>
+                        <span className="font-medium">
+                          $
+                          <span
+                            className="animate-counter"
+                            style={{ '--value': 223682 } as React.CSSProperties}
+                          ></span>
+                        </span>
                       </div>
                       <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                        <div className="h-full bg-[#008080] w-[80%] rounded-full" />
+                        <div className="h-full bg-[#008080] w-[80%] rounded-full animate-[progress_2s_ease-out]" />
                       </div>
                     </div>
 
@@ -799,7 +830,7 @@ export default function FedexGroundPage() {
                         <span className="font-medium">$40,808</span>
                       </div>
                       <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                        <div className="h-full bg-[#008080] w-[15%] rounded-full" />
+                        <div className="h-full bg-[#008080] w-[15%] rounded-full animate-[progress_2s_ease-out]" />
                       </div>
                     </div>
 
@@ -810,7 +841,7 @@ export default function FedexGroundPage() {
                         <span className="font-medium">$45,983</span>
                       </div>
                       <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                        <div className="h-full bg-[#008080] w-[17%] rounded-full" />
+                        <div className="h-full bg-[#008080] w-[17%] rounded-full animate-[progress_2s_ease-out]" />
                       </div>
                     </div>
 
@@ -821,7 +852,7 @@ export default function FedexGroundPage() {
                         <span className="font-medium">$26,636</span>
                       </div>
                       <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                        <div className="h-full bg-[#008080] w-[10%] rounded-full" />
+                        <div className="h-full bg-[#008080] w-[10%] rounded-full animate-[progress_2s_ease-out]" />
                       </div>
                     </div>
                   </div>
