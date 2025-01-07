@@ -5,50 +5,10 @@ import { Button } from '@/components/ui/button'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
-export default function ProjectsPage() {
+export default function FedexGroundPage() {
   return (
     <>
       <main className="relative min-h-screen -mt-16">
-        {/* Hero Section */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/golden-gate-bridge.jpg"
-            alt="Golden Gate Bridge"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 flex min-h-screen items-center pt-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-2xl">
-              <h1 className="mb-6 text-5xl font-medium text-white md:text-7xl drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] transition-all duration-300">
-                项目展示
-              </h1>
-              <p className="mb-8 max-w-lg text-lg text-white/90 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] transition-all duration-300">
-                美域佳华不仅专注于移民服务，更致力于为客户提供涵盖投资、商业运营和教育等多维度的项目支持。
-                无论您处于事业初创期、扩展期，或是希望为家人提供更优质的教育与生活条件，我们都能为您匹配合适的项目，
-                助力您和家人的长远发展。
-              </p>
-              <Button
-                className="px-8 py-6 text-base border-2 border-white 
-                    bg-transparent text-white 
-                    hover:bg-white/10 hover:backdrop-blur-sm hover:text-white
-                    transition-all duration-300 
-                    shadow-lg"
-                variant="outline"
-              >
-                选择项目
-              </Button>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      {/* Add Project Showcase Section */}
-      <section className="relative min-h-screen flex items-center">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <video autoPlay loop muted playsInline className="object-cover w-full h-full">
@@ -59,12 +19,12 @@ export default function ProjectsPage() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 w-full">
+        <div className="relative z-10 flex min-h-screen items-center pt-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center text-white">
-              <h2 className="text-5xl md:text-7xl font-bold mb-4">
+              <h1 className="text-5xl md:text-7xl font-bold mb-4">
                 Fedex Ground 联邦快递 <br /> 独立承包商项目
-              </h2>
+              </h1>
               <h2 className="text-2xl md:text-4xl font-medium mb-8 text-white/80">
                 南加州最具影响力的 EB-5 项目公司
               </h2>
@@ -80,6 +40,96 @@ export default function ProjectsPage() {
                 variant="outline"
               >
                 查看详情
+              </Button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      {/* Project Overview Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-5 gap-12 items-center">
+            {/* Left: Image - 占据 3 列 */}
+            <div className="md:col-span-3 relative aspect-[16/9] rounded-lg overflow-hidden shadow-xl">
+              <Image
+                src="/FedEx-P&D-section.jpg"
+                alt="FedEx Ground P&D Service"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+
+            {/* Right: Content - 占据 2 列 */}
+            <div className="md:col-span-2 space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#008080]">项目概述</h2>
+
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                美域佳华作为联邦快递 P&D 项目的独立承包商，深度参与 P&D 线路的交易和服务。
+                这不仅体现了美域佳华在该领域的运营实力，也为投资人和企业家提供了稳健的商业机会。
+              </p>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold">我们提供以下服务：</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-6 h-6 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="text-muted-foreground">运输线路的买卖</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-6 h-6 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="text-muted-foreground">司机和承包商培训及咨询</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-6 h-6 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="text-muted-foreground">车辆交易及企业融资</span>
+                  </li>
+                </ul>
+              </div>
+
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                除此之外，我们还致力于将业务扩展至 Linehaul 项目，进一步拓宽发展空间。
+              </p>
+
+              <Button className="mt-6 bg-[#008080] hover:bg-[#008080]/90 text-white">
+                了解更多详情
               </Button>
             </div>
           </div>
@@ -265,6 +315,6 @@ export default function ProjectsPage() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: '项目展示',
+    title: 'Fedex Ground 联邦快递 | 独立承包商项目介绍 | 项目展示',
   }
 }
