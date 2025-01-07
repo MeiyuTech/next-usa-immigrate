@@ -672,7 +672,7 @@ export default function EB5Page() {
                 <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
-                      src="/uc-student-housing.jpg"
+                      src="/uc-student-housing-hero-section.jpg"
                       alt="uc-student-housing"
                       fill
                       className="object-cover"
@@ -770,6 +770,6 @@ export default function EB5Page() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: '投资移民 (EB-5) | 美域佳华',
+    title: '投资移民 (EB-5)',
   }
 }
