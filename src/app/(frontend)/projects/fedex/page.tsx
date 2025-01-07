@@ -49,16 +49,18 @@ export default function FedexGroundPage() {
       {/* Project Overview Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-5 gap-12 items-center">
+          <div className="grid md:grid-cols-5 gap-12 items-start">
             {/* Left: Image - 占据 3 列 */}
-            <div className="md:col-span-3 relative aspect-[16/9] rounded-lg overflow-hidden shadow-xl">
-              <Image
-                src="/FedEx-P&D-section.jpg"
-                alt="FedEx Ground P&D Service"
-                fill
-                className="object-cover"
-                priority
-              />
+            <div className="md:col-span-3 sticky top-24">
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+                <Image
+                  src="/FedEx-P&D-section.jpg"
+                  alt="FedEx Ground P&D Service"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
 
             {/* Right: Content - 占据 2 列 */}
@@ -71,8 +73,9 @@ export default function FedexGroundPage() {
               </p>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold">我们提供以下服务：</h3>
+                <h3 className="text-xl font-semibold">我们负责：</h3>
                 <ul className="space-y-3">
+                  {/* 运营管理 */}
                   <li className="flex items-start gap-3">
                     <svg
                       className="w-6 h-6 mt-1 text-[#008080] flex-shrink-0"
@@ -87,8 +90,15 @@ export default function FedexGroundPage() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span className="text-muted-foreground">运输线路的买卖</span>
+                    <div>
+                      <span className="text-muted-foreground">运营管理</span>
+                      <p className="text-sm text-muted-foreground/75">
+                        配备专业团队进行线路运营管理，涵盖日常包裹量及线路分批，在线运营支持，工资结算，参加每周官方例会。{' '}
+                      </p>
+                    </div>
                   </li>
+
+                  {/* 线路评估 */}
                   <li className="flex items-start gap-3">
                     <svg
                       className="w-6 h-6 mt-1 text-[#008080] flex-shrink-0"
@@ -103,8 +113,15 @@ export default function FedexGroundPage() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span className="text-muted-foreground">司机和承包商培训及咨询</span>
+                    <div>
+                      <span className="text-muted-foreground">线路评估</span>
+                      <p className="text-sm text-muted-foreground/75">
+                        对目标收购线路，或原有特许经营线路进行专业评估，通过民邦快速评估约定评估线路公平市场价值。
+                      </p>
+                    </div>
                   </li>
+
+                  {/* 招聘培训 */}
                   <li className="flex items-start gap-3">
                     <svg
                       className="w-6 h-6 mt-1 text-[#008080] flex-shrink-0"
@@ -119,7 +136,59 @@ export default function FedexGroundPage() {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span className="text-muted-foreground">车辆交易及企业融资</span>
+                    <div>
+                      <span className="text-muted-foreground">招聘培训</span>
+                      <p className="text-sm text-muted-foreground/75">
+                        对司机、AO运营主管、BC业务主管等岗位进行潜在招聘，指导相关人员完成培训调度及快速进入工作岗位。
+                      </p>
+                    </div>
+                  </li>
+
+                  {/* 配套服务 */}
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-6 h-6 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <span className="text-muted-foreground">配套服务</span>
+                      <p className="text-sm text-muted-foreground/75">
+                        为运营服务的联邦快递 ISP 进行车辆维修，轮胎采购等业务提供全方位支持。
+                      </p>
+                    </div>
+                  </li>
+
+                  {/* 融资贷款 */}
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-6 h-6 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <div>
+                      <span className="text-muted-foreground">融资贷款</span>
+                      <p className="text-sm text-muted-foreground/75">
+                        为运营服务的联邦快递 ISP 进行再融资，包括但不限于合规的修民资金或 SBA
+                        贷款等。
+                      </p>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -135,177 +204,740 @@ export default function FedexGroundPage() {
           </div>
         </div>
       </section>
-
-      {/* Investment Projects Section */}
-      <section className="py-24 bg-background">
+      {/* Investment Advantages Section */}
+      <section className="py-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4">多领域投资项目</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">投资亮点与优势</h2>
 
-          {/* Business Investment Projects */}
-          <div className="mb-16">
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Local Logistics Card */}
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold mb-8 text-center">本地物流</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
-                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                    <Image
-                      src="/fedex.png"
-                      alt="fedex"
-                      fill
-                      className="object-cover object-[center_25px]"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-[#008080] flex items-center gap-2">
-                      <span>🚚</span>
-                      <span>联邦快递独立投资项目</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <h4 className="font-semibold mb-2">项目亮点：</h4>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                      <li>加入全球物流巨头网络，业务覆盖全球220多个国家和地区</li>
-                      <li>参与FedEx独立承运商模式，投资回报稳定</li>
-                      <li>灵活的商业模式，适合追求长期收益的投资者</li>
-                    </ul>
-                    <p className="text-[#008080] font-medium">
-                      与全球物流巨头并肩，构建可持续收益体系
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Health Food Card */}
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold mb-8 text-center">健康餐饮</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
-                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                    <Image
-                      src="/taste-of-beauty.jpg"
-                      alt="taste-of-beauty"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-[#008080] flex items-center gap-2">
-                      <span>🥗</span>
-                      <span>高级素食餐厅投资项目</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <h4 className="font-semibold mb-2">项目亮点：</h4>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                      <li>依托团队20年餐饮经验，打造高端素食品牌</li>
-                      <li>总店位于加州橙县，分店位于洛杉矶好莱坞，市场潜力巨大</li>
-                      <li>符合当下健康饮食趋势，稳健回报与品牌溢价并存</li>
-                    </ul>
-                    <p className="text-[#008080] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-
-          {/* Real Estate Projects */}
-          <div className="mb-16">
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Student Housing Card */}
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold mb-8 text-center">学生公寓</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
-                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                    <Image
-                      src="/uc-student-housing-hero-section.jpg"
-                      alt="uc-student-housing"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-[#008080] flex items-center gap-2">
-                      <span>🏠</span>
-                      <span>加州大学河滨分校公寓项目</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <h4 className="font-semibold mb-2">项目亮点：</h4>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                      <li>位于60号和91号高速交汇处，地理位置优越，紧邻安大略机场</li>
-                      <li>项目获得河滨县政府推荐信，配套设施成熟，适合学生和家庭居住</li>
-                      <li>随着洛杉矶发展东移，该区域成为潜力股，未来增值空间大</li>
-                    </ul>
-                    <p className="text-[#008080] font-medium">
-                      投资教育与未来，坐享优质房产升值空间
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Early Education Card */}
-              <div className="space-y-4">
-                <h3 className="text-2xl font-bold mb-8 text-center">学前教育</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
-                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                    <Image
-                      src="/orange-county-kindergarten.png"
-                      alt="orange-county-kindergarten"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-[#008080] flex items-center gap-2">
-                      <span>🎨</span>
-                      <span>橙县艺术幼儿园投资项目</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <h4 className="font-semibold mb-2">项目亮点：</h4>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                      <li>位于洛杉矶橙县核心地段，毗邻全美顶尖教育资源</li>
-                      <li>创造19个就业机会，符合EB-5投资移民要求</li>
-                      <li>前期投入120万美元，年利润估算高达324万美元</li>
-                    </ul>
-                    <p className="text-[#008080] font-medium">深耕优质教育市场，抢占高端幼教蓝海</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-
-          {/* Why Choose Us */}
-          <div className="bg-muted/50 rounded-lg p-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">为什么选择这些项目？</h3>
-            <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="text-center">
-                <p className="text-4xl mb-4">🌟</p>
-                <h4 className="font-semibold mb-2">安全稳健</h4>
-                <p className="text-muted-foreground">项目筛选严谨，风险可控，投资回报透明可期</p>
-              </div>
-              <div className="text-center">
-                <p className="text-4xl mb-4">🤝</p>
-                <h4 className="font-semibold mb-2">全程协助</h4>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Advantage 1: Business Model */}
+            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#008080] flex items-center gap-3">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#008080]/10">
+                    1
+                  </span>
+                  稳健的商业模式，现金流充足
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  提供从项目选择、实地考察到后续运营的全方位服务
+                  联邦快递独立承包商项目确保所有包裹交由我们递送，收入稳定可预测，极大降低市场波动带来的风险。
                 </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                    <span className="text-muted-foreground">
+                      每周结算机制，结合固定费率和浮动费率，确保现金流稳定，配送量越多收入越高。
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                    <span className="text-muted-foreground">
+                      项目运营依赖实际包裹配送，需求长期存在，保障了业务的持续性和增长潜力。
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Advantage 2: Employment Creation */}
+            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#008080] flex items-center gap-3">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#008080]/10">
+                    2
+                  </span>
+                  直接创造就业，满足移民需求
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  该项目对司机和管理岗位有持续性需求，每个司机负责{' '}
+                  <span className="text-[#008080]">最后一公里</span>{' '}
+                  配送任务，确保至少10人就业，有效降低失业和岗位流失风险。
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                    <span className="text-muted-foreground">
+                      投资者不仅能满足EB-5投资移民的就业要求，还能通过直接管理企业保障业务顺畅运行。
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                    <span className="text-muted-foreground">
+                      稳定合约和充足就业需求使项目低风险，符合移民局长期商业经营标准。
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Advantage 3: Investment Security */}
+            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#008080] flex items-center gap-3">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#008080]/10">
+                    3
+                  </span>
+                  资金安全保障，投资回报可观
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  投资车辆和联邦快递承运合同作为抵押物，项目具有较高的资产安全性和变现能力。
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                    <span className="text-muted-foreground">
+                      合同为封闭式合约，除非发生重大违规，否则可持续增值，并在必要时出售或转让，实现资产变现。
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                    <span className="text-muted-foreground">
+                      年利润率预计在<span className="text-[#008080]"> 10%-20% </span>
+                      之间，根据运营规模年收入可达 $100 万至 $133 万，投资回收期约为 5.3 年。
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                    <span className="text-muted-foreground">
+                      包裹量增长直接带动收入提升，使得项目风险相对较低，是稳定的长期投资选择。
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Advantage 4: Immigration Benefits */}
+            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <CardHeader>
+                <CardTitle className="text-2xl text-[#008080] flex items-center gap-3">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#008080]/10">
+                    4
+                  </span>
+                  移民友好，快速通道
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-muted-foreground">
+                  该项目不仅符合EB-5投资移民的要求，还适用于EB-1C高管移民计划，为投资者提供灵活的移民路径。
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                    <span className="text-muted-foreground">
+                      L1签证申请可快速获得批准，最快15天内获批，一年后转EB-1C直接申请永久绿卡，无需经历漫长排期。
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <svg
+                      className="w-5 h-5 mt-1 text-[#008080] flex-shrink-0"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                    <span className="text-muted-foreground">
+                      L1签证持有者配偶可合法工作，子女享受美国公立教育或州内学费，进一步降低家庭移民成本和风险。
+                    </span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+      {/* Service Area Section */}
+      <section className="py-24 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-5 gap-12 items-start">
+            {/* Left: Service Areas Description - 占据 2 列 */}
+            <div className="md:col-span-2 space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#008080]">服务区域</h2>
+
+              <div className="space-y-6">
+                {/* Bay Area */}
+                <div className="space-y-3">
+                  <h3 className="text-xl font-semibold flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-[#008080]"></span>
+                    旧金山湾区南部
+                  </h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#008080]">•</span>
+                      覆盖范围：圣克拉拉县、圣马特奥县等硅谷核心区域
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#008080]">•</span>
+                      日均包裹量：4,000-5,000件
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#008080]">•</span>
+                      服务对象：科技公司、高等院校及高净值居民区
+                    </li>
+                  </ul>
+                </div>
+
+                {/* LA & Orange County */}
+                <div className="space-y-3">
+                  <h3 className="text-xl font-semibold flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-[#008080]"></span>
+                    洛杉矶-橙县都会区
+                  </h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#008080]">•</span>
+                      覆盖范围：尔湾、新港滩、亨廷顿比奇等高端社区
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#008080]">•</span>
+                      日均包裹量：3,500-4,500件
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#008080]">•</span>
+                      特色：高端住宅区和商业区配送服务
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Expansion Plans */}
+                <div className="space-y-3">
+                  <h3 className="text-xl font-semibold flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-[#008080/50]"></span>
+                    计划扩展区域
+                  </h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#008080]">•</span>
+                      东湾区：奥克兰、伯克利等区域（2024年Q3）
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#008080]">•</span>
+                      圣地亚哥县：拉霍亚、德尔马等高端区域（2024年Q4）
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Key Advantages */}
+                <div className="mt-8 p-4 bg-[#008080]/5 rounded-lg">
+                  <h4 className="font-semibold mb-2">区位优势</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#008080]">✓</span>
+                      覆盖加州两大经济中心，服务高科技和高净值人群
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#008080]">✓</span>
+                      区域电商需求旺盛，包裹量稳定且持续增长
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#008080]">✓</span>
+                      临近主要机场和港口，物流网络完善
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="text-center">
-                <p className="text-4xl mb-4">🌐</p>
-                <h4 className="font-semibold mb-2">多领域覆盖</h4>
-                <p className="text-muted-foreground">满足事业投资、资产配置、教育保障等多种需求</p>
+            </div>
+
+            {/* Right: California Map - 占据 3 列 */}
+            <div className="md:col-span-3 sticky top-24 md:order-last">
+              <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-xl bg-white">
+                <Image
+                  src="/california-service-area.jpg"
+                  alt="FedEx Ground Service Areas in California"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="text-center mt-12">
-            <Button
-              className="px-8 py-6 text-base bg-[#008080] hover:bg-[#008080] text-white"
-              size="lg"
-            >
-              了解更多投资项目，开启成功之路
-            </Button>
+      {/* Success Case Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">优质线路收购案例</h2>
+
+          <div className="grid md:grid-cols-12 gap-8">
+            {/* Left Side - Main Info Card */}
+            <div className="md:col-span-5">
+              <Card className="h-full bg-[#008080] text-white">
+                <CardHeader className="border-b border-white/20">
+                  <div className="space-y-2">
+                    <CardTitle className="text-2xl">橙县 FedEx 项目</CardTitle>
+                    <div className="space-y-1 text-sm opacity-90">
+                      <p className="flex items-center gap-2">
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                          />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                        </svg>
+                        洛杉矶橙县
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                          />
+                        </svg>
+                        服务邮编：3个橙县邮编
+                      </p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-6 pt-6">
+                  <div className="flex items-center gap-4">
+                    <span className="text-4xl font-bold">$2.52M</span>
+                    <div className="text-sm opacity-90">
+                      <p>上一财年总收入</p>
+                      <p>17条线路</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4 text-2xl">
+                    <span className="font-bold">$1.4M</span>
+                    <div className="text-sm opacity-90">
+                      <p>成交价</p>
+                      <p className="line-through opacity-75">市场报价 $1.95M</p>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4 pt-4">
+                    <div className="text-center p-4 bg-white/10 rounded-lg">
+                      <p className="text-3xl font-bold">9</p>
+                      <p className="text-sm opacity-90">收购线路数</p>
+                    </div>
+                    <div className="text-center p-4 bg-white/10 rounded-lg">
+                      <p className="text-3xl font-bold">12</p>
+                      <p className="text-sm opacity-90">车辆数量</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Right Side - Details Grid */}
+            <div className="md:col-span-7 grid grid-cols-2 gap-6">
+              {/* Vehicle Assets */}
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2 text-[#008080]">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                      />
+                    </svg>
+                    车辆资产
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-2xl font-bold text-[#008080]">$400,000</p>
+                  <p className="text-muted-foreground">12辆运营车辆总价值</p>
+                </CardContent>
+              </Card>
+
+              {/* Employment */}
+              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2 text-[#008080]">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                      />
+                    </svg>
+                    就业创造
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2">
+                    <div>
+                      <p className="text-2xl font-bold text-[#008080]">12</p>
+                      <p className="text-muted-foreground">全职司机</p>
+                    </div>
+                    <div>
+                      <p className="text-xl font-bold text-[#008080]">1-2</p>
+                      <p className="text-muted-foreground">高级经理人</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Revenue Per Route */}
+              <Card className="col-span-2 transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2 text-[#008080]">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      />
+                    </svg>
+                    平均线路收益
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center gap-8">
+                    <div>
+                      <p className="text-2xl font-bold text-[#008080]">$148,282</p>
+                      <p className="text-muted-foreground">每条线路年均收入</p>
+                    </div>
+                    <div className="flex-1 h-2 bg-[#008080]/10 rounded-full overflow-hidden">
+                      <div className="h-full bg-[#008080] w-[85%] rounded-full" />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Financial Report Section */}
+      <section className="py-24 bg-muted/50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">财务报表分析</h2>
+          <div className="text-center mb-4 text-muted-foreground">
+            <p>Datamark Logistics, Inc.</p>
+            <p>2018年10月 - 11月</p>
+          </div>
+
+          {/* Revenue Overview */}
+          <div className="grid md:grid-cols-12 gap-8 mb-12">
+            {/* Left: Key Metrics */}
+            <div className="md:col-span-5 grid grid-cols-2 gap-4">
+              <Card className="col-span-2 bg-[#008080] text-white">
+                <CardHeader>
+                  <CardTitle>总收入</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-4xl font-bold">$417,146</div>
+                  <p className="text-sm opacity-80 mt-2">物流服务收入</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white">
+                <CardHeader>
+                  <CardTitle className="text-[#008080]">运营成本</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold text-[#008080]">$97,824</div>
+                  <p className="text-sm text-muted-foreground">23.4% 占比</p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white">
+                <CardHeader>
+                  <CardTitle className="text-[#008080]">净利润</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-2xl font-bold text-[#008080]">$42,527</div>
+                  <p className="text-sm text-muted-foreground">10.2% 利润率</p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Right: Cost Breakdown */}
+            <div className="md:col-span-7">
+              <Card>
+                <CardHeader>
+                  <CardTitle>成本构成</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    {/* Payroll */}
+                    <div className="space-y-2">
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">员工工资支出</span>
+                        <span className="font-medium">$223,682</span>
+                      </div>
+                      <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
+                        <div className="h-full bg-[#008080] w-[80%] rounded-full" />
+                      </div>
+                    </div>
+
+                    {/* Insurance */}
+                    <div className="space-y-2">
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">保险费用</span>
+                        <span className="font-medium">$40,808</span>
+                      </div>
+                      <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
+                        <div className="h-full bg-[#008080] w-[15%] rounded-full" />
+                      </div>
+                    </div>
+
+                    {/* Maintenance */}
+                    <div className="space-y-2">
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">维修维护费</span>
+                        <span className="font-medium">$45,983</span>
+                      </div>
+                      <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
+                        <div className="h-full bg-[#008080] w-[17%] rounded-full" />
+                      </div>
+                    </div>
+
+                    {/* Fuel */}
+                    <div className="space-y-2">
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">燃油费</span>
+                        <span className="font-medium">$26,636</span>
+                      </div>
+                      <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
+                        <div className="h-full bg-[#008080] w-[10%] rounded-full" />
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Detailed Analysis */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Revenue Analysis */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <svg
+                    className="w-5 h-5 text-[#008080]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                    />
+                  </svg>
+                  收入分析
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-[#008080] mb-2">$6,952</div>
+                  <p className="text-sm text-muted-foreground">日均收入</p>
+                </div>
+                <div className="h-[100px] bg-[#008080]/5 rounded-lg mt-4">
+                  {/* 这里可以添加收入趋势图表 */}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Cost Structure */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <svg
+                    className="w-5 h-5 text-[#008080]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
+                    />
+                  </svg>
+                  成本结构
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">运营成本率</span>
+                    <span className="text-[#008080] font-medium">23.4%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">人工成本率</span>
+                    <span className="text-[#008080] font-medium">53.6%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">其他费用率</span>
+                    <span className="text-[#008080] font-medium">23.0%</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Profitability */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <svg
+                    className="w-5 h-5 text-[#008080]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  盈利能力
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="text-center p-4">
+                  <div className="text-3xl font-bold text-[#008080] mb-2">10.2%</div>
+                  <p className="text-sm text-muted-foreground">净利润率</p>
+                </div>
+                <div className="mt-4 space-y-2">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-muted-foreground">毛利率</span>
+                    <span className="font-medium">76.6%</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-muted-foreground">营业利润率</span>
+                    <span className="font-medium">10.0%</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
