@@ -39,7 +39,7 @@ export default function FedexGroundPage() {
                   shadow-lg"
                 variant="outline"
               >
-                查看详情
+                <Link href="#project-overview">查看详情</Link>
               </Button>
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function FedexGroundPage() {
       </main>
 
       {/* Project Overview Section */}
-      <section className="py-24">
+      <section id="project-overview" className="py-24">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-5 gap-12 items-start">
             {/* Left: Image - 占据 3 列 */}
@@ -196,10 +196,6 @@ export default function FedexGroundPage() {
               <p className="text-lg leading-relaxed text-muted-foreground">
                 除此之外，我们还致力于将业务扩展至 Linehaul 项目，进一步拓宽发展空间。
               </p>
-
-              <Button className="mt-6 bg-[#008080] hover:bg-[#008080]/90 text-white">
-                了解更多详情
-              </Button>
             </div>
           </div>
         </div>
