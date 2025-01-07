@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { AnimatedCard, AnimatedNumber, AnimatedProgress } from '@/components/ui/animated-elements'
 
 export default function FedexGroundPage() {
   return (
@@ -569,7 +569,7 @@ export default function FedexGroundPage() {
           <div className="grid md:grid-cols-12 gap-8">
             {/* Left Side - Main Info Card */}
             <div className="md:col-span-5">
-              <Card className="h-full bg-[#008080] text-white animate-card">
+              <AnimatedCard className="h-full bg-[#008080] text-white">
                 <CardHeader className="border-b border-white/20">
                   <div className="space-y-2">
                     <CardTitle className="text-2xl">橙县 FedEx 项目</CardTitle>
@@ -616,9 +616,9 @@ export default function FedexGroundPage() {
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-6 pt-6">
-                  <div className="flex items-center gap-4">
-                    <span className="text-4xl font-bold animate-[counter_2s_ease-out] [counter-set:_number_2520795]">
-                      $2.52M
+                  <div className="flex flex-col items-start gap-1">
+                    <span className="text-4xl font-bold">
+                      $<AnimatedNumber value={2520795} />
                     </span>
                     <div className="text-sm opacity-90">
                       <p>上一财年总收入</p>
@@ -645,13 +645,13 @@ export default function FedexGroundPage() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
             </div>
 
             {/* Right Side - Details Grid */}
             <div className="md:col-span-7 grid grid-cols-2 gap-6">
               {/* Vehicle Assets */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-[#008080]">
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -669,10 +669,10 @@ export default function FedexGroundPage() {
                   <p className="text-2xl font-bold text-[#008080]">$400,000</p>
                   <p className="text-muted-foreground">12辆运营车辆总价值</p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
 
               {/* Employment */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-[#008080]">
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -698,10 +698,10 @@ export default function FedexGroundPage() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
 
               {/* Revenue Per Route */}
-              <Card className="col-span-2 transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <AnimatedCard className="col-span-2 transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-[#008080]">
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -719,20 +719,16 @@ export default function FedexGroundPage() {
                   <div className="flex items-center gap-8">
                     <div>
                       <p className="text-2xl font-bold text-[#008080]">
-                        $
-                        <span
-                          className="animate-counter"
-                          style={{ '--value': 148282 } as React.CSSProperties}
-                        ></span>
+                        $<AnimatedNumber value={148282} />
                       </p>
                       <p className="text-muted-foreground">每条线路年均收入</p>
                     </div>
-                    <div className="flex-1 h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                      <div className="h-full bg-[#008080] w-[85%] rounded-full animate-[progress_2s_ease-out]" />
+                    <div className="flex-1">
+                      <AnimatedProgress value={85} />
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
             </div>
           </div>
         </div>
@@ -751,26 +747,18 @@ export default function FedexGroundPage() {
           <div className="grid md:grid-cols-12 gap-8 mb-12">
             {/* Left: Key Metrics */}
             <div className="md:col-span-5 grid grid-cols-2 gap-4">
-              <Card className="col-span-2 bg-[#008080] text-white animate-card">
+              <AnimatedCard className="col-span-2 bg-[#008080] text-white">
                 <CardHeader>
                   <CardTitle>总收入</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex items-center gap-4">
+                  <div className="flex flex-col items-start gap-1">
                     <span className="text-4xl font-bold">
-                      $
-                      <span
-                        className="animate-counter"
-                        style={{ '--value': 2520795 } as React.CSSProperties}
-                      ></span>
+                      $<AnimatedNumber value={2520795} />
                     </span>
-                    <div className="text-sm opacity-90">
-                      <p>上一财年总收入</p>
-                      <p>17条线路</p>
-                    </div>
                   </div>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
 
               <Card className="bg-white animate-card">
                 <CardHeader>
@@ -778,11 +766,7 @@ export default function FedexGroundPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold text-[#008080]">
-                    $
-                    <span
-                      className="animate-counter"
-                      style={{ '--value': 97824 } as React.CSSProperties}
-                    ></span>
+                    $<AnimatedNumber value={97824} />
                   </div>
                   <p className="text-sm text-muted-foreground">23.4% 占比</p>
                 </CardContent>
@@ -794,11 +778,7 @@ export default function FedexGroundPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold text-[#008080]">
-                    $
-                    <span
-                      className="animate-counter"
-                      style={{ '--value': 42527 } as React.CSSProperties}
-                    ></span>
+                    $<AnimatedNumber value={42527} />
                   </div>
                   <p className="text-sm text-muted-foreground">10.2% 利润率</p>
                 </CardContent>
@@ -817,17 +797,9 @@ export default function FedexGroundPage() {
                     <div className="space-y-2">
                       <div className="flex justify-between">
                         <span className="text-muted-foreground">员工工资支出</span>
-                        <span className="font-medium">
-                          $
-                          <span
-                            className="animate-counter"
-                            style={{ '--value': 223682 } as React.CSSProperties}
-                          ></span>
-                        </span>
+                        <span className="font-medium">$223,682</span>
                       </div>
-                      <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                        <div className="h-full bg-[#008080] w-[80%] rounded-full animate-[progress_2s_ease-out]" />
-                      </div>
+                      <AnimatedProgress value={80} />
                     </div>
 
                     {/* Insurance */}
@@ -836,9 +808,7 @@ export default function FedexGroundPage() {
                         <span className="text-muted-foreground">保险费用</span>
                         <span className="font-medium">$40,808</span>
                       </div>
-                      <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                        <div className="h-full bg-[#008080] w-[15%] rounded-full animate-[progress_2s_ease-out]" />
-                      </div>
+                      <AnimatedProgress value={15} />
                     </div>
 
                     {/* Maintenance */}
@@ -847,9 +817,7 @@ export default function FedexGroundPage() {
                         <span className="text-muted-foreground">维修维护费</span>
                         <span className="font-medium">$45,983</span>
                       </div>
-                      <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                        <div className="h-full bg-[#008080] w-[17%] rounded-full animate-[progress_2s_ease-out]" />
-                      </div>
+                      <AnimatedProgress value={17} />
                     </div>
 
                     {/* Fuel */}
