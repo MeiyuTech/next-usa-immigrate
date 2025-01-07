@@ -28,7 +28,7 @@ export function ServiceMegaMenu() {
     <MegaMenuWrapper>
       <div>
         <h3 className={headingStyles}>
-          <Link href="/eb-5">投资移民 (EB-5)</Link>
+          <Link href="/services/eb-5">投资移民 (EB-5)</Link>
         </h3>
         <div className="space-y-3">
           <Link href="/posts/eb-5-introduction" className={linkStyles}>

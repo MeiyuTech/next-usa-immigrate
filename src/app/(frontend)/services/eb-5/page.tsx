@@ -565,12 +565,15 @@ export default function EB5Page() {
         <div className="relative z-10 w-full">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center text-white">
-              <h2 className="text-4xl md:text-6xl font-bold mb-6">
-                北美最具影响力的 EB-5 项目公司
+              <h2 className="text-5xl md:text-7xl font-bold mb-4">
+                Fedex Ground 联邦快递 <br /> 独立承包商项目
+              </h2>
+              <h2 className="text-2xl md:text-4xl font-medium mb-8 text-white/80">
+                南加州最具影响力的 EB-5 项目公司
               </h2>
               <h3 className="text-2xl md:text-3xl mb-8">Fedex 项目 | 第一顺位 | 无排期</h3>
-              <p className="text-lg md:text-xl mb-6">无排期南加州联邦项目全球首发</p>
-              <p className="text-lg md:text-xl mb-12">526E 获批担保/项目完工担保</p>
+              <p className="text-lg md:text-xl mb-6">无排期南加州联邦快递承包项目全球首发</p>
+              <p className="text-lg md:text-xl mb-12">526E 获批担保 / 低风险投资，稳健回报</p>
               <Button
                 className="px-8 py-6 text-base border-2 border-white 
                   bg-transparent text-white 
@@ -672,7 +675,7 @@ export default function EB5Page() {
                 <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
-                      src="/uc-student-housing.jpg"
+                      src="/uc-student-housing-hero-section.jpg"
                       alt="uc-student-housing"
                       fill
                       className="object-cover"
@@ -770,6 +773,6 @@ export default function EB5Page() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: '投资移民 (EB-5) | 美域佳华',
+    title: '投资移民 (EB-5)',
   }
 }
