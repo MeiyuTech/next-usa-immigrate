@@ -718,7 +718,13 @@ export default function FedexGroundPage() {
                 <CardContent>
                   <div className="flex items-center gap-8">
                     <div>
-                      <p className="text-2xl font-bold text-[#008080]">$148,282</p>
+                      <p className="text-2xl font-bold text-[#008080]">
+                        $
+                        <span
+                          className="animate-counter"
+                          style={{ '--value': 148282 } as React.CSSProperties}
+                        ></span>
+                      </p>
                       <p className="text-muted-foreground">每条线路年均收入</p>
                     </div>
                     <div className="flex-1 h-2 bg-[#008080]/10 rounded-full overflow-hidden">
@@ -731,6 +737,7 @@ export default function FedexGroundPage() {
           </div>
         </div>
       </section>
+
       {/* Financial Report Section */}
       <section className="py-24 bg-muted/50">
         <div className="container mx-auto px-4">
