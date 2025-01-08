@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { PerformanceChart } from '@/components/charts/performance-chart'
 import { Button } from '@/components/ui/button'
 import { CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { AnimatedCard, AnimatedNumber, AnimatedProgress } from '@/components/ui/animated-elements'
@@ -936,6 +937,248 @@ export default function FedexGroundPage() {
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">营业利润率</span>
                     <span className="font-medium">10.0%</span>
+                  </div>
+                </div>
+              </CardContent>
+            </AnimatedCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Ongoing Projects Section */}
+      <section className="py-24 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">正在进行的项目</h2>
+
+          {/* Performance Chart */}
+          <div className="mb-16">
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <PerformanceChart />
+              {/* Summary Cards */}
+              <AnimatedCard>
+                <CardHeader>
+                  <CardTitle>项目概览</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <p className="text-sm text-muted-foreground">总投资额</p>
+                        <p className="text-2xl font-bold text-[#008080]">293万美元</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-muted-foreground">总线路数</p>
+                        <p className="text-2xl font-bold text-[#008080]">29条</p>
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-2">平均盈亏平衡期</p>
+                      <p className="text-xl font-bold text-[#008080]">1.1年</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </AnimatedCard>
+
+              <AnimatedCard>
+                <CardHeader>
+                  <CardTitle>2023年度表现</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">总营业额</p>
+                      <p className="text-2xl font-bold text-[#008080]">$4,018,729</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">平均净利润率</p>
+                      <p className="text-xl font-bold text-[#008080]">10.2%</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </AnimatedCard>
+            </div>
+          </div>
+
+          {/* Project Cards */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Project 1 */}
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02]">
+              <CardHeader>
+                <CardTitle className="text-xl">Ho**i**g fedex</CardTitle>
+                <p className="text-sm text-muted-foreground">成立时间: 07/11/2017</p>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="grid grid-cols-3 gap-4 text-sm">
+                    <div>
+                      <p className="font-medium">收购价格</p>
+                      <p className="text-muted-foreground">84万美元</p>
+                    </div>
+                    <div>
+                      <p className="font-medium">盈亏平衡期</p>
+                      <p className="text-muted-foreground">1.3年</p>
+                    </div>
+                    <div>
+                      <p className="font-medium">线路数量</p>
+                      <p className="text-muted-foreground">12条</p>
+                    </div>
+                  </div>
+
+                  {/* Financial Chart */}
+                  <div className="pt-4">
+                    <p className="text-sm font-medium mb-3">近三年财务状况</p>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span className="text-muted-foreground">2023</span>
+                          <span>$1,526,167</span>
+                        </div>
+                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
+                            style={{ width: '80%' }}
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span className="text-muted-foreground">2022</span>
+                          <span>$1,691,396</span>
+                        </div>
+                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
+                            style={{ width: '88%' }}
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span className="text-muted-foreground">2021</span>
+                          <span>$1,908,839</span>
+                        </div>
+                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
+                            style={{ width: '100%' }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </AnimatedCard>
+
+            {/* Project 2 */}
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02]">
+              <CardHeader>
+                <CardTitle className="text-xl">Ne**i fedex</CardTitle>
+                <p className="text-sm text-muted-foreground">成立时间: 01/03/2022</p>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="grid grid-cols-3 gap-4 text-sm">
+                    <div>
+                      <p className="font-medium">收购价格</p>
+                      <p className="text-muted-foreground">69万美元</p>
+                    </div>
+                    <div>
+                      <p className="font-medium">盈亏平衡期</p>
+                      <p className="text-muted-foreground">当年即盈利</p>
+                    </div>
+                    <div>
+                      <p className="font-medium">线路数量</p>
+                      <p className="text-muted-foreground">8条</p>
+                    </div>
+                  </div>
+
+                  {/* Financial Chart */}
+                  <div className="pt-4">
+                    <p className="text-sm font-medium mb-3">近两年财务状况</p>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span className="text-muted-foreground">2023</span>
+                          <span>$904,752</span>
+                        </div>
+                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
+                            style={{ width: '85%' }}
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span className="text-muted-foreground">2022</span>
+                          <span>$152,943</span>
+                        </div>
+                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
+                            style={{ width: '15%' }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </AnimatedCard>
+
+            {/* Project 3 */}
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02]">
+              <CardHeader>
+                <CardTitle className="text-xl">S**g**i</CardTitle>
+                <p className="text-sm text-muted-foreground">成立时间: 10/26/2021</p>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="grid grid-cols-3 gap-4 text-sm">
+                    <div>
+                      <p className="font-medium">收购价格</p>
+                      <p className="text-muted-foreground">140万美元</p>
+                    </div>
+                    <div>
+                      <p className="font-medium">盈亏平衡期</p>
+                      <p className="text-muted-foreground">1年</p>
+                    </div>
+                    <div>
+                      <p className="font-medium">线路数量</p>
+                      <p className="text-muted-foreground">9条</p>
+                    </div>
+                  </div>
+
+                  {/* Financial Chart */}
+                  <div className="pt-4">
+                    <p className="text-sm font-medium mb-3">近两年财务状况</p>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span className="text-muted-foreground">2023</span>
+                          <span>$1,587,810</span>
+                        </div>
+                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
+                            style={{ width: '100%' }}
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span className="text-muted-foreground">2022</span>
+                          <span>$803,012</span>
+                        </div>
+                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
+                            style={{ width: '50%' }}
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
