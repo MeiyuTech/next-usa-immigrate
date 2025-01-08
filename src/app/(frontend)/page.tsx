@@ -1,9 +1,14 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-// import { AnimatedTitle } from '@/components/AnimatedTitle'
 import Link from 'next/link'
-
+import {
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardFooter,
+} from '@/components/ui/card'
 import {
   Carousel,
   CarouselContent,
@@ -11,14 +16,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from '@/components/ui/card'
+import { AnimatedCard } from '@/components/ui/animated-elements'
 
 export default function HomePage() {
   return (
@@ -93,7 +91,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* L1/EB-1C Card */}
-            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
               <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                 <Image src="/eb-1c-l-1.jpg" alt="L1/EB-1C 高管移民" fill className="object-cover" />
               </div>
@@ -112,11 +110,11 @@ export default function HomePage() {
               <CardFooter>
                 <p className="text-[#008080] font-medium">快速通道，开启全球事业版图</p>
               </CardFooter>
-            </Card>
+            </AnimatedCard>
 
             {/* EB-5 Card */}
             <Link href="/services/eb-5">
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                   <Image
                     src="/eb-5-investment.jpg"
@@ -142,10 +140,10 @@ export default function HomePage() {
                 <CardFooter>
                   <p className="text-[#008080] font-medium">投资未来，搭建家庭稳固桥梁</p>
                 </CardFooter>
-              </Card>
+              </AnimatedCard>
             </Link>
             {/* EB-2/3 Card */}
-            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
               <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                 <Image
                   src="/eb-2-3-employer-sponsorship.jpg"
@@ -169,7 +167,7 @@ export default function HomePage() {
               <CardFooter>
                 <p className="text-[#008080] font-medium">以才华立足美国，事业家庭两不误</p>
               </CardFooter>
-            </Card>
+            </AnimatedCard>
           </div>
         </div>
       </section>
@@ -190,39 +188,41 @@ export default function HomePage() {
               {/* Local Logistics Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">本地物流</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
-                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                    <Image
-                      src="/fedex.png"
-                      alt="fedex"
-                      fill
-                      className="object-cover object-[center_25px]"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-[#008080] flex items-center gap-2">
-                      <span>🚚</span>
-                      <span>联邦快递独立投资项目</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <h4 className="font-semibold mb-2">项目亮点：</h4>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                      <li>加入全球物流巨头网络，业务覆盖全球220多个国家和地区</li>
-                      <li>参与FedEx独立承运商模式，投资回报稳定</li>
-                      <li>灵活的商业模式，适合追求长期收益的投资者</li>
-                    </ul>
-                    <p className="text-[#008080] font-medium">
-                      与全球物流巨头并肩，构建可持续收益体系
-                    </p>
-                  </CardContent>
-                </Card>
+                <Link href="/projects/fedex">
+                  <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                    <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                      <Image
+                        src="/fedex.png"
+                        alt="fedex"
+                        fill
+                        className="object-cover object-[center_25px]"
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="text-[#008080] flex items-center gap-2">
+                        <span>🚚</span>
+                        <span>联邦快递独立投资项目</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <h4 className="font-semibold mb-2">项目亮点：</h4>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                        <li>加入全球物流巨头网络，业务覆盖全球220多个国家和地区</li>
+                        <li>参与FedEx独立承运商模式，投资回报稳定</li>
+                        <li>灵活的商业模式，适合追求长期收益的投资者</li>
+                      </ul>
+                      <p className="text-[#008080] font-medium">
+                        与全球物流巨头并肩，构建可持续收益体系
+                      </p>
+                    </CardContent>
+                  </AnimatedCard>
+                </Link>
               </div>
 
               {/* Health Food Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">健康餐饮</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/taste-of-beauty.jpg"
@@ -246,7 +246,7 @@ export default function HomePage() {
                     </ul>
                     <p className="text-[#008080] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
                   </CardContent>
-                </Card>
+                </AnimatedCard>
               </div>
             </div>
           </div>
@@ -257,7 +257,7 @@ export default function HomePage() {
               {/* Student Housing Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">学生公寓</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/uc-student-housing.jpg"
@@ -283,13 +283,13 @@ export default function HomePage() {
                       投资教育与未来，坐享优质房产升值空间
                     </p>
                   </CardContent>
-                </Card>
+                </AnimatedCard>
               </div>
 
               {/* Early Education Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">学前教育</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/orange-county-kindergarten.png"
@@ -313,7 +313,7 @@ export default function HomePage() {
                     </ul>
                     <p className="text-[#008080] font-medium">深耕优质教育市场，抢占高端幼教蓝海</p>
                   </CardContent>
-                </Card>
+                </AnimatedCard>
               </div>
             </div>
           </div>
@@ -323,14 +323,14 @@ export default function HomePage() {
               className="px-8 py-6 text-base bg-[#008080] hover:bg-[#008080] text-white"
               size="lg"
             >
-              了解更多投资项目，开启成功之路
+              <Link href="/projects">了解更多投资项目，开启成功之路</Link>
             </Button>
           </div>
         </div>
       </section>
 
       {/* Global Network Section */}
-      <section className="py-24">
+      <section id="global-network" className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-4">多时区团队协作</h2>
           <h3 className="text-2xl text-center mb-4">为您中美两岸一站式的全链路服务</h3>

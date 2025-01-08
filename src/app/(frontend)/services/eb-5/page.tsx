@@ -3,8 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { AnimatedCard } from '@/components/ui/animated-elements'
 
 export default function EB5Page() {
   return (
@@ -290,7 +291,7 @@ export default function EB5Page() {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Advantage 1 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -316,10 +317,10 @@ export default function EB5Page() {
                     的双重选择，满足不同投资人的需求。
                   </p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
 
               {/* Advantage 2 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -345,39 +346,41 @@ export default function EB5Page() {
                     万美元投资可为 2-3 位投资者同步办理绿卡，一举多得。
                   </p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
 
               {/* Advantage 3 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
-                <CardHeader className="text-center">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
-                    <svg
-                      className="w-6 h-6 text-primary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                  </div>
-                  <CardTitle className="text-xl mb-2">中美联动</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-center">
-                    美域佳华在北美和中国大陆均设有办公室，可以为EB-5投资人提供{' '}
-                    <span className="text-[#008080]">中美两岸全链路服务</span>
-                    ，包括项目选择、投资、移民、税务规划、子女教育、生活规划等。
-                  </p>
-                </CardContent>
-              </Card>
+              <Link href="/#global-network">
+                <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                  <CardHeader className="text-center">
+                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
+                      <svg
+                        className="w-6 h-6 text-primary"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    </div>
+                    <CardTitle className="text-xl mb-2">中美联动</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground text-center">
+                      美域佳华在北美和中国大陆均设有办公室，可以为EB-5投资人提供{' '}
+                      <span className="text-[#008080]">中美两岸全链路服务</span>
+                      ，包括项目选择、投资、移民、税务规划、子女教育、生活规划等。
+                    </p>
+                  </CardContent>
+                </AnimatedCard>
+              </Link>
 
               {/* Advantage 4 - 已获得美国移民局批准 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -401,10 +404,10 @@ export default function EB5Page() {
                     南加州最大的投资移民区域中心之一，少数获得永久绿卡批准(I-829)的区域中心之一
                   </p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
 
               {/* Advantage 5 - 政府支持 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -428,10 +431,10 @@ export default function EB5Page() {
                     配合当地政府推动都市开发项目，获得联邦、州及市政府的支持
                   </p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
 
               {/* Advantage 6 - 成功经验 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -460,10 +463,10 @@ export default function EB5Page() {
                     超过 xxxx 位投资人已收回投资款
                   </p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
 
               {/* Advantage 7 - 就业机会 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -488,10 +491,10 @@ export default function EB5Page() {
                     <span className="text-[#008080]">为投资人提供更多保障</span>
                   </p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
 
               {/* Advantage 8 - 合作伙伴 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -516,10 +519,10 @@ export default function EB5Page() {
                     <span className="text-[#008080]">确保项目稳定运营</span>
                   </p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
 
               {/* Advantage - 施工竣工保证 */}
-              <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                 <CardHeader className="text-center">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto">
                     <svg
@@ -544,7 +547,7 @@ export default function EB5Page() {
                     <span className="text-[#008080]">开发商完工担保</span>， 确保项目顺利完成
                   </p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
             </div>
           </div>
         </div>
@@ -574,23 +577,13 @@ export default function EB5Page() {
               <h3 className="text-2xl md:text-3xl mb-8">Fedex 项目 | 第一顺位 | 无排期</h3>
               <p className="text-lg md:text-xl mb-6">无排期南加州联邦快递承包项目全球首发</p>
               <p className="text-lg md:text-xl mb-12">526E 获批担保 / 低风险投资，稳健回报</p>
-              <Button
-                className="px-8 py-6 text-base border-2 border-white 
-                  bg-transparent text-white 
-                  hover:bg-white/10 hover:backdrop-blur-sm hover:text-white
-                  transition-all duration-300 
-                  shadow-lg"
-                variant="outline"
-              >
-                查看我们的EB-5项目
-              </Button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Investment Projects Section */}
-      <section className="py-24 bg-background">
+      <section id="investment-projects" className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-4">多领域投资项目</h2>
           <p className="text-lg text-center mb-16 max-w-3xl mx-auto">
@@ -605,39 +598,41 @@ export default function EB5Page() {
               {/* Local Logistics Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">本地物流</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
-                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                    <Image
-                      src="/fedex.png"
-                      alt="fedex"
-                      fill
-                      className="object-cover object-[center_25px]"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-[#008080] flex items-center gap-2">
-                      <span>🚚</span>
-                      <span>联邦快递独立投资项目</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <h4 className="font-semibold mb-2">项目亮点：</h4>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                      <li>加入全球物流巨头网络，业务覆盖全球220多个国家和地区</li>
-                      <li>参与FedEx独立承运商模式，投资回报稳定</li>
-                      <li>灵活的商业模式，适合追求长期收益的投资者</li>
-                    </ul>
-                    <p className="text-[#008080] font-medium">
-                      与全球物流巨头并肩，构建可持续收益体系
-                    </p>
-                  </CardContent>
-                </Card>
+                <Link href="/projects/fedex#project-overview">
+                  <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                    <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                      <Image
+                        src="/fedex.png"
+                        alt="fedex"
+                        fill
+                        className="object-cover object-[center_25px]"
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="text-[#008080] flex items-center gap-2">
+                        <span>🚚</span>
+                        <span>联邦快递独立投资项目</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <h4 className="font-semibold mb-2">项目亮点：</h4>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                        <li>加入全球物流巨头网络，业务覆盖全球220多个国家和地区</li>
+                        <li>参与FedEx独立承运商模式，投资回报稳定</li>
+                        <li>灵活的商业模式，适合追求长期收益的投资者</li>
+                      </ul>
+                      <p className="text-[#008080] font-medium">
+                        与全球物流巨头并肩，构建可持续收益体系
+                      </p>
+                    </CardContent>
+                  </AnimatedCard>
+                </Link>
               </div>
 
               {/* Health Food Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">健康餐饮</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/taste-of-beauty.jpg"
@@ -661,7 +656,7 @@ export default function EB5Page() {
                     </ul>
                     <p className="text-[#008080] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
                   </CardContent>
-                </Card>
+                </AnimatedCard>
               </div>
             </div>
           </div>
@@ -672,7 +667,7 @@ export default function EB5Page() {
               {/* Student Housing Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">学生公寓</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/uc-student-housing-hero-section.jpg"
@@ -698,13 +693,13 @@ export default function EB5Page() {
                       投资教育与未来，坐享优质房产升值空间
                     </p>
                   </CardContent>
-                </Card>
+                </AnimatedCard>
               </div>
 
               {/* Early Education Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">学前教育</h3>
-                <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
                       src="/orange-county-kindergarten.png"
@@ -728,7 +723,7 @@ export default function EB5Page() {
                     </ul>
                     <p className="text-[#008080] font-medium">深耕优质教育市场，抢占高端幼教蓝海</p>
                   </CardContent>
-                </Card>
+                </AnimatedCard>
               </div>
             </div>
           </div>
@@ -762,7 +757,7 @@ export default function EB5Page() {
               className="px-8 py-6 text-base bg-[#008080] hover:bg-[#008080] text-white"
               size="lg"
             >
-              了解更多投资项目，开启成功之路
+              <Link href="/projects">了解更多投资项目，开启成功之路</Link>
             </Button>
           </div>
         </div>
