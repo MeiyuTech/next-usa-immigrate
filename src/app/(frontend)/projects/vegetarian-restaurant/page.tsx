@@ -3,10 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { AnimatedCard, AnimatedNumber, AnimatedProgress } from '@/components/ui/animated-elements'
-import { FinancialChart } from '@/components/charts/financial-chart'
-import { CostStructureChart } from '@/components/charts/cost-structure-chart'
+import { AnimatedCard, AnimatedNumber } from '@/components/ui/animated-elements'
 import { MarketGrowthChart } from '@/components/charts/market-growth-chart'
+import { BrandInvestExitProcessCircle } from '@/components/brand-invest-exit-process-circle'
 
 export default function VegetarianRestaurantPage() {
   return (
@@ -620,6 +619,22 @@ export default function VegetarianRestaurantPage() {
                   </div>
                 </div>
               </AnimatedCard>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Exit Strategy Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">稳妥的退出机制</h2>
+
+          <div className="max-w-6xl mx-auto space-y-16">
+            <div className="relative">
+              <div className="absolute inset-0 bg-[url('/circle-pattern.png')] opacity-5" />
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-100 shadow-lg">
+                <BrandInvestExitProcessCircle />
+              </div>
             </div>
           </div>
         </div>
