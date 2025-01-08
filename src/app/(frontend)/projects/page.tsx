@@ -259,7 +259,7 @@ export default function ProjectsPage() {
               className="px-8 py-6 text-base bg-[#008080] hover:bg-[#008080] text-white"
               size="lg"
             >
-              了解更多投资项目，开启成功之路
+              <Link href="/projects/list">了解更多投资项目，开启成功之路</Link>
             </Button>
           </div>
         </div>

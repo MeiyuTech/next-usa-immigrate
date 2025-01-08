@@ -49,6 +49,8 @@ export default function FedexGroundPage() {
       {/* Project Overview Section */}
       <section id="project-overview" className="py-24">
         <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">项目概述</h2>
+
           <div className="grid md:grid-cols-5 gap-12 items-start">
             {/* Left: Image - 占据 3 列 */}
             <div className="md:col-span-3 sticky top-24">
@@ -65,8 +67,6 @@ export default function FedexGroundPage() {
 
             {/* Right: Content - 占据 2 列 */}
             <div className="md:col-span-2 space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#008080]">项目概述</h2>
-
               <p className="text-lg leading-relaxed text-muted-foreground">
                 美域佳华作为联邦快递 P&D 项目的独立承包商，深度参与 P&D 线路的交易和服务。
                 这不仅体现了美域佳华在该领域的运营实力，也为投资人和企业家提供了稳健的商业机会。
@@ -450,19 +450,19 @@ export default function FedexGroundPage() {
         </div>
       </section>
       {/* Service Area Section */}
-      <section className="py-24 bg-muted/50">
+      <section className="py-24">
         <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">服务区域</h2>
           <div className="grid md:grid-cols-5 gap-12 items-start">
             {/* Left: Service Areas Description - 占据 2 列 */}
-            <div className="md:col-span-2 space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#008080]">服务区域</h2>
 
+            <div className="md:col-span-2 space-y-6">
               <div className="space-y-6">
                 {/* Bay Area */}
                 <div className="space-y-3">
                   <h3 className="text-xl font-semibold flex items-center gap-2">
                     <span className="w-3 h-3 rounded-full bg-[#008080]"></span>
-                    旧金山湾区南部
+                    <span className="text-[#008080]">旧金山湾区南部</span>
                   </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
@@ -484,7 +484,7 @@ export default function FedexGroundPage() {
                 <div className="space-y-3">
                   <h3 className="text-xl font-semibold flex items-center gap-2">
                     <span className="w-3 h-3 rounded-full bg-[#008080]"></span>
-                    洛杉矶-橙县都会区
+                    <span className="text-[#008080]">洛杉矶-橙县都会区</span>
                   </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
@@ -522,7 +522,7 @@ export default function FedexGroundPage() {
 
                 {/* Key Advantages */}
                 <div className="mt-8 p-4 bg-[#008080]/5 rounded-lg">
-                  <h4 className="font-semibold mb-2">区位优势</h4>
+                  <h3 className="font-semibold mb-2">区位优势</h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-[#008080]">✓</span>

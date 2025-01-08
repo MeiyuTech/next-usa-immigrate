@@ -577,16 +577,6 @@ export default function EB5Page() {
               <h3 className="text-2xl md:text-3xl mb-8">Fedex 项目 | 第一顺位 | 无排期</h3>
               <p className="text-lg md:text-xl mb-6">无排期南加州联邦快递承包项目全球首发</p>
               <p className="text-lg md:text-xl mb-12">526E 获批担保 / 低风险投资，稳健回报</p>
-              <Button
-                className="px-8 py-6 text-base border-2 border-white 
-                  bg-transparent text-white 
-                  hover:bg-white/10 hover:backdrop-blur-sm hover:text-white
-                  transition-all duration-300 
-                  shadow-lg"
-                variant="outline"
-              >
-                <Link href="#investment-projects">查看我们的EB-5项目</Link>
-              </Button>
             </div>
           </div>
         </div>
@@ -608,7 +598,7 @@ export default function EB5Page() {
               {/* Local Logistics Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">本地物流</h3>
-                <Link href="/projects/fedex">
+                <Link href="/projects/fedex#project-overview">
                   <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                     <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                       <Image
