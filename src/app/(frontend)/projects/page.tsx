@@ -171,33 +171,35 @@ export default function ProjectsPage() {
               {/* Student Housing Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">学生公寓</h3>
-                <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
-                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                    <Image
-                      src="/uc-student-housing-hero-section.jpg"
-                      alt="uc-student-housing"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-[#008080] flex items-center gap-2">
-                      <span>🏠</span>
-                      <span>加州大学河滨分校公寓项目</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <h4 className="font-semibold mb-2">项目亮点：</h4>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                      <li>位于60号和91号高速交汇处，地理位置优越，紧邻安大略机场</li>
-                      <li>项目获得河滨县政府推荐信，配套设施成熟，适合学生和家庭居住</li>
-                      <li>随着洛杉矶发展东移，该区域成为潜力股，未来增值空间大</li>
-                    </ul>
-                    <p className="text-[#008080] font-medium">
-                      投资教育与未来，坐享优质房产升值空间
-                    </p>
-                  </CardContent>
-                </AnimatedCard>
+                <Link href="/projects/ucr-student-housing">
+                  <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                    <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                      <Image
+                        src="/uc-student-housing-hero-section.jpg"
+                        alt="uc-student-housing"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="text-[#008080] flex items-center gap-2">
+                        <span>🏠</span>
+                        <span>加州大学河滨分校公寓项目</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <h4 className="font-semibold mb-2">项目亮点：</h4>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                        <li>位于60号和91号高速交汇处，地理位置优越，紧邻安大略机场</li>
+                        <li>项目获得河滨县政府推荐信，配套设施成熟，适合学生和家庭居住</li>
+                        <li>随着洛杉矶发展东移，该区域成为潜力股，未来增值空间大</li>
+                      </ul>
+                      <p className="text-[#008080] font-medium">
+                        投资教育与未来，坐享优质房产升值空间
+                      </p>
+                    </CardContent>
+                  </AnimatedCard>
+                </Link>
               </div>
 
               {/* Early Education Card */}

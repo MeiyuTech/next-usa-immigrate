@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { CardContent } from '@/components/ui/card'
 import { AnimatedCard } from '@/components/ui/animated-elements'
 
 export default function UCRStudentHousingPage() {
@@ -36,7 +36,7 @@ export default function UCRStudentHousingPage() {
                   shadow-lg"
                 variant="outline"
               >
-                了解详情
+                <Link href="#project-overview">了解更多</Link>
               </Button>
             </div>
           </div>
@@ -44,7 +44,7 @@ export default function UCRStudentHousingPage() {
       </main>
 
       {/* Project Overview Section */}
-      <section className="py-12">
+      <section id="project-overview" className="py-12">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8">项目概述</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
