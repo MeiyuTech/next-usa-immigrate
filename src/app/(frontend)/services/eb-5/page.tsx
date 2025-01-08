@@ -569,7 +569,7 @@ export default function EB5Page() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center text-white">
               <h2 className="text-5xl md:text-7xl font-bold mb-4">
-                Fedex Ground 联邦快递 <br /> 独立承包商项目
+                Fedex Ground 联邦快递 <br /> 独立投资项目
               </h2>
               <h2 className="text-2xl md:text-4xl font-medium mb-8 text-white/80">
                 南加州最具影响力的 EB-5 项目公司
@@ -593,7 +593,7 @@ export default function EB5Page() {
           </p>
 
           {/* Business Investment Projects */}
-          <div className="mb-16">
+          <div className="mb-24">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Local Logistics Card */}
               <div className="space-y-4">
@@ -601,12 +601,7 @@ export default function EB5Page() {
                 <Link href="/projects/fedex#project-overview">
                   <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                     <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                      <Image
-                        src="/fedex.png"
-                        alt="fedex"
-                        fill
-                        className="object-cover object-[center_25px]"
-                      />
+                      <Image src="/fedex.png" alt="fedex" fill className="object-cover" />
                     </div>
                     <CardHeader>
                       <CardTitle className="text-[#008080] flex items-center gap-2">
@@ -632,37 +627,39 @@ export default function EB5Page() {
               {/* Health Food Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">健康餐饮</h3>
-                <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
-                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                    <Image
-                      src="/taste-of-beauty.jpg"
-                      alt="taste-of-beauty"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-[#008080] flex items-center gap-2">
-                      <span>🥗</span>
-                      <span>高级素食餐厅投资项目</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <h4 className="font-semibold mb-2">项目亮点：</h4>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                      <li>依托团队20年餐饮经验，打造高端素食品牌</li>
-                      <li>总店位于加州橙县，分店位于洛杉矶好莱坞，市场潜力巨大</li>
-                      <li>符合当下健康饮食趋势，稳健回报与品牌溢价并存</li>
-                    </ul>
-                    <p className="text-[#008080] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
-                  </CardContent>
-                </AnimatedCard>
+                <Link href="/projects/vegetarian-restaurant">
+                  <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                    <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                      <Image
+                        src="/taste-of-beauty.jpg"
+                        alt="taste-of-beauty"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="text-[#008080] flex items-center gap-2">
+                        <span>🥗</span>
+                        <span>高级素食餐厅投资项目</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <h4 className="font-semibold mb-2">项目亮点：</h4>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                        <li>依托团队20年餐饮经验，打造高端素食品牌</li>
+                        <li>总店位于加州橙县，分店位于洛杉矶好莱坞，市场潜力巨大</li>
+                        <li>符合当下健康饮食趋势，稳健回报与品牌溢价并存</li>
+                      </ul>
+                      <p className="text-[#008080] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
+                    </CardContent>
+                  </AnimatedCard>
+                </Link>
               </div>
             </div>
           </div>
 
           {/* Real Estate Projects */}
-          <div className="mb-16">
+          <div className="mb-24">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Student Housing Card */}
               <div className="space-y-4">

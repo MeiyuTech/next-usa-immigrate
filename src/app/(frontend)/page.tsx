@@ -173,7 +173,7 @@ export default function HomePage() {
       </section>
 
       {/* Investment Projects Section */}
-      <section className="py-24 bg-background">
+      <section id="investment-projects" className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-4">多领域投资项目</h2>
           <p className="text-lg text-center mb-16 max-w-3xl mx-auto">
@@ -183,20 +183,15 @@ export default function HomePage() {
           </p>
 
           {/* Business Investment Projects */}
-          <div className="mb-16">
+          <div className="mb-24">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Local Logistics Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">本地物流</h3>
-                <Link href="/projects/fedex">
+                <Link href="/projects/fedex#project-overview">
                   <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                     <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                      <Image
-                        src="/fedex.png"
-                        alt="fedex"
-                        fill
-                        className="object-cover object-[center_25px]"
-                      />
+                      <Image src="/fedex.png" alt="fedex" fill className="object-cover" />
                     </div>
                     <CardHeader>
                       <CardTitle className="text-[#008080] flex items-center gap-2">
@@ -222,37 +217,39 @@ export default function HomePage() {
               {/* Health Food Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">健康餐饮</h3>
-                <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
-                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                    <Image
-                      src="/taste-of-beauty.jpg"
-                      alt="taste-of-beauty"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-[#008080] flex items-center gap-2">
-                      <span>🥗</span>
-                      <span>高级素食餐厅投资项目</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <h4 className="font-semibold mb-2">项目亮点：</h4>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                      <li>依托团队20年餐饮经验，打造高端素食品牌</li>
-                      <li>总店位于加州橙县，分店位于洛杉矶好莱坞，市场潜力巨大</li>
-                      <li>符合当下健康饮食趋势，稳健回报与品牌溢价并存</li>
-                    </ul>
-                    <p className="text-[#008080] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
-                  </CardContent>
-                </AnimatedCard>
+                <Link href="/projects/vegetarian-restaurant">
+                  <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                    <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                      <Image
+                        src="/taste-of-beauty.jpg"
+                        alt="taste-of-beauty"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="text-[#008080] flex items-center gap-2">
+                        <span>🥗</span>
+                        <span>高级素食餐厅投资项目</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <h4 className="font-semibold mb-2">项目亮点：</h4>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                        <li>依托团队20年餐饮经验，打造高端素食品牌</li>
+                        <li>总店位于加州橙县，分店位于洛杉矶好莱坞，市场潜力巨大</li>
+                        <li>符合当下健康饮食趋势，稳健回报与品牌溢价并存</li>
+                      </ul>
+                      <p className="text-[#008080] font-medium">创新餐饮投资，把握健康潮流新机遇</p>
+                    </CardContent>
+                  </AnimatedCard>
+                </Link>
               </div>
             </div>
           </div>
 
           {/* Real Estate Projects */}
-          <div className="mb-16">
+          <div className="mb-24">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Student Housing Card */}
               <div className="space-y-4">
@@ -260,7 +257,7 @@ export default function HomePage() {
                 <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
-                      src="/uc-student-housing.jpg"
+                      src="/uc-student-housing-hero-section.jpg"
                       alt="uc-student-housing"
                       fill
                       className="object-cover"
@@ -314,6 +311,30 @@ export default function HomePage() {
                     <p className="text-[#008080] font-medium">深耕优质教育市场，抢占高端幼教蓝海</p>
                   </CardContent>
                 </AnimatedCard>
+              </div>
+            </div>
+          </div>
+
+          {/* Why Choose Us */}
+          <div className="bg-muted/50 rounded-lg p-8">
+            <h3 className="text-2xl font-bold mb-6 text-center">为什么选择这些项目？</h3>
+            <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <div className="text-center">
+                <p className="text-4xl mb-4">🌟</p>
+                <h4 className="font-semibold mb-2">安全稳健</h4>
+                <p className="text-muted-foreground">项目筛选严谨，风险可控，投资回报透明可期</p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl mb-4">🤝</p>
+                <h4 className="font-semibold mb-2">全程协助</h4>
+                <p className="text-muted-foreground">
+                  提供从项目选择、实地考察到后续运营的全方位服务
+                </p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl mb-4">🌐</p>
+                <h4 className="font-semibold mb-2">多领域覆盖</h4>
+                <p className="text-muted-foreground">满足事业投资、资产配置、教育保障等多种需求</p>
               </div>
             </div>
           </div>

@@ -2,8 +2,10 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { AnimatedCard, AnimatedNumber, AnimatedProgress } from '@/components/ui/animated-elements'
+import { FinancialChart } from '@/components/charts/financial-chart'
+import { CostStructureChart } from '@/components/charts/cost-structure-chart'
 
 export default function FedexGroundPage() {
   return (
@@ -23,7 +25,7 @@ export default function FedexGroundPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center text-white">
               <h1 className="text-5xl md:text-7xl font-bold mb-4">
-                Fedex Ground 联邦快递 <br /> 独立承包商项目
+                Fedex Ground 联邦快递 <br /> 独立投资项目
               </h1>
               <h2 className="text-2xl md:text-4xl font-medium mb-8 text-white/80">
                 南加州最具影响力的 EB-5 项目公司
@@ -207,7 +209,7 @@ export default function FedexGroundPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Advantage 1: Business Model */}
-            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
               <CardHeader>
                 <CardTitle className="text-2xl text-[#008080] flex items-center gap-3">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#008080]/10">
@@ -259,10 +261,10 @@ export default function FedexGroundPage() {
                   </li>
                 </ul>
               </CardContent>
-            </Card>
+            </AnimatedCard>
 
             {/* Advantage 2: Employment Creation */}
-            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
               <CardHeader>
                 <CardTitle className="text-2xl text-[#008080] flex items-center gap-3">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#008080]/10">
@@ -316,10 +318,10 @@ export default function FedexGroundPage() {
                   </li>
                 </ul>
               </CardContent>
-            </Card>
+            </AnimatedCard>
 
             {/* Advantage 3: Investment Security */}
-            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
               <CardHeader>
                 <CardTitle className="text-2xl text-[#008080] flex items-center gap-3">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#008080]/10">
@@ -390,10 +392,10 @@ export default function FedexGroundPage() {
                   </li>
                 </ul>
               </CardContent>
-            </Card>
+            </AnimatedCard>
 
             {/* Advantage 4: Immigration Benefits */}
-            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
               <CardHeader>
                 <CardTitle className="text-2xl text-[#008080] flex items-center gap-3">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#008080]/10">
@@ -445,7 +447,7 @@ export default function FedexGroundPage() {
                   </li>
                 </ul>
               </CardContent>
-            </Card>
+            </AnimatedCard>
           </div>
         </div>
       </section>
@@ -731,7 +733,7 @@ export default function FedexGroundPage() {
       </section>
 
       {/* Financial Report Section */}
-      <section className="py-24 bg-muted/50">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">财务报表分析</h2>
           <div className="text-center mb-4 text-muted-foreground">
@@ -756,19 +758,17 @@ export default function FedexGroundPage() {
                 </CardContent>
               </AnimatedCard>
 
-              <Card className="bg-white animate-card">
+              <AnimatedCard className="bg-white">
                 <CardHeader>
                   <CardTitle className="text-[#008080]">运营成本</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold text-[#008080]">
-                    $<AnimatedNumber value={97824} />
-                  </div>
+                  <div className="text-2xl font-bold text-[#008080]">$97,824</div>
                   <p className="text-sm text-muted-foreground">23.4% 占比</p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
 
-              <Card className="bg-white animate-card">
+              <AnimatedCard className="bg-white">
                 <CardHeader>
                   <CardTitle className="text-[#008080]">净利润</CardTitle>
                 </CardHeader>
@@ -778,12 +778,12 @@ export default function FedexGroundPage() {
                   </div>
                   <p className="text-sm text-muted-foreground">10.2% 利润率</p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
             </div>
 
             {/* Right: Cost Breakdown */}
             <div className="md:col-span-7">
-              <Card className="animate-card">
+              <AnimatedCard>
                 <CardHeader>
                   <CardTitle>成本构成</CardTitle>
                 </CardHeader>
@@ -828,14 +828,14 @@ export default function FedexGroundPage() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
             </div>
           </div>
 
           {/* Detailed Analysis */}
           <div className="grid md:grid-cols-3 gap-6">
             {/* Revenue Analysis */}
-            <Card>
+            <AnimatedCard>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <svg
@@ -856,17 +856,16 @@ export default function FedexGroundPage() {
               </CardHeader>
               <CardContent>
                 <div className="text-center p-4">
-                  <div className="text-3xl font-bold text-[#008080] mb-2">$6,952</div>
+                  <div className="text-3xl font-bold text-[#008080] mb-2">
+                    $<AnimatedNumber value={6952} />
+                  </div>
                   <p className="text-sm text-muted-foreground">日均收入</p>
                 </div>
-                <div className="h-[100px] bg-[#008080]/5 rounded-lg mt-4">
-                  {/* 这里可以添加收入趋势图表 */}
-                </div>
               </CardContent>
-            </Card>
+            </AnimatedCard>
 
             {/* Cost Structure */}
-            <Card>
+            <AnimatedCard>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <svg
@@ -886,25 +885,18 @@ export default function FedexGroundPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">运营成本率</span>
-                    <span className="text-[#008080] font-medium">23.4%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">人工成本率</span>
-                    <span className="text-[#008080] font-medium">53.6%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">其他费用率</span>
-                    <span className="text-[#008080] font-medium">23.0%</span>
-                  </div>
-                </div>
+                <CostStructureChart
+                  data={[
+                    { name: '运营成本', value: 23.4 },
+                    { name: '人工成本', value: 53.6 },
+                    { name: '其他费用', value: 23.0 },
+                  ]}
+                />
               </CardContent>
-            </Card>
+            </AnimatedCard>
 
             {/* Profitability */}
-            <Card>
+            <AnimatedCard>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <svg
@@ -939,7 +931,203 @@ export default function FedexGroundPage() {
                   </div>
                 </div>
               </CardContent>
-            </Card>
+            </AnimatedCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Ongoing Projects Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-16">正在进行的项目</h2>
+
+          {/* Summary Cards */}
+          <div className="mb-16">
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <AnimatedCard className="bg-[#008080] text-white">
+                <CardHeader>
+                  <CardTitle>项目概览</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <p className="text-sm">总投资额</p>
+                        <p className="text-2xl font-bold ">293万美元</p>
+                      </div>
+                      <div>
+                        <p className="text-sm">公司数量</p>
+                        <p className="text-2xl font-bold ">3家</p>
+                      </div>
+                      <div>
+                        <p className="text-sm">总线路数</p>
+                        <p className="text-2xl font-bold ">29条</p>
+                      </div>
+                      <div>
+                        <p className="text-sm">覆盖范围</p>
+                        <p className="text-xl font-bold ">旧金山湾区南部 + 洛杉矶橙县</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </AnimatedCard>
+
+              <AnimatedCard>
+                <CardHeader>
+                  <CardTitle>2023年度表现</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">总营业额</p>
+                      <p className="text-2xl font-bold text-[#008080]">
+                        $<AnimatedNumber value={4018729} />
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">平均净利润率</p>
+                      <p className="text-xl font-bold text-[#008080]">10.2%</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </AnimatedCard>
+            </div>
+          </div>
+
+          {/* Project Cards */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Project 1 */}
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02]">
+              <CardHeader>
+                <CardTitle className="text-xl">H Fedex</CardTitle>
+                <p className="text-sm text-muted-foreground">成立时间: 07/11/2017</p>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <p className="font-medium">收购价格</p>
+                      <p className="text-muted-foreground">$840K</p>
+                    </div>
+                    <div>
+                      <p className="font-medium">线路数量</p>
+                      <p className="text-muted-foreground">12条</p>
+                    </div>
+                  </div>
+
+                  {/* Financial Chart */}
+                  <div className="pt-4">
+                    <p className="text-sm font-medium mb-3">近三年财务状况</p>
+                    <FinancialChart
+                      data={[
+                        {
+                          year: '2023',
+                          revenue: 1526167,
+                          profit: 240702,
+                        },
+                        {
+                          year: '2022',
+                          revenue: 1691396,
+                          profit: 180049,
+                        },
+                        {
+                          year: '2021',
+                          revenue: 1908839,
+                          profit: 380071,
+                        },
+                        {
+                          year: '2020',
+                          revenue: 1789180,
+                          profit: 290885,
+                        },
+                      ]}
+                    />
+                  </div>
+                </div>
+              </CardContent>
+            </AnimatedCard>
+
+            {/* Project 2 */}
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02]">
+              <CardHeader>
+                <CardTitle className="text-xl">N Fedex</CardTitle>
+                <p className="text-sm text-muted-foreground">成立时间: 01/03/2022</p>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <p className="font-medium">收购价格</p>
+                      <p className="text-muted-foreground">$690K</p>
+                    </div>
+                    <div>
+                      <p className="font-medium">线路数量</p>
+                      <p className="text-muted-foreground">8条</p>
+                    </div>
+                  </div>
+
+                  {/* Financial Chart */}
+                  <div className="pt-4">
+                    <p className="text-sm font-medium mb-3">近两年财务状况</p>
+                    <FinancialChart
+                      data={[
+                        {
+                          year: '2023',
+                          revenue: 904752,
+                          profit: 132629,
+                        },
+                        {
+                          year: '2022',
+                          revenue: 152943,
+                          profit: 98330,
+                        },
+                      ]}
+                    />
+                  </div>
+                </div>
+              </CardContent>
+            </AnimatedCard>
+
+            {/* Project 3 */}
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02]">
+              <CardHeader>
+                <CardTitle className="text-xl">S Fedex</CardTitle>
+                <p className="text-sm text-muted-foreground">成立时间: 10/26/2021</p>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <p className="font-medium">收购价格</p>
+                      <p className="text-muted-foreground">$1400K</p>
+                    </div>
+                    <div>
+                      <p className="font-medium">线路数量</p>
+                      <p className="text-muted-foreground">9条</p>
+                    </div>
+                  </div>
+
+                  {/* Financial Chart */}
+                  <div className="pt-4">
+                    <p className="text-sm font-medium mb-3">近两年财务状况</p>
+                    <FinancialChart
+                      data={[
+                        {
+                          year: '2023',
+                          revenue: 1587810,
+                          profit: 168454,
+                        },
+                        {
+                          year: '2022',
+                          revenue: 803012,
+                          profit: 111157,
+                        },
+                      ]}
+                    />
+                  </div>
+                </div>
+              </CardContent>
+            </AnimatedCard>
           </div>
         </div>
       </section>
@@ -949,6 +1137,6 @@ export default function FedexGroundPage() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: 'Fedex Ground 联邦快递 | 独立承包商项目介绍 | 项目展示',
+    title: 'Fedex Ground 联邦快递 | 独立投资项目介绍 | 项目展示',
   }
 }
