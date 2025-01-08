@@ -1,8 +1,9 @@
 'use client'
 
-import { useInView } from 'react-intersection-observer'
-import { Card } from '@/components/ui/card'
 import { useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
+import { Card } from '@/components/ui/card'
 
 // Animated number component
 export function AnimatedNumber({ value }: { value: number }) {
@@ -14,13 +15,13 @@ export function AnimatedNumber({ value }: { value: number }) {
 
   useEffect(() => {
     if (inView) {
-      // 动画持续时间
+      // Animation duration
       const duration = 2000
-      // 更新间隔
+      // Update interval
       const interval = 16
-      // 步进次数
+      // Number of steps
       const steps = duration / interval
-      // 每次增加的值
+      // Increment per step
       const increment = value / steps
 
       let current = 0
@@ -41,9 +42,14 @@ export function AnimatedNumber({ value }: { value: number }) {
   }, [inView, value])
 
   return (
-    <span ref={ref} className={`inline-block ${inView ? 'opacity-100' : 'opacity-0'}`}>
+    <motion.span
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
       {new Intl.NumberFormat('en-US').format(count)}
-    </span>
+    </motion.span>
   )
 }
 
@@ -60,39 +66,38 @@ export function AnimatedCard({
     threshold: 0.1,
   })
 
+  // 提取 col-span 相关的类
+  const colSpanClass = className.match(/col-span-\d+/)?.[0] || ''
+  // 移除原始className中的 col-span 类，避免重复
+  const otherClasses = className.replace(/col-span-\d+/, '').trim()
+
   return (
-    <Card
+    <motion.div
       ref={ref}
-      className={`transition-all duration-1000 delay-100 ease-out ${
-        inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-      } ${className}`}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 40 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+      className={`w-full h-full ${colSpanClass}`} // 应用 col-span 到外层
     >
-      {children}
-    </Card>
+      <Card className={`w-full h-full ${otherClasses}`}>{children}</Card>
+    </motion.div>
   )
 }
 
-// Add new AnimatedProgress component
+// Animated progress component
 export function AnimatedProgress({ value }: { value: number }) {
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.1,
   })
-  const [width, setWidth] = useState(0)
-
-  useEffect(() => {
-    if (inView) {
-      setWidth(value)
-    } else {
-      setWidth(0)
-    }
-  }, [inView, value])
 
   return (
     <div ref={ref} className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-      <div
-        className="h-full bg-[#008080] rounded-full transition-all duration-1000 ease-out"
-        style={{ width: `${width}%` }}
+      <motion.div
+        className="h-full bg-[#008080] rounded-full"
+        initial={{ width: 0 }}
+        animate={{ width: inView ? `${value}%` : '0%' }}
+        transition={{ duration: 1, ease: 'easeOut' }}
       />
     </div>
   )

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { AnimatedCard, AnimatedNumber, AnimatedProgress } from '@/components/ui/animated-elements'
 
 export default function FedexGroundPage() {
@@ -207,7 +207,7 @@ export default function FedexGroundPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Advantage 1: Business Model */}
-            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
               <CardHeader>
                 <CardTitle className="text-2xl text-[#008080] flex items-center gap-3">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#008080]/10">
@@ -259,10 +259,10 @@ export default function FedexGroundPage() {
                   </li>
                 </ul>
               </CardContent>
-            </Card>
+            </AnimatedCard>
 
             {/* Advantage 2: Employment Creation */}
-            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
               <CardHeader>
                 <CardTitle className="text-2xl text-[#008080] flex items-center gap-3">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#008080]/10">
@@ -316,10 +316,10 @@ export default function FedexGroundPage() {
                   </li>
                 </ul>
               </CardContent>
-            </Card>
+            </AnimatedCard>
 
             {/* Advantage 3: Investment Security */}
-            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
               <CardHeader>
                 <CardTitle className="text-2xl text-[#008080] flex items-center gap-3">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#008080]/10">
@@ -390,10 +390,10 @@ export default function FedexGroundPage() {
                   </li>
                 </ul>
               </CardContent>
-            </Card>
+            </AnimatedCard>
 
             {/* Advantage 4: Immigration Benefits */}
-            <Card className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
               <CardHeader>
                 <CardTitle className="text-2xl text-[#008080] flex items-center gap-3">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#008080]/10">
@@ -445,7 +445,7 @@ export default function FedexGroundPage() {
                   </li>
                 </ul>
               </CardContent>
-            </Card>
+            </AnimatedCard>
           </div>
         </div>
       </section>
@@ -756,7 +756,7 @@ export default function FedexGroundPage() {
                 </CardContent>
               </AnimatedCard>
 
-              <Card className="bg-white animate-card">
+              <AnimatedCard className="bg-white">
                 <CardHeader>
                   <CardTitle className="text-[#008080]">运营成本</CardTitle>
                 </CardHeader>
@@ -766,9 +766,9 @@ export default function FedexGroundPage() {
                   </div>
                   <p className="text-sm text-muted-foreground">23.4% 占比</p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
 
-              <Card className="bg-white animate-card">
+              <AnimatedCard className="bg-white">
                 <CardHeader>
                   <CardTitle className="text-[#008080]">净利润</CardTitle>
                 </CardHeader>
@@ -778,12 +778,12 @@ export default function FedexGroundPage() {
                   </div>
                   <p className="text-sm text-muted-foreground">10.2% 利润率</p>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
             </div>
 
             {/* Right: Cost Breakdown */}
             <div className="md:col-span-7">
-              <Card className="animate-card">
+              <AnimatedCard>
                 <CardHeader>
                   <CardTitle>成本构成</CardTitle>
                 </CardHeader>
@@ -828,14 +828,14 @@ export default function FedexGroundPage() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+              </AnimatedCard>
             </div>
           </div>
 
           {/* Detailed Analysis */}
           <div className="grid md:grid-cols-3 gap-6">
             {/* Revenue Analysis */}
-            <Card>
+            <AnimatedCard>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <svg
@@ -863,10 +863,10 @@ export default function FedexGroundPage() {
                   {/* 这里可以添加收入趋势图表 */}
                 </div>
               </CardContent>
-            </Card>
+            </AnimatedCard>
 
             {/* Cost Structure */}
-            <Card>
+            <AnimatedCard>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <svg
@@ -901,10 +901,10 @@ export default function FedexGroundPage() {
                   </div>
                 </div>
               </CardContent>
-            </Card>
+            </AnimatedCard>
 
             {/* Profitability */}
-            <Card>
+            <AnimatedCard>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <svg
@@ -939,7 +939,7 @@ export default function FedexGroundPage() {
                   </div>
                 </div>
               </CardContent>
-            </Card>
+            </AnimatedCard>
           </div>
         </div>
       </section>

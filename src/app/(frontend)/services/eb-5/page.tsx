@@ -593,7 +593,7 @@ export default function EB5Page() {
           </p>
 
           {/* Business Investment Projects */}
-          <div className="mb-16">
+          <div className="mb-24">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Local Logistics Card */}
               <div className="space-y-4">
@@ -601,12 +601,7 @@ export default function EB5Page() {
                 <Link href="/projects/fedex#project-overview">
                   <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                     <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                      <Image
-                        src="/fedex.png"
-                        alt="fedex"
-                        fill
-                        className="object-cover object-[center_25px]"
-                      />
+                      <Image src="/fedex.png" alt="fedex" fill className="object-cover" />
                     </div>
                     <CardHeader>
                       <CardTitle className="text-[#008080] flex items-center gap-2">
@@ -662,7 +657,7 @@ export default function EB5Page() {
           </div>
 
           {/* Real Estate Projects */}
-          <div className="mb-16">
+          <div className="mb-24">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Student Housing Card */}
               <div className="space-y-4">

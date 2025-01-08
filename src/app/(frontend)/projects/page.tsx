@@ -93,22 +93,22 @@ export default function ProjectsPage() {
       <section id="investment-projects" className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-4">多领域投资项目</h2>
+          <p className="text-lg text-center mb-16 max-w-3xl mx-auto">
+            美域佳华不仅专注于移民服务，更致力于为客户提供涵盖投资、商业运营和教育等多维度的项目支持。
+            无论您处于事业初创期、扩展期，或是希望为家人提供更优质的教育与生活条件，我们都能为您匹配合适的项目，
+            助力您和家人的长远发展。
+          </p>
 
           {/* Business Investment Projects */}
-          <div className="mb-16">
+          <div className="mb-24">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Local Logistics Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">本地物流</h3>
-                <Link href="/projects/fedex">
+                <Link href="/projects/fedex#project-overview">
                   <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                     <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                      <Image
-                        src="/fedex.png"
-                        alt="fedex"
-                        fill
-                        className="object-cover object-[center_25px]"
-                      />
+                      <Image src="/fedex.png" alt="fedex" fill className="object-cover" />
                     </div>
                     <CardHeader>
                       <CardTitle className="text-[#008080] flex items-center gap-2">
@@ -164,7 +164,7 @@ export default function ProjectsPage() {
           </div>
 
           {/* Real Estate Projects */}
-          <div className="mb-16">
+          <div className="mb-24">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Student Housing Card */}
               <div className="space-y-4">
@@ -259,7 +259,7 @@ export default function ProjectsPage() {
               className="px-8 py-6 text-base bg-[#008080] hover:bg-[#008080] text-white"
               size="lg"
             >
-              <Link href="/projects/list">了解更多投资项目，开启成功之路</Link>
+              <Link href="/projects">了解更多投资项目，开启成功之路</Link>
             </Button>
           </div>
         </div>
