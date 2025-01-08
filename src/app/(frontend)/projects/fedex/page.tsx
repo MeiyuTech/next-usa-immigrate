@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { PerformanceChart } from '@/components/charts/performance-chart'
 import { Button } from '@/components/ui/button'
 import { CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { AnimatedCard, AnimatedNumber, AnimatedProgress } from '@/components/ui/animated-elements'
+import { FinancialChart } from '@/components/charts/financial-chart'
+import { CostStructureChart } from '@/components/charts/cost-structure-chart'
 
 export default function FedexGroundPage() {
   return (
@@ -732,7 +733,7 @@ export default function FedexGroundPage() {
       </section>
 
       {/* Financial Report Section */}
-      <section className="py-24 bg-muted/50">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">财务报表分析</h2>
           <div className="text-center mb-4 text-muted-foreground">
@@ -762,9 +763,7 @@ export default function FedexGroundPage() {
                   <CardTitle className="text-[#008080]">运营成本</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold text-[#008080]">
-                    $<AnimatedNumber value={97824} />
-                  </div>
+                  <div className="text-2xl font-bold text-[#008080]">$97,824</div>
                   <p className="text-sm text-muted-foreground">23.4% 占比</p>
                 </CardContent>
               </AnimatedCard>
@@ -857,11 +856,10 @@ export default function FedexGroundPage() {
               </CardHeader>
               <CardContent>
                 <div className="text-center p-4">
-                  <div className="text-3xl font-bold text-[#008080] mb-2">$6,952</div>
+                  <div className="text-3xl font-bold text-[#008080] mb-2">
+                    $<AnimatedNumber value={6952} />
+                  </div>
                   <p className="text-sm text-muted-foreground">日均收入</p>
-                </div>
-                <div className="h-[100px] bg-[#008080]/5 rounded-lg mt-4">
-                  {/* 这里可以添加收入趋势图表 */}
                 </div>
               </CardContent>
             </AnimatedCard>
@@ -887,20 +885,13 @@ export default function FedexGroundPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">运营成本率</span>
-                    <span className="text-[#008080] font-medium">23.4%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">人工成本率</span>
-                    <span className="text-[#008080] font-medium">53.6%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">其他费用率</span>
-                    <span className="text-[#008080] font-medium">23.0%</span>
-                  </div>
-                </div>
+                <CostStructureChart
+                  data={[
+                    { name: '运营成本', value: 23.4 },
+                    { name: '人工成本', value: 53.6 },
+                    { name: '其他费用', value: 23.0 },
+                  ]}
+                />
               </CardContent>
             </AnimatedCard>
 
@@ -946,16 +937,14 @@ export default function FedexGroundPage() {
       </section>
 
       {/* Ongoing Projects Section */}
-      <section className="py-24 bg-muted/30">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">正在进行的项目</h2>
 
-          {/* Performance Chart */}
+          {/* Summary Cards */}
           <div className="mb-16">
             <div className="grid md:grid-cols-2 gap-8 items-start">
-              <PerformanceChart />
-              {/* Summary Cards */}
-              <AnimatedCard>
+              <AnimatedCard className="bg-[#008080] text-white">
                 <CardHeader>
                   <CardTitle>项目概览</CardTitle>
                 </CardHeader>
@@ -963,17 +952,21 @@ export default function FedexGroundPage() {
                   <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <p className="text-sm text-muted-foreground">总投资额</p>
-                        <p className="text-2xl font-bold text-[#008080]">293万美元</p>
+                        <p className="text-sm">总投资额</p>
+                        <p className="text-2xl font-bold ">293万美元</p>
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground">总线路数</p>
-                        <p className="text-2xl font-bold text-[#008080]">29条</p>
+                        <p className="text-sm">公司数量</p>
+                        <p className="text-2xl font-bold ">3家</p>
                       </div>
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground mb-2">平均盈亏平衡期</p>
-                      <p className="text-xl font-bold text-[#008080]">1.1年</p>
+                      <div>
+                        <p className="text-sm">总线路数</p>
+                        <p className="text-2xl font-bold ">29条</p>
+                      </div>
+                      <div>
+                        <p className="text-sm">覆盖范围</p>
+                        <p className="text-xl font-bold ">旧金山湾区南部 + 洛杉矶橙县</p>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
@@ -987,7 +980,9 @@ export default function FedexGroundPage() {
                   <div className="space-y-4">
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">总营业额</p>
-                      <p className="text-2xl font-bold text-[#008080]">$4,018,729</p>
+                      <p className="text-2xl font-bold text-[#008080]">
+                        $<AnimatedNumber value={4018729} />
+                      </p>
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">平均净利润率</p>
@@ -1004,19 +999,15 @@ export default function FedexGroundPage() {
             {/* Project 1 */}
             <AnimatedCard className="transition-all duration-300 hover:scale-[1.02]">
               <CardHeader>
-                <CardTitle className="text-xl">Ho**i**g fedex</CardTitle>
+                <CardTitle className="text-xl">H Fedex</CardTitle>
                 <p className="text-sm text-muted-foreground">成立时间: 07/11/2017</p>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="grid grid-cols-3 gap-4 text-sm">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <p className="font-medium">收购价格</p>
-                      <p className="text-muted-foreground">84万美元</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">盈亏平衡期</p>
-                      <p className="text-muted-foreground">1.3年</p>
+                      <p className="text-muted-foreground">$840K</p>
                     </div>
                     <div>
                       <p className="font-medium">线路数量</p>
@@ -1027,44 +1018,30 @@ export default function FedexGroundPage() {
                   {/* Financial Chart */}
                   <div className="pt-4">
                     <p className="text-sm font-medium mb-3">近三年财务状况</p>
-                    <div className="space-y-3">
-                      <div>
-                        <div className="flex justify-between text-sm mb-1">
-                          <span className="text-muted-foreground">2023</span>
-                          <span>$1,526,167</span>
-                        </div>
-                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
-                            style={{ width: '80%' }}
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <div className="flex justify-between text-sm mb-1">
-                          <span className="text-muted-foreground">2022</span>
-                          <span>$1,691,396</span>
-                        </div>
-                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
-                            style={{ width: '88%' }}
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <div className="flex justify-between text-sm mb-1">
-                          <span className="text-muted-foreground">2021</span>
-                          <span>$1,908,839</span>
-                        </div>
-                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
-                            style={{ width: '100%' }}
-                          />
-                        </div>
-                      </div>
-                    </div>
+                    <FinancialChart
+                      data={[
+                        {
+                          year: '2023',
+                          revenue: 1526167,
+                          profit: 240702,
+                        },
+                        {
+                          year: '2022',
+                          revenue: 1691396,
+                          profit: 180049,
+                        },
+                        {
+                          year: '2021',
+                          revenue: 1908839,
+                          profit: 380071,
+                        },
+                        {
+                          year: '2020',
+                          revenue: 1789180,
+                          profit: 290885,
+                        },
+                      ]}
+                    />
                   </div>
                 </div>
               </CardContent>
@@ -1073,19 +1050,15 @@ export default function FedexGroundPage() {
             {/* Project 2 */}
             <AnimatedCard className="transition-all duration-300 hover:scale-[1.02]">
               <CardHeader>
-                <CardTitle className="text-xl">Ne**i fedex</CardTitle>
+                <CardTitle className="text-xl">N Fedex</CardTitle>
                 <p className="text-sm text-muted-foreground">成立时间: 01/03/2022</p>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="grid grid-cols-3 gap-4 text-sm">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <p className="font-medium">收购价格</p>
-                      <p className="text-muted-foreground">69万美元</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">盈亏平衡期</p>
-                      <p className="text-muted-foreground">当年即盈利</p>
+                      <p className="text-muted-foreground">$690K</p>
                     </div>
                     <div>
                       <p className="font-medium">线路数量</p>
@@ -1096,32 +1069,20 @@ export default function FedexGroundPage() {
                   {/* Financial Chart */}
                   <div className="pt-4">
                     <p className="text-sm font-medium mb-3">近两年财务状况</p>
-                    <div className="space-y-3">
-                      <div>
-                        <div className="flex justify-between text-sm mb-1">
-                          <span className="text-muted-foreground">2023</span>
-                          <span>$904,752</span>
-                        </div>
-                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
-                            style={{ width: '85%' }}
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <div className="flex justify-between text-sm mb-1">
-                          <span className="text-muted-foreground">2022</span>
-                          <span>$152,943</span>
-                        </div>
-                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
-                            style={{ width: '15%' }}
-                          />
-                        </div>
-                      </div>
-                    </div>
+                    <FinancialChart
+                      data={[
+                        {
+                          year: '2023',
+                          revenue: 904752,
+                          profit: 132629,
+                        },
+                        {
+                          year: '2022',
+                          revenue: 152943,
+                          profit: 98330,
+                        },
+                      ]}
+                    />
                   </div>
                 </div>
               </CardContent>
@@ -1130,19 +1091,15 @@ export default function FedexGroundPage() {
             {/* Project 3 */}
             <AnimatedCard className="transition-all duration-300 hover:scale-[1.02]">
               <CardHeader>
-                <CardTitle className="text-xl">S**g**i</CardTitle>
+                <CardTitle className="text-xl">S Fedex</CardTitle>
                 <p className="text-sm text-muted-foreground">成立时间: 10/26/2021</p>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="grid grid-cols-3 gap-4 text-sm">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <p className="font-medium">收购价格</p>
-                      <p className="text-muted-foreground">140万美元</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">盈亏平衡期</p>
-                      <p className="text-muted-foreground">1年</p>
+                      <p className="text-muted-foreground">$1400K</p>
                     </div>
                     <div>
                       <p className="font-medium">线路数量</p>
@@ -1153,32 +1110,20 @@ export default function FedexGroundPage() {
                   {/* Financial Chart */}
                   <div className="pt-4">
                     <p className="text-sm font-medium mb-3">近两年财务状况</p>
-                    <div className="space-y-3">
-                      <div>
-                        <div className="flex justify-between text-sm mb-1">
-                          <span className="text-muted-foreground">2023</span>
-                          <span>$1,587,810</span>
-                        </div>
-                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
-                            style={{ width: '100%' }}
-                          />
-                        </div>
-                      </div>
-                      <div>
-                        <div className="flex justify-between text-sm mb-1">
-                          <span className="text-muted-foreground">2022</span>
-                          <span>$803,012</span>
-                        </div>
-                        <div className="h-2 bg-[#008080]/10 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-[#008080] rounded-full transition-all duration-1000"
-                            style={{ width: '50%' }}
-                          />
-                        </div>
-                      </div>
-                    </div>
+                    <FinancialChart
+                      data={[
+                        {
+                          year: '2023',
+                          revenue: 1587810,
+                          profit: 168454,
+                        },
+                        {
+                          year: '2022',
+                          revenue: 803012,
+                          profit: 111157,
+                        },
+                      ]}
+                    />
                   </div>
                 </div>
               </CardContent>
