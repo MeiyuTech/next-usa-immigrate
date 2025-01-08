@@ -25,7 +25,7 @@ export default function FedexGroundPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center text-white">
               <h1 className="text-5xl md:text-7xl font-bold mb-4">
-                Fedex Ground 联邦快递 <br /> 独立承包商项目
+                Fedex Ground 联邦快递 <br /> 独立投资项目
               </h1>
               <h2 className="text-2xl md:text-4xl font-medium mb-8 text-white/80">
                 南加州最具影响力的 EB-5 项目公司
@@ -1137,6 +1137,6 @@ export default function FedexGroundPage() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: 'Fedex Ground 联邦快递 | 独立承包商项目介绍 | 项目展示',
+    title: 'Fedex Ground 联邦快递 | 独立投资项目介绍 | 项目展示',
   }
 }
