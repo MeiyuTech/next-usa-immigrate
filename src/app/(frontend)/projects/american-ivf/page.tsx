@@ -192,127 +192,200 @@ export default function AmericanIVFPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">项目详细介绍</h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Left Column - Video Background */}
-            <div
-              className="relative w-full rounded-lg overflow-hidden"
-              style={{ aspectRatio: '9/16' }}
-            >
-              <video
-                className="absolute inset-0 w-full h-full object-cover"
-                autoPlay
-                loop
-                playsInline
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 place-items-center">
+            {/* Video Card */}
+            <div>
+              <AnimatedCard
+                className="bg-white rounded-xl shadow-md overflow-hidden"
+                style={{
+                  width: '360px',
+                  height: '640px',
+                }}
               >
-                <source src="/videos/How Does IVF Work 240109.mp4" type="video/mp4" />
-              </video>
+                <div className="relative w-full h-full">
+                  <video
+                    className="absolute inset-0 w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    playsInline
+                  >
+                    <source src="/videos/How Does IVF Work 240109.mp4" type="video/mp4" />
+                  </video>
+                  <div className="absolute inset-0 bg-gradient-to-b " />
+                  <div className="relative p-6">
+                    <h3 className="text-2xl font-semibold mb-4 text-[#008080]">IVF 流程介绍</h3>
+                  </div>
+                </div>
+              </AnimatedCard>
             </div>
 
-            {/* Right Column - Content */}
+            {/* Medical Examinations Card */}
             <div>
-              <AnimatedCard className="bg-white p-8 rounded-xl shadow-md">
-                <div className="space-y-8">
-                  {/* Pre-treatment Preparation */}
+              <AnimatedCard
+                className="bg-white p-6 rounded-xl shadow-md"
+                style={{
+                  width: '360px',
+                  height: '640px',
+                }}
+              >
+                <h3 className="text-2xl font-semibold mb-6 text-[#008080]">必要医学检查</h3>
+                <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-semibold mb-4 text-[#008080]">前期准备</h3>
-                    <div className="space-y-6">
-                      {/* Medical Examinations */}
-                      <div>
-                        <h4 className="text-lg font-medium mb-3 text-gray-800">必要医学检查</h4>
-                        <ul className="space-y-3 text-gray-700">
-                          <li className="flex items-start gap-3">
-                            <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
-                            <span>
-                              女性激素六项检查（FSH、LH、E2、PRL、T、AMH）及妇科B超，需在月经第二天进行
-                            </span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
-                            <span>男性精液分析和血常规检查，评估精子质量和身体状况</span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
-                            <span>染色体检查（如有遗传疾病史），确保胚胎健康</span>
-                          </li>
-                        </ul>
-                      </div>
+                    <h4 className="text-lg font-medium mb-4 text-gray-800">女性检查项目</h4>
+                    <ul className="space-y-4 text-gray-700">
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>激素六项检查：</span>
+                      </li>
+                      <li className="ml-5 space-y-2">
+                        <p>• FSH (卵泡刺激素)</p>
+                        <p>• LH (黄体生成素)</p>
+                        <p>• E2 (雌二醇)</p>
+                        <p>• PRL (泌乳素)</p>
+                        <p>• T (睾酮)</p>
+                        <p>• AMH (抗缪勒氏管激素)</p>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>妇科B超检查</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-medium mb-4 text-gray-800">男性检查项目</h4>
+                    <ul className="space-y-4 text-gray-700">
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>精液分析：精子数量、活力、形态等指标</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>血常规检查</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </AnimatedCard>
+            </div>
 
-                      {/* Cycle Adjustment */}
-                      <div>
-                        <h4 className="text-lg font-medium mb-3 text-gray-800">周期调整</h4>
-                        <ul className="space-y-3 text-gray-700">
-                          <li className="flex items-start gap-3">
-                            <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
-                            <span>根据个人情况使用避孕药或促排药物，进行卵泡发育系统调整</span>
-                          </li>
-                          <li className="flex items-start gap-3">
-                            <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
-                            <span>制定个性化的营养补充方案，改善卵子和精子质量</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+            {/* Treatment Process Card 1 */}
+            <div>
+              <AnimatedCard
+                className="bg-white p-8 rounded-xl shadow-md"
+                style={{
+                  width: '360px',
+                  height: '640px',
+                }}
+              >
+                <h3 className="text-2xl font-semibold mb-6 text-[#008080]">促排卵方案</h3>
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-lg font-medium mb-4">长促方案</h4>
+                    <p className="text-gray-700 mb-4">适用于卵巢储备正常的患者</p>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>前周期中黄期使用GnRH-a抑制垂体</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>月经第2-3天开始Gn促排卵</span>
+                      </li>
+                    </ul>
                   </div>
 
-                  {/* Divider */}
-                  <div className="h-px bg-gray-100"></div>
-
-                  {/* Treatment Process */}
                   <div>
-                    <h3 className="text-2xl font-semibold mb-4 text-[#008080]">治疗流程</h3>
-                    <div className="space-y-6">
-                      <div className="flex items-start gap-3">
-                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#008080]/10 flex items-center justify-center">
-                          <span className="text-[#008080] font-medium">1</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-medium mb-2">医疗咨询与方案制定</h4>
-                          <p className="text-gray-700 mb-2">
-                            与美国顶尖试管医生进行一对一视频咨询，根据您的具体情况选择：
-                          </p>
-                          <ul className="space-y-2 text-gray-700 ml-4">
-                            <li>• 长促方案：适用于卵巢储备正常的患者</li>
-                            <li>• 短促方案：适用于高龄或卵巢储备下降患者</li>
-                            <li>• 微促方案：适用于卵巢反应较弱的患者</li>
-                          </ul>
-                        </div>
-                      </div>
+                    <h4 className="text-lg font-medium mb-4">短促方案</h4>
+                    <p className="text-gray-700 mb-4">适用于高龄或卵巢储备下降患者</p>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>月经第2-3天同时使用GnRH-a和Gn</span>
+                      </li>
+                    </ul>
+                  </div>
 
-                      <div className="flex items-start gap-3">
-                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#008080]/10 flex items-center justify-center">
-                          <span className="text-[#008080] font-medium">2</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-medium mb-2">胚胎培养与筛查</h4>
-                          <p className="text-gray-700 mb-2">
-                            采用先进的胚胎培养技术，确保最佳培养环境：
-                          </p>
-                          <ul className="space-y-2 text-gray-700 ml-4">
-                            <li>• 飞跃第五天培养，获得囊胚</li>
-                            <li>• PGT-A基因检测（根据需求），筛查染色体异常</li>
-                            <li>• 胚胎评级，选择最优质胚胎</li>
-                          </ul>
-                        </div>
-                      </div>
+                  <div>
+                    <h4 className="text-lg font-medium mb-4">微刺激方案</h4>
+                    <p className="text-gray-700 mb-4">适用于卵巢反应较弱的患者</p>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>使用较小剂量的促排卵药物</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>减少患者用药负担</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </AnimatedCard>
+            </div>
 
-                      <div className="flex items-start gap-3">
-                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#008080]/10 flex items-center justify-center">
-                          <span className="text-[#008080] font-medium">3</span>
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-medium mb-2">胚胎移植与追踪</h4>
-                          <p className="text-gray-700 mb-2">
-                            采用单胚胎移植策略，确保最佳妊娠结局：
-                          </p>
-                          <ul className="space-y-2 text-gray-700 ml-4">
-                            <li>• 子宫内膜准备与评估</li>
-                            <li>• 精确时间点的胚胎解冻与移植</li>
-                            <li>• 移植后激素支持与监测</li>
-                            <li>• 妊娠检测与早期孕期管理</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+            {/* Treatment Process Card 2 */}
+            <div>
+              <AnimatedCard
+                className="bg-white p-8 rounded-xl shadow-md"
+                style={{
+                  width: '360px',
+                  height: '640px',
+                }}
+              >
+                <h3 className="text-2xl font-semibold mb-6 text-[#008080]">胚胎培养与移植</h3>
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-lg font-medium mb-4">胚胎培养</h4>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>采用先进培养系统，全程监控胚胎发育</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>飞跃第五天培养，获得高质量囊胚</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-medium mb-4">PGT-A基因检测</h4>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>筛查染色体异常</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>提高妊娠成功率</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>降低流产风险</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-medium mb-4">胚胎移植</h4>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>子宫内膜准备与评估</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>单胚胎移植策略</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>移植后激素支持</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <span className="w-2 h-2 bg-[#008080] rounded-full mt-2"></span>
+                        <span>早期孕期管理</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </AnimatedCard>
