@@ -698,31 +698,35 @@ export default function EB5Page() {
               {/* Early Education Card */}
               <div className="space-y-4">
                 <h3 className="text-2xl font-bold mb-8 text-center">学前教育</h3>
-                <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
-                  <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                    <Image
-                      src="/orange-county-kindergarten.png"
-                      alt="orange-county-kindergarten"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-[#008080] flex items-center gap-2">
-                      <span>🎨</span>
-                      <span>橙县艺术幼儿园投资项目</span>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <h4 className="font-semibold mb-2">项目亮点：</h4>
-                    <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
-                      <li>位于洛杉矶橙县核心地段，毗邻全美顶尖教育资源</li>
-                      <li>创造19个就业机会，符合EB-5投资移民要求</li>
-                      <li>前期投入120万美元，年利润估算高达324万美元</li>
-                    </ul>
-                    <p className="text-[#008080] font-medium">深耕优质教育市场，抢占高端幼教蓝海</p>
-                  </CardContent>
-                </AnimatedCard>
+                <Link href="/projects/kindergarten">
+                  <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                    <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                      <Image
+                        src="/orange-county-kindergarten.png"
+                        alt="orange-county-kindergarten"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="text-[#008080] flex items-center gap-2">
+                        <span>🎨</span>
+                        <span>橙县艺术幼儿园投资项目</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <h4 className="font-semibold mb-2">项目亮点：</h4>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                        <li>位于洛杉矶橙县核心地段，毗邻全美顶尖教育资源</li>
+                        <li>创造19个就业机会，符合EB-5投资移民要求</li>
+                        <li>前期投入120万美元，年利润估算高达324万美元</li>
+                      </ul>
+                      <p className="text-[#008080] font-medium">
+                        深耕优质教育市场，抢占高端幼教蓝海
+                      </p>
+                    </CardContent>
+                  </AnimatedCard>
+                </Link>
               </div>
             </div>
           </div>
