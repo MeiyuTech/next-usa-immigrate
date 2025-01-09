@@ -282,79 +282,100 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
 
               {activeSection === '项目展示' && (
                 <>
-                  <div>
-                    <h3 className="mb-2 text-[13px] font-semibold uppercase tracking-wide text-foreground/60">
-                      热门项目
-                    </h3>
-                    <div className="grid gap-2">
+                  <div className="space-y-8">
+                    <div>
+                      <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-foreground/60">
+                        当前投资项目
+                      </h3>
+                      <div className="space-y-4">
+                        <Button
+                          variant="ghost"
+                          className="h-auto w-full px-0 hover:bg-foreground/5"
+                          onClick={handleLinkClick}
+                        >
+                          <Link href="/projects/fedex" className="w-full text-left">
+                            <div className="font-medium">联邦快递独立投资项目</div>
+                            <div className="mt-1 text-xs text-foreground/60">
+                              全球物流巨头并肩，220+国家网络覆盖
+                            </div>
+                          </Link>
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          className="h-auto w-full px-0 hover:bg-foreground/5"
+                          onClick={handleLinkClick}
+                        >
+                          <Link href="/projects/vegetarian-restaurant" className="w-full text-left">
+                            <div className="font-medium">高级素食餐厅投资项目</div>
+                            <div className="mt-1 text-xs text-foreground/60">
+                              20年餐饮经验团队，打造高端美食品牌
+                            </div>
+                          </Link>
+                        </Button>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-foreground/60">
+                        竣工项目
+                      </h3>
+                      <div className="space-y-4">
+                        <Button
+                          variant="ghost"
+                          className="h-auto w-full px-0 hover:bg-foreground/5"
+                          onClick={handleLinkClick}
+                        >
+                          <Link href="/projects/ucr-student-housing" className="w-full text-left">
+                            <div className="font-medium">加州大学河滨分校公寓项目</div>
+                            <div className="mt-1 text-xs text-foreground/60">
+                              优质学生住房，毗邻大型机场
+                            </div>
+                          </Link>
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          className="h-auto w-full px-0 hover:bg-foreground/5"
+                          onClick={handleLinkClick}
+                        >
+                          <Link href="/projects/kindergarten" className="w-full text-left">
+                            <div className="font-medium">橙县艺术幼儿园项目</div>
+                            <div className="mt-1 text-xs text-foreground/60">
+                              EB-5认证教育投资，年利润324万美元
+                            </div>
+                          </Link>
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          className="h-auto w-full px-0 hover:bg-foreground/5"
+                          onClick={handleLinkClick}
+                        >
+                          <Link href="/projects/fox-property" className="w-full text-left">
+                            <div className="font-medium">福克斯物业开发项目</div>
+                            <div className="mt-1 text-xs text-foreground/60">
+                              TEA区域优势显著，市场估值2000万美元
+                            </div>
+                          </Link>
+                        </Button>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="mb-4 text-lg font-semibold leading-snug">
+                        精选优质投资项目，
+                        <br />
+                        确保资金安全与投资回报。
+                      </h4>
                       <Button
                         variant="ghost"
-                        className="justify-start px-0"
+                        className="group h-auto px-0 text-foreground/70 hover:text-foreground"
                         onClick={handleLinkClick}
                       >
-                        区域中心项目
-                      </Button>
-                      <Button
-                        variant="ghost"
-                        className="justify-start px-0"
-                        onClick={handleLinkClick}
-                      >
-                        直接投资项目
-                      </Button>
-                      <Button
-                        variant="ghost"
-                        className="justify-start px-0"
-                        onClick={handleLinkClick}
-                      >
-                        特殊人才机会
+                        <Link href="/projects" className="inline-flex items-center">
+                          了解更多项目
+                          <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                        </Link>
                       </Button>
                     </div>
-                  </div>
-
-                  <div>
-                    <h3 className="mb-2 text-[13px] font-semibold uppercase tracking-wide text-foreground/60">
-                      项目分析
-                    </h3>
-                    <div className="grid gap-2">
-                      <Button
-                        variant="ghost"
-                        className="justify-start px-0"
-                        onClick={handleLinkClick}
-                      >
-                        投资回报分析
-                      </Button>
-                      <Button
-                        variant="ghost"
-                        className="justify-start px-0"
-                        onClick={handleLinkClick}
-                      >
-                        风险评估报告
-                      </Button>
-                      <Button
-                        variant="ghost"
-                        className="justify-start px-0"
-                        onClick={handleLinkClick}
-                      >
-                        项目进度追踪
-                      </Button>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="mb-2 text-[13px] font-semibold uppercase tracking-wide text-foreground/60">
-                      最新动态
-                    </h3>
-                    <h4 className="mb-2 text-lg font-semibold">
-                      发现最新的投资机会，助您实现事业和移民双赢。
-                    </h4>
-                    <Button
-                      variant="ghost"
-                      className="h-auto justify-start px-0 py-2"
-                      onClick={handleLinkClick}
-                    >
-                      浏览所有项目
-                      <ChevronRight className="ml-1 h-4 w-4" />
-                    </Button>
                   </div>
                 </>
               )}
