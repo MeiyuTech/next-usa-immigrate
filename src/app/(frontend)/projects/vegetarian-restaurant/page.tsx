@@ -6,6 +6,7 @@ import { CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { AnimatedCard, AnimatedNumber } from '@/components/ui/animated-elements'
 import { MarketGrowthChart } from '@/components/charts/market-growth-chart'
 import { BrandInvestExitProcessCircle } from '@/components/brand-invest-exit-process-circle'
+import { LogoCarousel } from '@/components/ui/logo-carousel'
 
 export default function VegetarianRestaurantPage() {
   return (
@@ -67,7 +68,14 @@ export default function VegetarianRestaurantPage() {
             {/* Content */}
             <div className="max-w-3xl text-center">
               <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-                Taste of Beauty
+                <a
+                  href="https://thetasteofbeauty.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#008080] hover:text-[#008080]/80 transition-colors"
+                >
+                  Taste of Beauty
+                </a>{' '}
                 是美域集团旗下的高端素食餐厅品牌，以独特的植物性（plant-based）美食理念，
                 融合亚洲风味与艺术烹饪，带来视觉与味觉的双重享受。餐厅秉持健康、环保、动物福利三大核心理念，
                 为食客提供更加均衡、适度且富有生命力的餐饮体验。
@@ -145,8 +153,20 @@ export default function VegetarianRestaurantPage() {
         </div>
       </section>
 
+      {/* Press Section */}
+      <section className="py-24 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <a href="https://thetasteofbeauty.com/press/" target="_blank" rel="noopener noreferrer">
+            <h2 className="text-4xl font-bold text-[#008080] text-center mb-16">媒体报道</h2>
+          </a>
+        </div>
+        <div className="space-y-8 p-8 flex justify-center items-center">
+          <LogoCarousel columnCount={3} />
+        </div>
+      </section>
+
       {/* Investment Advantages Section */}
-      <section className="py-24 bg-gray-50/50">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">投资亮点与优势</h2>
 
@@ -429,7 +449,7 @@ export default function VegetarianRestaurantPage() {
       </section>
 
       {/* Market Analysis Section */}
-      <section className="py-24 bg-gray-50/50">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">市场分析</h2>
 
