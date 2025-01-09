@@ -13,7 +13,10 @@ type CarouselOptions = UseCarouselParameters[0]
 type CarouselPlugin = UseCarouselParameters[1]
 
 type CarouselProps = {
-  opts?: CarouselOptions
+  opts?: CarouselOptions & {
+    autoplay?: boolean
+    delay?: number
+  }
   plugins?: CarouselPlugin
   orientation?: 'horizontal' | 'vertical'
   setApi?: (api: CarouselApi) => void
@@ -105,6 +108,20 @@ const Carousel = React.forwardRef<
       api?.off('select', onSelect)
     }
   }, [api, onSelect])
+
+  React.useEffect(() => {
+    if (api && opts?.autoplay) {
+      const interval = setInterval(() => {
+        if (api.canScrollNext()) {
+          api.scrollNext()
+        } else {
+          api.scrollTo(0)
+        }
+      }, opts?.delay || 3000)
+
+      return () => clearInterval(interval)
+    }
+  }, [api, opts?.autoplay, opts?.delay])
 
   return (
     <CarouselContext.Provider

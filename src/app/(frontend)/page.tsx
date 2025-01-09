@@ -398,6 +398,8 @@ export default function HomePage() {
             opts={{
               align: 'start',
               loop: true,
+              autoplay: true,
+              delay: 3000,
             }}
             className="w-full"
           >
