@@ -238,6 +238,38 @@ export default function ProjectsPage() {
             </div>
           </div>
 
+          {/* Property Development Card */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold mb-8 text-center">物业开发</h3>
+            <Link href="/projects/fox-property">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                  <Image
+                    src="/san-bernardino.webp"
+                    alt="Fox Property Development"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-[#008080] flex items-center gap-2">
+                    <span>🏢</span>
+                    <span>福克斯物业开发项目</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <h4 className="font-semibold mb-2">项目亮点：</h4>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
+                    <li>位于南加州圣贝纳迪诺市核心地段，距离洛杉矶市中心仅一小时车程</li>
+                    <li>TEA地区投资额低至80万美元，对比非TEA区域节省25万美元</li>
+                    <li>市场估值1500万-2000万美元，项目潜力巨大，投资前景广阔</li>
+                  </ul>
+                  <p className="text-[#008080] font-medium">核心商圈物业投资，TEA区域优势显著</p>
+                </CardContent>
+              </AnimatedCard>
+            </Link>
+          </div>
+
           {/* Why Choose Us */}
           <div className="bg-muted/50 rounded-lg p-8">
             <h3 className="text-2xl font-bold mb-6 text-center">为什么选择这些项目？</h3>
