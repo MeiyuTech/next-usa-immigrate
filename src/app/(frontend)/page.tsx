@@ -439,71 +439,73 @@ export default function HomePage() {
             </AnimatedElement>
           </div>
           {/* Office Locations Carousel */}
-          <Carousel
-            opts={{
-              align: 'start',
-              loop: true,
-              autoplay: true,
-              delay: 3000,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-4">
-              {[
-                {
-                  src: '/office-beijing.jpg',
-                  alt: 'Office Beijing',
-                  title: '中国-北京办公室',
-                },
-                {
-                  src: '/office-irvine.jpg',
-                  alt: 'Office Invine',
-                  title: '美国-洛杉矶办公室',
-                },
-                {
-                  src: '/office-sf.jpg',
-                  alt: 'Office San Francisco',
-                  title: '美国-旧金山办公室',
-                },
-                {
-                  src: '/office-miami.jpg',
-                  alt: 'Office Miami',
-                  title: '美国-迈阿密办公室',
-                },
-                {
-                  src: '/office-boston.jpg',
-                  alt: 'Office Boston',
-                  title: '美国-波士顿办公室',
-                },
-                {
-                  src: '/office-chengdu.jpg',
-                  alt: 'Office Chengdu',
-                  title: '中国-成都办公室',
-                },
-                {
-                  src: '/office-changzhou.jpg',
-                  alt: 'Office Changzhou',
-                  title: '中国-常州办公室',
-                },
-              ].map((office, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/3">
-                  <div className="relative aspect-video rounded-lg overflow-hidden group">
-                    <Image
-                      src={office.src}
-                      alt={office.alt}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-[#008080] py-2 px-4">
-                      <p className="text-center text-white">{office.title}</p>
+          <Link href="/about-us/contact">
+            <Carousel
+              opts={{
+                align: 'start',
+                loop: true,
+                autoplay: true,
+                delay: 3000,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {[
+                  {
+                    src: '/office-beijing.jpg',
+                    alt: 'Office Beijing',
+                    title: '中国-北京办公室',
+                  },
+                  {
+                    src: '/office-irvine.jpg',
+                    alt: 'Office Invine',
+                    title: '美国-洛杉矶办公室',
+                  },
+                  {
+                    src: '/office-sf.jpg',
+                    alt: 'Office San Francisco',
+                    title: '美国-旧金山办公室',
+                  },
+                  {
+                    src: '/office-miami.jpg',
+                    alt: 'Office Miami',
+                    title: '美国-迈阿密办公室',
+                  },
+                  {
+                    src: '/office-boston.jpg',
+                    alt: 'Office Boston',
+                    title: '美国-波士顿办公室',
+                  },
+                  {
+                    src: '/office-chengdu.jpg',
+                    alt: 'Office Chengdu',
+                    title: '中国-成都办公室',
+                  },
+                  {
+                    src: '/office-changzhou.jpg',
+                    alt: 'Office Changzhou',
+                    title: '中国-常州办公室',
+                  },
+                ].map((office, index) => (
+                  <CarouselItem key={index} className="pl-4 md:basis-1/3">
+                    <div className="relative aspect-video rounded-lg overflow-hidden group">
+                      <Image
+                        src={office.src}
+                        alt={office.alt}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                      <div className="absolute bottom-0 left-0 right-0 bg-[#008080] py-2 px-4">
+                        <p className="text-center text-white">{office.title}</p>
+                      </div>
                     </div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
+          </Link>
         </div>
       </section>
     </>

@@ -20,7 +20,7 @@ export default function LawyersPage() {
   ]
   return (
     <div>
-      {/* Banner Section */}
+      {/* Hero Section */}
       <div className="relative h-[300px] w-full mb-12">
         <Image src="/lawyer-hero.png" alt="Lawyer Hero" fill className="object-cover" priority />
         {/* Dark overlay */}
@@ -74,6 +74,6 @@ export default function LawyersPage() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: '律师团队 | 团队介绍',
+    title: '律师团队 | 关于我们',
   }
 }
