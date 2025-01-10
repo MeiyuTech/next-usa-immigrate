@@ -475,21 +475,21 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
                           className="justify-start px-0"
                           onClick={handleLinkClick}
                         >
-                          公司历史
+                          <Link href="/about-us">集团介绍</Link>
                         </Button>
                         <Button
                           variant="ghost"
                           className="justify-start px-0"
                           onClick={handleLinkClick}
                         >
-                          愿景使命
+                          <Link href="/about-us#vision-and-strategy">愿景使命</Link>
                         </Button>
                         <Button
                           variant="ghost"
                           className="justify-start px-0"
                           onClick={handleLinkClick}
                         >
-                          服务优势
+                          <Link href="/about-us#service-advantage">服务优势</Link>
                         </Button>
                       </div>
                     </div>
@@ -511,7 +511,7 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
                           className="justify-start px-0"
                           onClick={handleLinkClick}
                         >
-                          法律团队
+                          <Link href="/about-us/lawyers">法律团队</Link>
                         </Button>
                         <Button
                           variant="ghost"
