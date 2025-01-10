@@ -16,7 +16,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import { AnimatedCard } from '@/components/ui/animated-elements'
+import { AnimatedCard, AnimatedElement } from '@/components/ui/animated-elements'
 
 export default function HomePage() {
   return (
@@ -424,13 +424,19 @@ export default function HomePage() {
           <h3 className="text-2xl text-center mb-4">为您中美两岸一站式的全链路服务</h3>
           <p className="text-lg text-center mb-16">北京/成都/常州 - 旧金山/洛杉矶/波士顿/迈阿密</p>
           {/* World Map */}
-          <div className="relative w-full aspect-[2/1] mb-16">
-            <Image
-              src="/AmCan-global-network.jpeg"
-              alt="Meiyu Global Network"
-              fill
-              className="object-contain"
-            />
+          <div className="relative w-full aspect-[1.6/1] mb-16">
+            <AnimatedElement
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              <Image
+                src="/MeiyuGlobalNetwork.png"
+                alt="Meiyu Global Network"
+                fill
+                className="object-cover transition-all duration-700 hover:scale-110"
+              />
+            </AnimatedElement>
           </div>
           {/* Office Locations Carousel */}
           <Carousel
