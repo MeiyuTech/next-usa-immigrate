@@ -18,31 +18,55 @@ export default function LawyersPage() {
       bio: '陈律师毕业于四川大学法学本科，南加州大学法学硕士，是美国纽约州注册律师，中国注册律师。陈律师曾就职于美国洛杉矶一家著名移民律师事务所，为世界级企业谷歌提供移民法律相关服务。陈律师还从事投资移民及区域中心项目案件，其职业移民从业经历异常耀眼。',
     },
   ]
-  // 把照片变成圆形的！！！
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-center mb-12">律师团队</h1>
-
-      <div className="grid gap-12 md:gap-16">
-        {lawyers.map((lawyer) => (
-          <div key={lawyer.id} className="flex flex-col md:flex-row gap-8 items-start">
-            <div className="w-full md:w-1/3">
-              <Image
-                src={lawyer.image}
-                alt={`${lawyer.englishName} - Immigration Lawyer`}
-                width={200}
-                height={200}
-                className="rounded-full shadow-lg border-4 border-blue-100"
-              />
-            </div>
-
-            <div className="w-full md:w-2/3">
-              <h2 className="text-2xl font-bold mb-2">{lawyer.name}</h2>
-              <h3 className="text-xl text-gray-600 mb-4">{lawyer.englishName}</h3>
-              <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{lawyer.bio}</p>
-            </div>
+    <div>
+      {/* Banner Section */}
+      <div className="relative h-[300px] w-full mb-12">
+        <Image src="/lawyer-hero.png" alt="Lawyer Hero" fill className="object-cover" priority />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-r">
+          <div className="container mx-auto px-4 h-full flex flex-col justify-center">
+            <h1
+              className="mb-6 text-5xl font-medium text-white md:text-7xl 
+                drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] transition-all duration-300
+                text-left"
+            >
+              专业律师团队
+            </h1>
+            <p
+              className="mb-8 max-w-lg text-lg text-white 
+                drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] transition-all duration-300"
+            >
+              我们的律师团队拥有丰富的移民法律经验，已帮助来自上百个国家的客户成功获得签证和美国绿卡，他们致力于为客户提供最专业的法律服务
+            </p>
           </div>
-        ))}
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid gap-12 md:gap-16">
+          {lawyers.map((lawyer) => (
+            <div key={lawyer.id} className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="w-full md:w-1/3">
+                <Image
+                  src={lawyer.image}
+                  alt={`${lawyer.englishName} - Immigration Lawyer`}
+                  width={200}
+                  height={200}
+                  className="rounded-full shadow-lg border-4 border-blue-100"
+                />
+              </div>
+
+              <div className="w-full md:w-2/3">
+                <h2 className="text-2xl font-bold mb-2">{lawyer.name}</h2>
+                <h3 className="text-xl text-gray-600 mb-4">{lawyer.englishName}</h3>
+                <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{lawyer.bio}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
