@@ -15,14 +15,6 @@ import { BusinessDistributionChart } from '@/components/charts/business-distribu
 import { FinancialGrowthChart } from '@/components/charts/financial-growth-chart'
 
 export default function AboutUsPage() {
-  const financialData = [
-    { year: '2019', revenue: 100, profit: 30 },
-    { year: '2020', revenue: 120, profit: 38 },
-    { year: '2021', revenue: 150, profit: 45 },
-    { year: '2022', revenue: 220, profit: 75 },
-    { year: '2023', revenue: 320, profit: 120 },
-  ]
-
   return (
     <>
       <main className="relative min-h-screen -mt-16">
@@ -63,7 +55,7 @@ export default function AboutUsPage() {
       </main>
 
       {/* Vision & Strategy Section */}
-      <section className="py-24">
+      <section id="vision-and-strategy" className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-6">愿景与战略</h2>
           <p className="text-lg text-center text-gray-600 mb-16 max-w-3xl mx-auto">
@@ -164,7 +156,15 @@ export default function AboutUsPage() {
                     <p className="text-muted-foreground mb-6">
                       近五年业务稳健增长，营收和利润持续提升。
                     </p>
-                    <FinancialGrowthChart data={financialData} />
+                    <FinancialGrowthChart
+                      data={[
+                        { year: '2019', revenue: 100, profit: 30 },
+                        { year: '2020', revenue: 120, profit: 38 },
+                        { year: '2021', revenue: 150, profit: 45 },
+                        { year: '2022', revenue: 220, profit: 75 },
+                        { year: '2023', revenue: 320, profit: 120 },
+                      ]}
+                    />
                   </CardContent>
                 </AnimatedCard>
 
@@ -198,8 +198,8 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* Our Advantages Section */}
-      <section className="py-24">
+      {/* Service Advantages Section */}
+      <section id="service-advantage" className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-6">核心优势</h2>
           <p className="text-lg text-center text-gray-600 mb-16 max-w-3xl mx-auto">
