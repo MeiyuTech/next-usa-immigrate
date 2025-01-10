@@ -421,8 +421,10 @@ export default function HomePage() {
       <section id="global-network" className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-4">多时区团队协作</h2>
-          <h3 className="text-2xl text-center mb-4">为您中美两岸一站式的全链路服务</h3>
-          <p className="text-lg text-center mb-16">北京/成都/常州 - 旧金山/洛杉矶/波士顿/迈阿密</p>
+          <h3 className="text-2xl text-center mb-4">中美两岸一站式的全链路服务</h3>
+          <p className="text-lg text-center mb-16">
+            北京/常州/成都/武汉 - 洛杉矶/旧金山/迈阿密/波士顿/纽约
+          </p>
           {/* World Map */}
           <div className="relative w-full aspect-[1.6/1] mb-16">
             <AnimatedElement
