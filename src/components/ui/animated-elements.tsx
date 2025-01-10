@@ -53,14 +53,15 @@ export function AnimatedNumber({ value }: { value: number }) {
   )
 }
 
-// Animated card component
-export function AnimatedCard({
-  children,
-  className = '',
-}: {
+// Add style to props type
+interface AnimatedCardProps {
   children: React.ReactNode
   className?: string
-}) {
+  style?: React.CSSProperties
+}
+
+// Animated card component
+export function AnimatedCard({ children, className = '', style }: AnimatedCardProps) {
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -78,6 +79,7 @@ export function AnimatedCard({
       animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 40 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
       className={`w-full h-full ${colSpanClass}`} // 应用 col-span 到外层
+      style={style}
     >
       <Card className={`w-full h-full ${otherClasses}`}>{children}</Card>
     </motion.div>

@@ -154,50 +154,52 @@ export function ProjectShowcaseMegaMenu() {
   return (
     <MegaMenuWrapper>
       <div>
-        <h3 className={headingStyles}>热门项目</h3>
+        <h3 className={headingStyles}>当前投资项目</h3>
         <div className="space-y-3">
-          <a href="#" className={linkStyles}>
-            区域中心项目
-          </a>
-          <a href="#" className={linkStyles}>
-            直接投资项目
-          </a>
-          <a href="#" className={linkStyles}>
-            特殊人才机会
-          </a>
+          <Link href="/projects/fedex" className={linkStyles}>
+            联邦快递独立投资项目
+            <div className="mt-1 text-xs text-white/60">全球物流巨头并肩，220+国家网络覆盖</div>
+          </Link>
+          <Link href="/projects/vegetarian-restaurant" className={linkStyles}>
+            高级素食餐厅投资项目
+            <div className="mt-1 text-xs text-white/60">20年餐饮经验团队，打造高端美食品牌</div>
+          </Link>
         </div>
       </div>
       <div>
-        <h3 className={headingStyles}>项目分析</h3>
+        <h3 className={headingStyles}>竣工项目</h3>
         <div className="space-y-3">
-          <a href="#" className={linkStyles}>
-            投资回报分析
-          </a>
-          <a href="#" className={linkStyles}>
-            风险评估报告
-          </a>
-          <a href="#" className={linkStyles}>
-            项目进度追踪
-          </a>
+          <Link href="/projects/ucr-student-housing" className={linkStyles}>
+            加州大学河滨分校公寓项目
+            <div className="mt-1 text-xs text-white/60">优质学生住房，毗邻大型机场</div>
+          </Link>
+          <Link href="/projects/kindergarten" className={linkStyles}>
+            橙县艺术幼儿园项目
+            <div className="mt-1 text-xs text-white/60">EB-5认证教育投资，年利润324万美元</div>
+          </Link>
+          <Link href="/projects/fox-property" className={linkStyles}>
+            福克斯物业开发项目
+            <div className="mt-1 text-xs text-white/60">TEA区域优势显著，市场估值2000万美元</div>
+          </Link>
         </div>
       </div>
       <div>
-        <h3 className={headingStyles}>最新动态</h3>
+        <h3 className={headingStyles}>投资优势</h3>
         <div className="space-y-4">
           <h4 className={featureHeadingStyles}>
-            发现最新的投资机会，
+            精选优质投资项目，
             <br />
-            助您实现事业和移民双赢。
+            确保资金安全与投资回报。
           </h4>
-          <a
-            href="#"
+          <Link
+            href="/projects"
             className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
           >
-            浏览所有项目
+            了解更多项目
             <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </MegaMenuWrapper>
