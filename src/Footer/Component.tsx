@@ -18,13 +18,13 @@ export async function Footer() {
       <div className="container py-12">
         {/* Top Bar with Theme Selector and CMS Links */}
         <div className="mb-12 flex flex-col items-end gap-4 md:flex-row md:justify-end md:items-center">
-          <nav className="flex flex-wrap gap-4">
+          {/* <nav className="flex flex-wrap gap-4">
             {navItems.map(({ link }, i) => {
               return (
                 <CMSLink className="text-sm text-white/70 hover:text-white" key={i} {...link} />
               )
             })}
-          </nav>
+          </nav> */}
           <ThemeSelector />
         </div>
 
@@ -100,7 +100,7 @@ export async function Footer() {
               <Link href="/resources" className="text-sm text-white/70 hover:text-white">
                 移民知识
               </Link>
-              <Link href="/about" className="text-sm text-white/70 hover:text-white">
+              <Link href="/about-us" className="text-sm text-white/70 hover:text-white">
                 关于我们
               </Link>
             </nav>
@@ -114,20 +114,41 @@ export async function Footer() {
             <div className="space-y-4">
               <div className="flex items-start gap-3 text-sm text-white/70">
                 <MapPin className="h-5 w-5 shrink-0" />
-                <p>美国华盛顿州西雅图市第五大道1234号，邮编98101</p>
+                <p>19800 MacArthur Blvd Ste 420, Irvine CA 92612</p>
               </div>
               <div className="flex items-center gap-3 text-sm text-white/70">
                 <Phone className="h-5 w-5" />
-                <a href="tel:+1234567890" className="hover:text-white">
-                  +1 (234) 567-890
-                </a>
+                <div className="space-y-1">
+                  <p>
+                    中国直拨：
+                    <a href="tel:167-6208-4336" className="hover:text-white">
+                      167-6208-4336
+                    </a>
+                  </p>
+                  <p>
+                    美国电话：
+                    <a href="tel:9499547996" className="hover:text-white">
+                      (949)954-7996
+                    </a>
+                  </p>
+                </div>
               </div>
               <div className="flex items-center gap-3 text-sm text-white/70">
                 <Mail className="h-5 w-5" />
-                <a href="mailto:info@meiyugroup.org" className="hover:text-white">
-                  info@meiyugroup.org
+                <a href="mailto:ca2@aet21.com" className="hover:text-white">
+                  ca2@aet21.com
                 </a>
               </div>
+              <div className="text-sm text-white/70">
+                <p>微信：LA9499547996</p>
+                <p>周一至周五 当地时间: 9:30 AM - 5:30 PM (PST)</p>
+              </div>
+              <Link
+                href="/about-us/contact"
+                className="inline-block text-sm text-white/70 hover:text-white underline"
+              >
+                查看更多办公室
+              </Link>
             </div>
           </div>
         </div>

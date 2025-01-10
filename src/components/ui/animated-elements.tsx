@@ -1,9 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, forwardRef, HTMLAttributes } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 import { Card } from '@/components/ui/card'
+import { cn } from '@/utilities/cn'
 
 // Animated number component
 export function AnimatedNumber({ value }: { value: number }) {
@@ -104,3 +105,13 @@ export function AnimatedProgress({ value }: { value: number }) {
     </div>
   )
 }
+
+// 添加一个新的动画组件，没有背景和边框
+const AnimatedElementComponent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+  (props, ref) => {
+    return <div ref={ref} {...props} className={cn('', props.className)} />
+  }
+)
+AnimatedElementComponent.displayName = 'AnimatedElementComponent'
+
+export const AnimatedElement = motion(AnimatedElementComponent)

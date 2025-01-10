@@ -64,15 +64,15 @@ export function ServiceMegaMenu() {
             <br />
             快速了解最适合您的移民项目。
           </h4>
-          <a
-            href="#"
+          <Link
+            href="/about-us/contact"
             className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
           >
             立即评估
             <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
       <div>
@@ -266,15 +266,15 @@ export function AboutUsMegaMenu() {
       <div>
         <h3 className={headingStyles}>公司介绍</h3>
         <div className="space-y-3">
-          <a href="#" className={linkStyles}>
-            公司历史
-          </a>
-          <a href="#" className={linkStyles}>
+          <Link href="/about-us" className={linkStyles}>
+            集团介绍
+          </Link>
+          <Link href="/about-us#vision-and-strategy" className={linkStyles}>
             愿景使命
-          </a>
-          <a href="#" className={linkStyles}>
+          </Link>
+          <Link href="/about-us#service-advantage" className={linkStyles}>
             服务优势
-          </a>
+          </Link>
         </div>
       </div>
       <div>
@@ -283,9 +283,9 @@ export function AboutUsMegaMenu() {
           <a href="#" className={linkStyles}>
             顾问团队
           </a>
-          <a href="#" className={linkStyles}>
+          <Link href="/about-us/lawyers" className={linkStyles}>
             法律团队
-          </a>
+          </Link>
           <a href="#" className={linkStyles}>
             合作伙伴
           </a>
@@ -300,7 +300,7 @@ export function AboutUsMegaMenu() {
             开启您的移民之旅。
           </h4>
           <Link
-            href="/contact"
+            href="/about-us/contact"
             className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
           >
             预约咨询

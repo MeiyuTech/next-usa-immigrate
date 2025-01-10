@@ -202,6 +202,7 @@ export default function FedexGroundPage() {
           </div>
         </div>
       </section>
+
       {/* Investment Advantages Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">
@@ -451,6 +452,7 @@ export default function FedexGroundPage() {
           </div>
         </div>
       </section>
+
       {/* Service Area Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">
