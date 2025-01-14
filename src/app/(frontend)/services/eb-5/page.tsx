@@ -113,7 +113,7 @@ export default function EB5Page() {
                         <span className="font-medium">第二步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
-                        <p>提交 I-526E （移民申请书）</p>
+                        <p>提交 I-526E/I-526 （移民申请书）</p>
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
@@ -206,7 +206,7 @@ export default function EB5Page() {
                         <span className="font-medium">第二步</span>
                       </div>
                       <div className="bg-white p-4 shadow-md min-h-[100px] flex items-center justify-center text-center relative z-[1]">
-                        <p>提交 I-526E （移民申请书）</p>
+                        <p>提交 I-526E/I-526 （移民申请书）</p>
                       </div>
                       <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-[2]">
                         <svg
@@ -457,7 +457,7 @@ export default function EB5Page() {
                   <p className="text-muted-foreground text-center">
                     自 xxxx 年起，已经成功完成超过 xxxx 期项目
                     <br />
-                    符合条件的投资人获得临时绿卡(I-526E)和永久绿卡(I-829)申请保持{' '}
+                    符合条件的投资人获得临时绿卡(I-526E/I-526)和永久绿卡(I-829)申请保持{' '}
                     <span className="text-[#008080]">100%</span> 通过率
                     <br />
                     超过 xxxx 位投资人已收回投资款
@@ -576,7 +576,7 @@ export default function EB5Page() {
               </h2>
               <h3 className="text-2xl md:text-3xl mb-8">Fedex 项目 | 第一顺位 | 无排期</h3>
               <p className="text-lg md:text-xl mb-6">无排期南加州联邦快递承包项目全球首发</p>
-              <p className="text-lg md:text-xl mb-12">526E 获批担保 / 低风险投资，稳健回报</p>
+              <p className="text-lg md:text-xl mb-12">526 获批担保 / 低风险投资，稳健回报</p>
             </div>
           </div>
         </div>
