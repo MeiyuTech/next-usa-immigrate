@@ -476,24 +476,24 @@ export default function FedexGroundPage() {
                   </h3>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <p className="font-medium text-[#008080]">覆盖面积</p>
+                      <h4 className="text-lg font-medium text-[#008080]">覆盖面积</h4>
                       <p className="text-muted-foreground">约 120 平方英里</p>
                     </div>
                     <div>
-                      <p className="font-medium text-[#008080]">服务门户</p>
+                      <h4 className="text-lg font-medium text-[#008080]">服务门户</h4>
                       <p className="text-muted-foreground">3,800+</p>
                     </div>
                     <div>
-                      <p className="font-medium text-[#008080]">日均包裹量</p>
+                      <h4 className="text-lg font-medium text-[#008080]">日均包裹量</h4>
                       <p className="text-muted-foreground">4,500-5,500件</p>
                     </div>
                     <div>
-                      <p className="font-medium text-[#008080]">主要区域</p>
+                      <h4 className="text-lg font-medium text-[#008080]">主要区域</h4>
                       <p className="text-muted-foreground">Palo Alto, Mountain View</p>
                     </div>
                   </div>
                   <div className="text-muted-foreground">
-                    <p className="font-medium text-[#008080] mb-2">区域特色：</p>
+                    <h4 className="text-lg font-medium text-[#008080] mb-2">区域特色：</h4>
                     <ul className="list-disc pl-4 space-y-2">
                       <li>硅谷核心区域，科技公司密集</li>
                       <li>高净值人群聚集区</li>
@@ -582,24 +582,24 @@ export default function FedexGroundPage() {
                   </h3>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <p className="font-medium text-[#008080]">覆盖面积</p>
+                      <h4 className="text-lg font-medium text-[#008080]">覆盖面积</h4>
                       <p className="text-muted-foreground">约 85 平方英里</p>
                     </div>
                     <div>
-                      <p className="font-medium text-[#008080]">服务门户</p>
+                      <h4 className="text-lg font-medium text-[#008080]">服务门户</h4>
                       <p className="text-muted-foreground">2,900+</p>
                     </div>
                     <div>
-                      <p className="font-medium text-[#008080]">日均包裹量</p>
+                      <h4 className="text-lg font-medium text-[#008080]">日均包裹量</h4>
                       <p className="text-muted-foreground">3,800-4,200件</p>
                     </div>
                     <div>
-                      <p className="font-medium text-[#008080]">主要区域</p>
+                      <h4 className="text-lg font-medium text-[#008080]">主要区域</h4>
                       <p className="text-muted-foreground">Huntington Beach, Newport Beach</p>
                     </div>
                   </div>
                   <div className="text-muted-foreground">
-                    <p className="font-medium text-[#008080] mb-2">区域特色：</p>
+                    <h4 className="text-lg font-medium text-[#008080] mb-2">区域特色：</h4>
                     <ul className="list-disc pl-4 space-y-2">
                       <li>豪华海滨别墅区</li>
                       <li>高端购物中心密集</li>
@@ -622,24 +622,24 @@ export default function FedexGroundPage() {
                   </h3>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <p className="font-medium text-[#008080]">覆盖面积</p>
+                      <h4 className="text-lg font-medium text-[#008080]">覆盖面积</h4>
                       <p className="text-muted-foreground">约 95 平方英里</p>
                     </div>
                     <div>
-                      <p className="font-medium text-[#008080]">服务门户</p>
+                      <h4 className="text-lg font-medium text-[#008080]">服务门户</h4>
                       <p className="text-muted-foreground">3,200+</p>
                     </div>
                     <div>
-                      <p className="font-medium text-[#008080]">日均包裹量</p>
+                      <h4 className="text-lg font-medium text-[#008080]">日均包裹量</h4>
                       <p className="text-muted-foreground">4,000-4,500件</p>
                     </div>
                     <div>
-                      <p className="font-medium text-[#008080]">主要区域</p>
+                      <h4 className="text-lg font-medium text-[#008080]">主要区域</h4>
                       <p className="text-muted-foreground">Yorba Linda, Anaheim Hills</p>
                     </div>
                   </div>
                   <div className="text-muted-foreground">
-                    <p className="font-medium text-[#008080] mb-2">区域特色：</p>
+                    <h4 className="text-lg font-medium text-[#008080] mb-2">区域特色：</h4>
                     <ul className="list-disc pl-4 space-y-2">
                       <li>高端住宅社区</li>
                       <li>优质学区集中地</li>
@@ -730,7 +730,9 @@ export default function FedexGroundPage() {
                   {/* San Diego Area */}
                   <div className="space-y-4">
                     <div>
-                      <p className="font-medium text-[#008080] mb-2">圣地亚哥北郡 (2025 Q3)</p>
+                      <h4 className="text-lg font-medium text-[#008080] mb-2">
+                        圣地亚哥北郡 (2025 Q3)
+                      </h4>
                       <div className="text-sm text-muted-foreground">
                         <ul className="list-disc pl-4 space-y-2">
                           <li>目标区域：La Jolla, Del Mar</li>
@@ -743,7 +745,7 @@ export default function FedexGroundPage() {
 
                     {/* East Bay Area */}
                     <div>
-                      <p className="font-medium text-[#008080] mb-2">东湾区 (2025 Q4)</p>
+                      <h4 className="text-lg font-medium text-[#008080] mb-2">东湾区 (2025 Q4)</h4>
                       <div className="text-sm text-muted-foreground">
                         <ul className="list-disc pl-4 space-y-2">
                           <li>目标区域：Berkeley, Oakland Hills</li>
