@@ -6,6 +6,13 @@ import { CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { AnimatedCard, AnimatedNumber, AnimatedProgress } from '@/components/ui/animated-elements'
 import { FinancialChart } from '@/components/charts/financial-chart'
 import { CostStructureChart } from '@/components/charts/cost-structure-chart'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from '@/components/ui/carousel'
 
 export default function FedexGroundPage() {
   return (
@@ -457,105 +464,298 @@ export default function FedexGroundPage() {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">服务区域</h2>
-          <div className="grid md:grid-cols-5 gap-12 items-start">
-            {/* Left: Service Areas Description - 占据 2 列 */}
 
-            <div className="md:col-span-2 space-y-6">
-              <div className="space-y-6">
-                {/* Bay Area */}
-                <div className="space-y-3">
-                  <h3 className="text-xl font-semibold flex items-center gap-2">
+          {/* Bay Area South */}
+          <div className="mb-20">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <AnimatedCard className="p-6">
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-semibold flex items-center gap-2">
                     <span className="w-3 h-3 rounded-full bg-[#008080]"></span>
                     <span className="text-[#008080]">旧金山湾区南部</span>
                   </h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#008080]">•</span>
-                      覆盖范围：圣克拉拉县、圣马特奥县等硅谷核心区域
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#008080]">•</span>
-                      日均包裹量：4,000-5,000件
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#008080]">•</span>
-                      服务对象：科技公司、高等院校及高净值居民区
-                    </li>
-                  </ul>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <p className="font-medium text-[#008080]">覆盖面积</p>
+                      <p className="text-muted-foreground">约 120 平方英里</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-[#008080]">服务门户</p>
+                      <p className="text-muted-foreground">3,800+</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-[#008080]">日均包裹量</p>
+                      <p className="text-muted-foreground">4,500-5,500件</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-[#008080]">主要区域</p>
+                      <p className="text-muted-foreground">Palo Alto, Mountain View</p>
+                    </div>
+                  </div>
+                  <div className="text-muted-foreground">
+                    <p className="font-medium text-[#008080] mb-2">区域特色：</p>
+                    <ul className="list-disc pl-4 space-y-2">
+                      <li>硅谷核心区域，科技公司密集</li>
+                      <li>高净值人群聚集区</li>
+                      <li>斯坦福大学等知名院校周边</li>
+                    </ul>
+                  </div>
                 </div>
-
-                {/* LA & Orange County */}
-                <div className="space-y-3">
-                  <h3 className="text-xl font-semibold flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-[#008080]"></span>
-                    <span className="text-[#008080]">洛杉矶-橙县都会区</span>
-                  </h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#008080]">•</span>
-                      覆盖范围：尔湾、新港滩、亨廷顿比奇等高端社区
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#008080]">•</span>
-                      日均包裹量：3,500-4,500件
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#008080]">•</span>
-                      特色：高端住宅区和商业区配送服务
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Expansion Plans */}
-                <div className="space-y-3">
-                  <h3 className="text-xl font-semibold flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-[#008080/50]"></span>
-                    计划扩展区域
-                  </h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#008080]">•</span>
-                      东湾区：奥克兰、伯克利等区域（2024年Q3）
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#008080]">•</span>
-                      圣地亚哥县：拉霍亚、德尔马等高端区域（2024年Q4）
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Key Advantages */}
-                <div className="mt-8 p-4 bg-[#008080]/5 rounded-lg">
-                  <h3 className="font-semibold mb-2">区位优势</h3>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#008080]">✓</span>
-                      覆盖加州两大经济中心，服务高科技和高净值人群
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#008080]">✓</span>
-                      区域电商需求旺盛，包裹量稳定且持续增长
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-[#008080]">✓</span>
-                      临近主要机场和港口，物流网络完善
-                    </li>
-                  </ul>
-                </div>
+              </AnimatedCard>
+              <div className="h-[400px]">
+                <Carousel opts={{ loop: true, autoplay: true, delay: 4000 }}>
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="relative h-[400px] rounded-lg overflow-hidden">
+                        <Image
+                          src="/Palo-Alto-Tech-Campus.jpg"
+                          alt="Palo Alto Tech Campus"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-[400px] rounded-lg overflow-hidden">
+                        <Image
+                          src="/Mountain-View-Downtown.jpg"
+                          alt="Mountain View Downtown"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-4" />
+                  <CarouselNext className="right-4" />
+                </Carousel>
               </div>
             </div>
+          </div>
 
-            {/* Right: California Map - 占据 3 列 */}
-            <div className="md:col-span-3 sticky top-24 md:order-last">
-              <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-xl bg-white">
-                <Image
-                  src="/california-service-area.jpg"
-                  alt="FedEx Ground Service Areas in California"
-                  fill
-                  className="object-contain"
-                  priority
-                />
+          {/* Sunset Beach Coastal Area */}
+          <div className="mb-20">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="h-[400px] md:order-first">
+                <Carousel opts={{ loop: true, autoplay: true, delay: 4000 }}>
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="relative h-[400px] rounded-lg overflow-hidden">
+                        <Image
+                          src="/service-areas-socal-1.png"
+                          alt="Service Areas SoCal 1"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-[400px] rounded-lg overflow-hidden">
+                        <Image
+                          src="/Sunset-Beach-Coastline.jpeg"
+                          alt="Sunset Beach Coastline"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-[400px] rounded-lg overflow-hidden">
+                        <Image
+                          src="/Huntington-Beach.jpeg"
+                          alt="Huntington Beach Harbor"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-4" />
+                  <CarouselNext className="right-4" />
+                </Carousel>
               </div>
+              <AnimatedCard className="p-6">
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-semibold flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-[#008080]"></span>
+                    <span className="text-[#008080]">南加州 Sunset Beach 沿海</span>
+                  </h3>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <p className="font-medium text-[#008080]">覆盖面积</p>
+                      <p className="text-muted-foreground">约 85 平方英里</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-[#008080]">服务门户</p>
+                      <p className="text-muted-foreground">2,900+</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-[#008080]">日均包裹量</p>
+                      <p className="text-muted-foreground">3,800-4,200件</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-[#008080]">主要区域</p>
+                      <p className="text-muted-foreground">Huntington Beach, Newport Beach</p>
+                    </div>
+                  </div>
+                  <div className="text-muted-foreground">
+                    <p className="font-medium text-[#008080] mb-2">区域特色：</p>
+                    <ul className="list-disc pl-4 space-y-2">
+                      <li>豪华海滨别墅区</li>
+                      <li>高端购物中心密集</li>
+                      <li>著名旅游度假胜地</li>
+                    </ul>
+                  </div>
+                </div>
+              </AnimatedCard>
+            </div>
+          </div>
+
+          {/* Yorba Linda Area */}
+          <div className="mb-20">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <AnimatedCard className="p-6">
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-semibold flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-[#008080]"></span>
+                    <span className="text-[#008080]">南加州 Yorba Linda 周边</span>
+                  </h3>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <p className="font-medium text-[#008080]">覆盖面积</p>
+                      <p className="text-muted-foreground">约 95 平方英里</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-[#008080]">服务门户</p>
+                      <p className="text-muted-foreground">3,200+</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-[#008080]">日均包裹量</p>
+                      <p className="text-muted-foreground">4,000-4,500件</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-[#008080]">主要区域</p>
+                      <p className="text-muted-foreground">Yorba Linda, Anaheim Hills</p>
+                    </div>
+                  </div>
+                  <div className="text-muted-foreground">
+                    <p className="font-medium text-[#008080] mb-2">区域特色：</p>
+                    <ul className="list-disc pl-4 space-y-2">
+                      <li>高端住宅社区</li>
+                      <li>优质学区集中地</li>
+                      <li>生活配套设施完善</li>
+                    </ul>
+                  </div>
+                </div>
+              </AnimatedCard>
+              <div className="h-[400px]">
+                <Carousel opts={{ loop: true, autoplay: true, delay: 4000 }}>
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="relative h-[400px] rounded-lg overflow-hidden">
+                        <Image
+                          src="/service-areas-socal-2.png"
+                          alt="Service Areas SoCal 2"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-[400px] rounded-lg overflow-hidden">
+                        <Image
+                          src="/Yorba-Linda-Residential-Area.png"
+                          alt="Yorba Linda Residential Area"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-[400px] rounded-lg overflow-hidden">
+                        <Image
+                          src="/Brea-Hills-Community.jpg"
+                          alt="Brea Hills Community"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-4" />
+                  <CarouselNext className="right-4" />
+                </Carousel>
+              </div>
+            </div>
+          </div>
+
+          {/* Expansion Plans */}
+          <div className="mb-20">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="h-[400px] md:order-first">
+                <Carousel opts={{ loop: true, autoplay: true, delay: 4000 }}>
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="relative h-[400px] rounded-lg overflow-hidden">
+                        <Image
+                          src="/north-san-diego-housing.jpg"
+                          alt="North San Diego Housing"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-[400px] rounded-lg overflow-hidden">
+                        <Image
+                          src="/Berkeley-Campus-Area.jpg"
+                          alt="Berkeley Campus Area"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-4" />
+                  <CarouselNext className="right-4" />
+                </Carousel>
+              </div>
+              <AnimatedCard className="p-6">
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-semibold flex items-center gap-2">
+                    <span className="w-3 h-3 rounded-full bg-[#008080]/50"></span>
+                    <span className="text-[#008080]">计划拓展区域</span>
+                  </h3>
+
+                  {/* San Diego Area */}
+                  <div className="space-y-4">
+                    <div>
+                      <p className="font-medium text-[#008080] mb-2">圣地亚哥北郡 (2025 Q3)</p>
+                      <div className="text-sm text-muted-foreground">
+                        <ul className="list-disc pl-4 space-y-2">
+                          <li>目标区域：La Jolla, Del Mar</li>
+                          <li>预计覆盖：80+ 平方英里</li>
+                          <li>预估日均包裹量：3,500-4,000件</li>
+                          <li>特色：生物科技公司集群、海滨豪宅区</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* East Bay Area */}
+                    <div>
+                      <p className="font-medium text-[#008080] mb-2">东湾区 (2025 Q4)</p>
+                      <div className="text-sm text-muted-foreground">
+                        <ul className="list-disc pl-4 space-y-2">
+                          <li>目标区域：Berkeley, Oakland Hills</li>
+                          <li>预计覆盖：100+ 平方英里</li>
+                          <li>预估日均包裹量：4,000-4,500件</li>
+                          <li>特色：高等教育园区、创新企业集群</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </AnimatedCard>
             </div>
           </div>
         </div>
