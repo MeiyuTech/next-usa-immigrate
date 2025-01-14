@@ -72,7 +72,7 @@ export default function ProjectsPage() {
               </h2>
               <h3 className="text-2xl md:text-3xl mb-8">Fedex 项目 | 第一顺位 | 无排期</h3>
               <p className="text-lg md:text-xl mb-6">无排期南加州联邦快递承包项目全球首发</p>
-              <p className="text-lg md:text-xl mb-12">526E 获批担保 / 低风险投资，稳健回报</p>
+              <p className="text-lg md:text-xl mb-12">I-526 获批担保 / 低风险投资，稳健回报</p>
               <Button
                 className="px-8 py-6 text-base border-2 border-white 
                   bg-transparent text-white 
