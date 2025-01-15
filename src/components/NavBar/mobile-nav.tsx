@@ -89,7 +89,7 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
                   <>
                     <div>
                       <h3 className="mb-2 text-[13px] font-semibold uppercase tracking-wide text-foreground/60">
-                        <Link href="/services/eb-5" onClick={handleLinkClick}>
+                        <Link href="/services/eb-5-investment" onClick={handleLinkClick}>
                           投资移民 (EB-5)
                         </Link>
                       </h3>

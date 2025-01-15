@@ -381,6 +381,20 @@ export default function KindergartenPage() {
           </div>
         </div>
       </section>
+
+      {/* Back Button Section */}
+      <section className="pb-24">
+        <div className="container mx-auto px-4 text-center">
+          <Button
+            className="px-8 py-6 text-base 
+              bg-[#008080] text-white hover:bg-[#008080]/90
+              transition-all duration-300 
+              shadow-lg"
+          >
+            <Link href="/projects">返回项目列表</Link>
+          </Button>
+        </div>
+      </section>
     </>
   )
 }

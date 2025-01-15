@@ -7,7 +7,7 @@ import { CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { AnimatedCard } from '@/components/ui/animated-elements'
 
-export default function EB5Page() {
+export default function EB5InvestmentPage() {
   return (
     <>
       <main className="relative min-h-screen -mt-16">
