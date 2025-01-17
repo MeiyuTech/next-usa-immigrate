@@ -472,12 +472,12 @@ export default function FedexGroundPage() {
                 <div className="space-y-6">
                   <h3 className="text-2xl font-semibold flex items-center gap-2">
                     <span className="w-3 h-3 rounded-full bg-[#008080]"></span>
-                    <span className="text-[#008080]">旧金山湾区南部</span>
+                    <span className="text-[#008080]">旧金山市中心</span>
                   </h3>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <h4 className="text-lg font-medium text-[#008080]">覆盖面积</h4>
-                      <p className="text-muted-foreground">约 120 平方英里</p>
+                      <p className="text-muted-foreground">约 12 平方英里</p>
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-[#008080]">服务门户</h4>
@@ -489,15 +489,17 @@ export default function FedexGroundPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-[#008080]">主要区域</h4>
-                      <p className="text-muted-foreground">Palo Alto, Mountain View</p>
+                      <p className="text-muted-foreground">
+                        San Francisco Downtown, Financial District, Chinatown, Broadway
+                      </p>
                     </div>
                   </div>
                   <div className="text-muted-foreground">
                     <h4 className="text-lg font-medium text-[#008080] mb-2">区域特色：</h4>
                     <ul className="list-disc pl-4 space-y-2">
-                      <li>硅谷核心区域，科技公司密集</li>
+                      <li>旧金山闹市区核心区域，金融公司密集</li>
                       <li>高净值人群聚集区</li>
-                      <li>斯坦福大学等知名院校周边</li>
+                      <li>靠近港口，交通便利，十分繁华</li>
                     </ul>
                   </div>
                 </div>
@@ -508,8 +510,8 @@ export default function FedexGroundPage() {
                     <CarouselItem>
                       <div className="relative h-[400px] rounded-lg overflow-hidden">
                         <Image
-                          src="/Palo-Alto-Tech-Campus.jpg"
-                          alt="Palo Alto Tech Campus"
+                          src="/service-areas-sf-1.png"
+                          alt="Service Areas SF 1"
                           fill
                           className="object-cover"
                         />
@@ -518,8 +520,28 @@ export default function FedexGroundPage() {
                     <CarouselItem>
                       <div className="relative h-[400px] rounded-lg overflow-hidden">
                         <Image
-                          src="/Mountain-View-Downtown.jpg"
-                          alt="Mountain View Downtown"
+                          src="/sf-chinatown.webp"
+                          alt="San Francisco Chinatown"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-[400px] rounded-lg overflow-hidden">
+                        <Image
+                          src="/sf-financial-district.jpg"
+                          alt="San Francisco Financial District"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="relative h-[400px] rounded-lg overflow-hidden">
+                        <Image
+                          src="/sf-broadway.jpg"
+                          alt="San Francisco Broadway"
                           fill
                           className="object-cover"
                         />
@@ -595,7 +617,7 @@ export default function FedexGroundPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-[#008080]">主要区域</h4>
-                      <p className="text-muted-foreground">Huntington Beach, Newport Beach</p>
+                      <p className="text-muted-foreground">Sunset Beach, Huntington Beach</p>
                     </div>
                   </div>
                   <div className="text-muted-foreground">

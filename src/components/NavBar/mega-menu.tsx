@@ -18,7 +18,7 @@ function MegaMenuWrapper({ children }: MegaMenuWrapperProps) {
 }
 
 const linkStyles =
-  'block font-medium text-white/80 hover:text-white transition-colors drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
+  'block text-[16px]font-medium text-white/80 hover:text-white transition-colors drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
 const headingStyles =
   'mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
 const featureHeadingStyles =

@@ -15,6 +15,7 @@ import { cn } from '@/utilities/cn'
 
 import './globals.css'
 import { getServerSideURL } from '@/utilities/getURL'
+import { FloatingQRCode } from '@/components/FloatingQRCode'
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   // const { isEnabled } = await draftMode()
@@ -41,6 +42,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <Header />
           <main className="pt-[96px]">{children}</main>
           <Footer />
+          <FloatingQRCode />
         </Providers>
       </body>
     </html>
