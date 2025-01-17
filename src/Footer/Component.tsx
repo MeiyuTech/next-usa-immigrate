@@ -58,7 +58,10 @@ export async function Footer() {
               服务项目
             </h3>
             <nav className="grid gap-2">
-              <Link href="/services/eb-5" className="text-sm text-white/70 hover:text-white">
+              <Link
+                href="/services/eb-5-investment"
+                className="text-sm text-white/70 hover:text-white"
+              >
                 投资移民 (EB-5)
               </Link>
               <Link href="/services/eb123" className="text-sm text-white/70 hover:text-white">
