@@ -40,6 +40,58 @@ const getPagesSitemap = unstable_cache(
         loc: `${SITE_URL}/posts`,
         lastmod: dateFallback,
       },
+      {
+        loc: `${SITE_URL}/about-us`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/about-us/contact`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/about-us/lawyers`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/privacy`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/projects`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/projects/fedex`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/projects/fox-property`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/projects/kindergarten`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/projects/ucr-student-housing`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/projects/vegetarian-restaurant`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/services/eb-5-investment`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/services/h-1b-recruitment`,
+        lastmod: dateFallback,
+      },
+      {
+        loc: `${SITE_URL}/terms`,
+        lastmod: dateFallback,
+      },
     ]
 
     const sitemap = results.docs
@@ -58,7 +110,7 @@ const getPagesSitemap = unstable_cache(
   ['pages-sitemap'],
   {
     tags: ['pages-sitemap'],
-  },
+  }
 )
 
 export async function GET() {

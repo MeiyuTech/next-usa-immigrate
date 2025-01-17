@@ -167,7 +167,7 @@ export async function Footer() {
               <Link href="/terms" className="hover:text-white">
                 服务条款
               </Link>
-              <Link href="/sitemap" className="hover:text-white">
+              <Link href="/sitemap.xml" className="hover:text-white">
                 网站地图
               </Link>
             </div>
