@@ -18,11 +18,11 @@ function MegaMenuWrapper({ children }: MegaMenuWrapperProps) {
 }
 
 const linkStyles =
-  'block text-[16px]font-medium text-white/80 hover:text-white transition-colors drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
+  'block text-[24px] font-medium text-white/80 hover:text-white transition-colors drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
 const headingStyles =
-  'mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
+  'mb-4 text-[16px] font-semibold uppercase tracking-wide text-white/60 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
 const featureHeadingStyles =
-  'text-[22px] font-semibold leading-tight text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]'
+  'text-[32px] font-semibold leading-tight text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]'
 export function ServiceMegaMenu() {
   return (
     <MegaMenuWrapper>
