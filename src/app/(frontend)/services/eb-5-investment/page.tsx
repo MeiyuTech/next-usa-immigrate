@@ -583,6 +583,7 @@ export default function EB5InvestmentPage() {
         </div>
       </section>
 
+      {/* id="investment-projects" */}
       <InvestmentProjectsSection />
     </>
   )

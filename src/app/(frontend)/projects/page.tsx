@@ -87,6 +87,7 @@ export default function ProjectsPage() {
         </div>
       </section>
 
+      {/* id="investment-projects" */}
       <InvestmentProjectsSection />
     </>
   )

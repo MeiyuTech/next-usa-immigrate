@@ -18,11 +18,11 @@ function MegaMenuWrapper({ children }: MegaMenuWrapperProps) {
 }
 
 const linkStyles =
-  'block text-[16px]font-medium text-white/80 hover:text-white transition-colors drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
+  'block text-[20px] font-medium text-white/80 hover:text-white transition-colors drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
 const headingStyles =
-  'mb-4 text-[13px] font-semibold uppercase tracking-wide text-white/60 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
+  'mb-4 text-[14px] font-semibold uppercase tracking-wide text-white/60 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
 const featureHeadingStyles =
-  'text-[22px] font-semibold leading-tight text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]'
+  'text-[28px] font-semibold leading-tight text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]'
 export function ServiceMegaMenu() {
   return (
     <MegaMenuWrapper>
@@ -43,39 +43,6 @@ export function ServiceMegaMenu() {
         </div>
       </div>
       <div>
-        <h3 className={headingStyles}>职业移民 (EB-1/2/3)</h3>
-        <div className="space-y-3">
-          <Link href="#" className={linkStyles}>
-            适用对象
-          </Link>
-          <Link href="#" className={linkStyles}>
-            申请条件
-          </Link>
-          <Link href="#" className={linkStyles}>
-            签证流程
-          </Link>
-        </div>
-      </div>
-      <div>
-        <h3 className={headingStyles}>在线评估</h3>
-        <div className="space-y-4">
-          <h4 className={featureHeadingStyles}>
-            只需 10 分钟，
-            <br />
-            快速了解最适合您的移民项目。
-          </h4>
-          <Link
-            href="/about-us/contact"
-            className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
-          >
-            立即评估
-            <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </div>
-      </div>
-      <div>
         <h3 className={headingStyles}>其他服务</h3>
         <div className="space-y-3">
           <Link href="/posts/family-based-immigration-introduction" className={linkStyles}>
@@ -89,6 +56,40 @@ export function ServiceMegaMenu() {
           </Link>
           <Link href="/posts/h-1b-introduction" className={linkStyles}>
             工作签证 （H-1B）
+          </Link>
+        </div>
+      </div>
+
+      <div>
+        <h3 className={headingStyles}>在线评估</h3>
+        <div className="space-y-4">
+          <h4 className={featureHeadingStyles}>
+            只需 10 分钟，
+            <br />
+            快速了解最适合您的移民项目。
+          </h4>
+          <Link
+            href="/about-us/contact"
+            className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
+          >
+            联系我们，立即评估
+            <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
+      </div>
+      <div>
+        <h3 className={headingStyles}>职业移民 (EB-1/2/3)</h3>
+        <div className="space-y-3">
+          <Link href="/posts/eb-123" className={linkStyles}>
+            适用对象
+          </Link>
+          <Link href="/posts/eb-123" className={linkStyles}>
+            申请条件
+          </Link>
+          <Link href="/posts/eb-123" className={linkStyles}>
+            签证流程
           </Link>
         </div>
       </div>
@@ -192,7 +193,7 @@ export function ProjectShowcaseMegaMenu() {
             确保资金安全与投资回报。
           </h4>
           <Link
-            href="/projects"
+            href="/projects#investment-projects"
             className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
           >
             了解更多项目

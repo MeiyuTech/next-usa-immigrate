@@ -128,21 +128,21 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
                           className="justify-start px-0"
                           onClick={handleLinkClick}
                         >
-                          适用对象
+                          <Link href="/posts/eb-123">适用对象</Link>
                         </Button>
                         <Button
                           variant="ghost"
                           className="justify-start px-0"
                           onClick={handleLinkClick}
                         >
-                          申请条件
+                          <Link href="/posts/eb-123">申请条件</Link>
                         </Button>
                         <Button
                           variant="ghost"
                           className="justify-start px-0"
                           onClick={handleLinkClick}
                         >
-                          签证流程
+                          <Link href="/posts/eb-123">签证流程</Link>
                         </Button>
                       </div>
                     </div>
@@ -195,7 +195,7 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
                         className="h-auto justify-start px-0 py-2"
                         onClick={handleLinkClick}
                       >
-                        立即评估
+                        <Link href="/about-us/contact">联系我们，立即评估</Link>
                         <ChevronRight className="ml-1 h-4 w-4" />
                       </Button>
                     </div>
@@ -374,7 +374,10 @@ export function MobileNav({ isOpen, setIsOpenAction }: MobileNavProps) {
                           className="group h-auto px-0 text-foreground/70 hover:text-foreground"
                           onClick={handleLinkClick}
                         >
-                          <Link href="/projects" className="inline-flex items-center">
+                          <Link
+                            href="/projects#investment-projects"
+                            className="inline-flex items-center"
+                          >
                             了解更多项目
                             <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                           </Link>

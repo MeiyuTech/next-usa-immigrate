@@ -94,7 +94,7 @@ export const FloatingQRCode = () => {
               >
                 <div className="relative h-48 w-48">
                   <Image
-                    src="/wechat-qr.png"
+                    src="/wechat-QR-Code.png"
                     alt="WeChat QR Code"
                     fill
                     className="object-contain"
