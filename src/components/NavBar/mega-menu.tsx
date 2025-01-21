@@ -18,11 +18,11 @@ function MegaMenuWrapper({ children }: MegaMenuWrapperProps) {
 }
 
 const linkStyles =
-  'block text-[24px] font-medium text-white/80 hover:text-white transition-colors drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
+  'block text-[20px] font-medium text-white/80 hover:text-white transition-colors drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
 const headingStyles =
-  'mb-4 text-[16px] font-semibold uppercase tracking-wide text-white/60 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
+  'mb-4 text-[14px] font-semibold uppercase tracking-wide text-white/60 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
 const featureHeadingStyles =
-  'text-[32px] font-semibold leading-tight text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]'
+  'text-[28px] font-semibold leading-tight text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]'
 export function ServiceMegaMenu() {
   return (
     <MegaMenuWrapper>
@@ -43,19 +43,23 @@ export function ServiceMegaMenu() {
         </div>
       </div>
       <div>
-        <h3 className={headingStyles}>职业移民 (EB-1/2/3)</h3>
+        <h3 className={headingStyles}>其他服务</h3>
         <div className="space-y-3">
-          <Link href="/posts/eb-123" className={linkStyles}>
-            适用对象
+          <Link href="/posts/family-based-immigration-introduction" className={linkStyles}>
+            家庭移民
           </Link>
-          <Link href="/posts/eb-123" className={linkStyles}>
-            申请条件
+          <Link href="/posts/f-1-introduction" className={linkStyles}>
+            学生签证 （F-1）
           </Link>
-          <Link href="/posts/eb-123" className={linkStyles}>
-            签证流程
+          <Link href="/posts/j-1-introduction" className={linkStyles}>
+            访问学者 （J-1）
+          </Link>
+          <Link href="/posts/h-1b-introduction" className={linkStyles}>
+            工作签证 （H-1B）
           </Link>
         </div>
       </div>
+
       <div>
         <h3 className={headingStyles}>在线评估</h3>
         <div className="space-y-4">
@@ -76,19 +80,16 @@ export function ServiceMegaMenu() {
         </div>
       </div>
       <div>
-        <h3 className={headingStyles}>其他服务</h3>
+        <h3 className={headingStyles}>职业移民 (EB-1/2/3)</h3>
         <div className="space-y-3">
-          <Link href="/posts/family-based-immigration-introduction" className={linkStyles}>
-            家庭移民
+          <Link href="/posts/eb-123" className={linkStyles}>
+            适用对象
           </Link>
-          <Link href="/posts/f-1-introduction" className={linkStyles}>
-            学生签证 （F-1）
+          <Link href="/posts/eb-123" className={linkStyles}>
+            申请条件
           </Link>
-          <Link href="/posts/j-1-introduction" className={linkStyles}>
-            访问学者 （J-1）
-          </Link>
-          <Link href="/posts/h-1b-introduction" className={linkStyles}>
-            工作签证 （H-1B）
+          <Link href="/posts/eb-123" className={linkStyles}>
+            签证流程
           </Link>
         </div>
       </div>

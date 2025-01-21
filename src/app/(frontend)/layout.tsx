@@ -21,7 +21,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   // const { isEnabled } = await draftMode()
 
   return (
-    <html className={cn(GeistSans.variable, GeistMono.variable)} lang="en" suppressHydrationWarning>
+    <html className={cn(GeistSans.variable, GeistMono.variable)} lang="zh" suppressHydrationWarning>
       <head>
         <InitTheme />
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
