@@ -19,9 +19,9 @@ export default function LawyersPage() {
     },
   ]
   return (
-    <div>
-      {/* Hero Section */}
-      <div className="relative h-[300px] w-full ">
+    <>
+      {/* Small Hero Section */}
+      <main className="relative h-[400px] -mt-16">
         <Image src="/lawyer-hero.png" alt="Lawyer Hero" fill className="object-cover" priority />
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/35" />
@@ -42,7 +42,7 @@ export default function LawyersPage() {
             </p>
           </div>
         </div>
-      </div>
+      </main>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
@@ -68,7 +68,7 @@ export default function LawyersPage() {
           ))}
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
