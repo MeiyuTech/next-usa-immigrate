@@ -58,6 +58,6 @@ export default async function Page() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Meiyu Website Template Posts`,
+    title: `Meiyu Website Posts`,
   }
 }
