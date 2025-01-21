@@ -45,13 +45,13 @@ export function ServiceMegaMenu() {
       <div>
         <h3 className={headingStyles}>职业移民 (EB-1/2/3)</h3>
         <div className="space-y-3">
-          <Link href="#" className={linkStyles}>
+          <Link href="/posts/eb-123" className={linkStyles}>
             适用对象
           </Link>
-          <Link href="#" className={linkStyles}>
+          <Link href="/posts/eb-123" className={linkStyles}>
             申请条件
           </Link>
-          <Link href="#" className={linkStyles}>
+          <Link href="/posts/eb-123" className={linkStyles}>
             签证流程
           </Link>
         </div>
@@ -68,7 +68,7 @@ export function ServiceMegaMenu() {
             href="/about-us/contact"
             className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
           >
-            立即评估
+            联系我们，立即评估
             <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
@@ -192,7 +192,7 @@ export function ProjectShowcaseMegaMenu() {
             确保资金安全与投资回报。
           </h4>
           <Link
-            href="/projects"
+            href="/projects#investment-projects"
             className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
           >
             了解更多项目

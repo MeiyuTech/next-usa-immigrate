@@ -21,7 +21,7 @@ export default function LawyersPage() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative h-[300px] w-full mb-12">
+      <div className="relative h-[300px] w-full ">
         <Image src="/lawyer-hero.png" alt="Lawyer Hero" fill className="object-cover" priority />
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/35" />

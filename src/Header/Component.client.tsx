@@ -45,9 +45,9 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ _data }) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <div className="absolute inset-0 bg-[#00808033] backdrop-blur-[12px]" />
-      <div className="relative container mx-auto py-3 flex justify-between text-white">
-        <Link href="/">
-          <div className={clsx('flex items-center gap-3')}>
+      <div className="relative container mx-auto h-[70px] flex items-center justify-between text-white">
+        <Link href="/" className="flex items-center">
+          <div className="flex items-center gap-3">
             <Image
               src="/favicon.svg"
               alt="Meiyu Logo"
@@ -55,12 +55,12 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ _data }) => {
               height={64}
               loading="eager"
               fetchPriority="high"
-              className={clsx('max-w-[80px]')}
+              className="max-w-[80px]"
             />
             <span className="text-xl font-medium w-[80px]">美域佳华</span>
           </div>
         </Link>
-        <nav className="container flex h-[70px] items-center justify-end">
+        <nav className="flex items-center justify-end">
           <div className="flex items-center gap-4">
             <div className="hidden items-center gap-4 lg:flex">
               {['移民服务', '成功案例', '项目展示', '移民知识', '关于我们'].map((item) => (
@@ -72,7 +72,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ _data }) => {
                 >
                   <button
                     className={cn(
-                      'relative px-2 py-1 text-[14px] font-medium text-white/90 transition-colors hover:text-white',
+                      'relative px-2 py-1 text-[16px] font-medium text-white/90 transition-colors hover:text-white',
                       'after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all hover:after:w-full',
                       'drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]',
                       activeMenu === item && 'text-white font-semibold after:w-full'

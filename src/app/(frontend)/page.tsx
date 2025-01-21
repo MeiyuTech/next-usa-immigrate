@@ -158,6 +158,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* id="investment-projects" */}
       <InvestmentProjectsSection />
 
       <GlobalNetworkSection />
