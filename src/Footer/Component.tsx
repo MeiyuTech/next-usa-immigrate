@@ -4,15 +4,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
-import { getCachedGlobal } from '@/utilities/getGlobals'
+// import { getCachedGlobal } from '@/utilities/getGlobals'
 import type { Footer } from '@/payload-types'
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
-import { CMSLink } from '@/components/Link'
+// import { CMSLink } from '@/components/Link'
 
 export async function Footer() {
-  const footerData: Footer = await getCachedGlobal('footer', 1)()
+  // const footerData: Footer = await getCachedGlobal('footer', 1)()
 
-  const navItems = footerData?.navItems || []
+  // const navItems = footerData?.navItems || []
   return (
     <footer className="border-t border-border bg-black text-white">
       <div className="container py-12">
