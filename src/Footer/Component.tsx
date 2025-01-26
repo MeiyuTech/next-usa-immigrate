@@ -159,7 +159,18 @@ export async function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-white/10 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-white/60 md:flex-row">
-            <p>© {new Date().getFullYear()} 美域集团. 保留所有权利.</p>
+            <div className="flex flex-col md:flex-row md:gap-4">
+              <p>© {new Date().getFullYear()} 美域集团. 保留所有权利.</p>
+              {/* ICP 备案号： */}
+              <Link
+                href="https://beian.miit.gov.cn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
+                苏ICP备18052748号
+              </Link>
+            </div>
             <div className="flex gap-6">
               <Link href="/privacy" className="hover:text-white">
                 隐私政策
