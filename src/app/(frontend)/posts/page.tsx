@@ -32,7 +32,7 @@ export default async function Page() {
       <PageClient />
       <div className="container mb-16">
         <div className="prose dark:prose-invert max-w-none">
-          <h1>Posts</h1>
+          <h1>移民知识</h1>
         </div>
       </div>
 
@@ -58,6 +58,7 @@ export default async function Page() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Meiyu Website Posts`,
+    title: `移民知识 ｜ 美国移民最新资讯 签证信息`,
+    description: `介绍了美国移民最新资讯 签证信息 移民知识`,
   }
 }
