@@ -246,15 +246,15 @@ export function ImmigrationResourcesMegaMenu() {
             <br />
             获取最新资讯与专业指导。
           </h4>
-          <a
-            href="#"
+          <Link
+            href="/posts"
             className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white"
           >
             阅读更多
             <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </MegaMenuWrapper>

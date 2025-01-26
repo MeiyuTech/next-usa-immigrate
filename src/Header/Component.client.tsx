@@ -3,7 +3,7 @@
 import React, { useState, useRef } from 'react'
 import { Menu, SearchIcon } from 'lucide-react'
 import Link from 'next/link'
-import clsx from 'clsx'
+// import clsx from 'clsx'
 import Image from 'next/image'
 
 import type { Header } from '@/payload-types'
