@@ -29,9 +29,8 @@ export const navigationData: NavItem[] = [
       {
         title: '职业移民 (EB-1/2/3)',
         items: [
-          { title: '适用对象', href: '/posts/eb-123' },
-          { title: '申请条件', href: '/posts/eb-123' },
-          { title: '签证流程', href: '/posts/eb-123' },
+          { title: '高管移民 (L-1/EB-1C)', href: '/posts/l-1-eb-1c-introduction' },
+          { title: '雇主担保移民 (EB-2/3)', href: '/posts/eb-23-introduction' },
         ],
       },
       {

@@ -82,14 +82,11 @@ export function ServiceMegaMenu() {
       <div>
         <h3 className={headingStyles}>职业移民 (EB-1/2/3)</h3>
         <div className="space-y-3">
-          <Link href="/posts/eb-123" className={linkStyles}>
-            适用对象
+          <Link href="/posts/l-1-eb-1c-introduction" className={linkStyles}>
+            高管移民 (L-1/EB-1C)
           </Link>
-          <Link href="/posts/eb-123" className={linkStyles}>
-            申请条件
-          </Link>
-          <Link href="/posts/eb-123" className={linkStyles}>
-            签证流程
+          <Link href="/posts/eb-23-introduction" className={linkStyles}>
+            雇主担保移民 (EB-2/3)
           </Link>
         </div>
       </div>
