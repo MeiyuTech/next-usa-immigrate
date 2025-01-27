@@ -168,7 +168,7 @@ export async function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-white"
               >
-                苏ICP备18052748号
+                苏ICP备18052748号-5
               </Link>
             </div>
             <div className="flex gap-6">
