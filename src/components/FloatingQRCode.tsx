@@ -34,7 +34,7 @@ export const FloatingQRCode = () => {
           >
             <motion.button
               onClick={scrollToTop}
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white shadow-lg"
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-primary dark:bg-primary/80 text-white shadow-lg"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -64,7 +64,7 @@ export const FloatingQRCode = () => {
           onMouseLeave={() => setIsHovered(false)}
         >
           <motion.div
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white shadow-lg"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-primary dark:bg-primary/80 text-white shadow-lg"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -90,7 +90,7 @@ export const FloatingQRCode = () => {
                 initial={{ opacity: 0, scale: 0.8, y: 10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.8, y: 10 }}
-                className="absolute bottom-16 right-0 rounded-lg bg-white p-4 shadow-xl"
+                className="absolute bottom-16 right-0 rounded-lg bg-white dark:bg-gray-800 p-4 shadow-xl"
               >
                 <div className="relative h-48 w-48">
                   <Image
@@ -100,7 +100,9 @@ export const FloatingQRCode = () => {
                     className="object-contain"
                   />
                 </div>
-                <p className="mt-2 text-center text-sm text-gray-600">扫码添加客服微信</p>
+                <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-300">
+                  扫码添加客服微信
+                </p>
               </motion.div>
             )}
           </AnimatePresence>
