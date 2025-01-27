@@ -58,7 +58,7 @@ export default function HomePage() {
                     shadow-lg"
                   variant="outline"
                 >
-                  免费评估
+                  <Link href="/contact">免费评估</Link>
                 </Button>
               </div>
             </div>
@@ -77,26 +77,33 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* L1/EB-1C Card */}
-            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
-              <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                <Image src="/eb-1c-l-1.jpg" alt="L1/EB-1C 高管移民" fill className="object-cover" />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-[#008080]">L1/EB-1C 高管移民</CardTitle>
-                <CardDescription>适合人群：跨国企业高管或创业者</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <h4 className="font-semibold mb-2">亮点：</h4>
-                <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                  <li>无排期、无抽签，一步到位绿卡</li>
-                  <li>适用于有三年以上经营历史的企业</li>
-                  <li>配偶合法工作，子女享公立教育</li>
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <p className="text-[#008080] font-medium">快速通道，开启全球事业版图</p>
-              </CardFooter>
-            </AnimatedCard>
+            <Link href="/posts/l-1-eb-1c-introduction">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                  <Image
+                    src="/eb-1c-l-1.jpg"
+                    alt="L1/EB-1C 高管移民"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-[#008080]">L1/EB-1C 高管移民</CardTitle>
+                  <CardDescription>适合人群：跨国企业高管或创业者</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <h4 className="font-semibold mb-2">亮点：</h4>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                    <li>无排期、无抽签，一步到位绿卡</li>
+                    <li>适用于有三年以上经营历史的企业</li>
+                    <li>配偶合法工作，子女享公立教育</li>
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <p className="text-[#008080] font-medium">快速通道，开启全球事业版图</p>
+                </CardFooter>
+              </AnimatedCard>
+            </Link>
 
             {/* EB-5 Card */}
             <Link href="/services/eb-5-investment">
@@ -128,32 +135,35 @@ export default function HomePage() {
                 </CardFooter>
               </AnimatedCard>
             </Link>
+
             {/* EB-2/3 Card */}
-            <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
-              <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
-                <Image
-                  src="/eb-2-3-employer-sponsorship.jpg"
-                  alt="EB-2/3 雇主担保移民"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-[#008080]">EB-2/3 雇主担保移民</CardTitle>
-                <CardDescription>适合人群：本科及以上学历人才</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <h4 className="font-semibold mb-2">亮点：</h4>
-                <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                  <li>H1B抽签可跳过排期，快速获批</li>
-                  <li>适合各类技术、管理和专业人才</li>
-                  <li>低成本，高性价比移民途径</li>
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <p className="text-[#008080] font-medium">以才华立足美国，事业家庭两不误</p>
-              </CardFooter>
-            </AnimatedCard>
+            <Link href="/posts/eb-23-introduction">
+              <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
+                <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
+                  <Image
+                    src="/eb-2-3-employer-sponsorship.jpg"
+                    alt="EB-2/3 雇主担保移民"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-[#008080]">EB-2/3 雇主担保移民</CardTitle>
+                  <CardDescription>适合人群：本科及以上学历人才</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <h4 className="font-semibold mb-2">亮点：</h4>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                    <li>H1B抽签可跳过排期，快速获批</li>
+                    <li>适合各类技术、管理和专业人才</li>
+                    <li>低成本，高性价比移民途径</li>
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <p className="text-[#008080] font-medium">以才华立足美国，事业家庭两不误</p>
+                </CardFooter>
+              </AnimatedCard>
+            </Link>
           </div>
         </div>
       </section>
