@@ -64,8 +64,11 @@ export async function Footer() {
               >
                 投资移民 (EB-5)
               </Link>
-              <Link href="/services/eb123" className="text-sm text-white/70 hover:text-white">
-                职业移民 (EB-1/2/3)
+              <Link
+                href="/posts/l-1-eb-1c-introduction"
+                className="text-sm text-white/70 hover:text-white"
+              >
+                高管移民 (L-1/EB-1C)
               </Link>
               <Link
                 href="/posts/family-based-immigration-introduction"
@@ -100,7 +103,7 @@ export async function Footer() {
               <Link href="/projects" className="text-sm text-white/70 hover:text-white">
                 项目展示
               </Link>
-              <Link href="/resources" className="text-sm text-white/70 hover:text-white">
+              <Link href="/posts" className="text-sm text-white/70 hover:text-white">
                 移民知识
               </Link>
               <Link href="/about-us" className="text-sm text-white/70 hover:text-white">
