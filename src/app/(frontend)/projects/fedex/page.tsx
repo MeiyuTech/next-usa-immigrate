@@ -48,7 +48,7 @@ export default function FedexGroundPage() {
                   shadow-lg"
                 variant="outline"
               >
-                <Link href="#project-overview">查看详情</Link>
+                <Link href="/projects/fedex#project-overview">查看详情</Link>
               </Button>
             </div>
           </div>
@@ -246,7 +246,8 @@ export default function FedexGroundPage() {
                       />
                     </svg>
                     <span className="text-muted-foreground">
-                      每周结算机制，结合固定费率和浮动费率，确保现金流稳定，配送量越多收入越高。
+                      每周结算机制，结合固定费率和浮动费率，确保现金流稳定，配送量越多收入越高。明年下半年，预计增加业务量
+                      35%，收入将大幅增加。
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -414,7 +415,8 @@ export default function FedexGroundPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  该项目不仅符合EB-5投资移民的要求，还适用于EB-1C高管移民计划，为投资者提供灵活的移民路径。
+                  该项目不仅符合EB-5投资移民的要求，还适用于EB-1C高管移民计划，为投资者提供灵活的移民路径。所有主要财务文件均由联邦快递总公司（FedEx
+                  Corporation）直接提供，确保权威背书和安全合规。
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-3">
@@ -432,7 +434,9 @@ export default function FedexGroundPage() {
                       />
                     </svg>
                     <span className="text-muted-foreground">
-                      L1签证申请可快速获得批准，最快15天内获批，一年后转EB-1C直接申请永久绿卡，无需经历漫长排期。
+                      L1签证和EB-5投资移民申请审批通过率高达
+                      <span className="text-[#008080]"> 100% </span>
+                      ，L1签证最快15天内获批，一年后转EB-1C直接申请永久绿卡，无需经历漫长排期。
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
@@ -481,11 +485,11 @@ export default function FedexGroundPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-[#008080]">服务门户</h4>
-                      <p className="text-muted-foreground">3,800+</p>
+                      <p className="text-muted-foreground">38,000+</p>
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-[#008080]">日均包裹量</h4>
-                      <p className="text-muted-foreground">4,500-5,500件</p>
+                      <p className="text-muted-foreground">2,000-2,500件</p>
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-[#008080]">主要区域</h4>
@@ -555,7 +559,7 @@ export default function FedexGroundPage() {
             </div>
           </div>
 
-          {/* Sunset Beach Coastal Area */}
+          {/* Huntington Beach Area */}
           <div className="mb-20">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="h-[400px] md:order-first">
@@ -600,7 +604,7 @@ export default function FedexGroundPage() {
                 <div className="space-y-6">
                   <h3 className="text-2xl font-semibold flex items-center gap-2">
                     <span className="w-3 h-3 rounded-full bg-[#008080]"></span>
-                    <span className="text-[#008080]">南加州 Sunset Beach 沿海</span>
+                    <span className="text-[#008080]">南加州 Huntington Beach 沿海</span>
                   </h3>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
@@ -609,11 +613,11 @@ export default function FedexGroundPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-[#008080]">服务门户</h4>
-                      <p className="text-muted-foreground">2,900+</p>
+                      <p className="text-muted-foreground">29,000+</p>
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-[#008080]">日均包裹量</h4>
-                      <p className="text-muted-foreground">3,800-4,200件</p>
+                      <p className="text-muted-foreground">2,400-2,800件</p>
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-[#008080]">主要区域</h4>
@@ -649,11 +653,11 @@ export default function FedexGroundPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-[#008080]">服务门户</h4>
-                      <p className="text-muted-foreground">3,200+</p>
+                      <p className="text-muted-foreground">32,000+</p>
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-[#008080]">日均包裹量</h4>
-                      <p className="text-muted-foreground">4,000-4,500件</p>
+                      <p className="text-muted-foreground">2,100-2,400件</p>
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-[#008080]">主要区域</h4>
@@ -753,27 +757,29 @@ export default function FedexGroundPage() {
                   <div className="space-y-4">
                     <div>
                       <h4 className="text-lg font-medium text-[#008080] mb-2">
-                        圣地亚哥北郡 (2025 Q3)
+                        圣地亚哥北郡 (2026 Q3)
                       </h4>
                       <div className="text-sm text-muted-foreground">
                         <ul className="list-disc pl-4 space-y-2">
                           <li>目标区域：La Jolla, Del Mar</li>
                           <li>预计覆盖：80+ 平方英里</li>
-                          <li>预估日均包裹量：3,500-4,000件</li>
+                          <li>预估日均包裹量：2,500-3,000件</li>
                           <li>特色：生物科技公司集群、海滨豪宅区</li>
                         </ul>
                       </div>
                     </div>
 
-                    {/* East Bay Area */}
+                    {/* Lake Forest Area */}
                     <div>
-                      <h4 className="text-lg font-medium text-[#008080] mb-2">东湾区 (2025 Q4)</h4>
+                      <h4 className="text-lg font-medium text-[#008080] mb-2">
+                        南加州森林湖 (2026 Q4)
+                      </h4>
                       <div className="text-sm text-muted-foreground">
                         <ul className="list-disc pl-4 space-y-2">
-                          <li>目标区域：Berkeley, Oakland Hills</li>
-                          <li>预计覆盖：100+ 平方英里</li>
-                          <li>预估日均包裹量：4,000-4,500件</li>
-                          <li>特色：高等教育园区、创新企业集群</li>
+                          <li>目标区域：Lake Forest, Foothill Ranch</li>
+                          <li>预计覆盖：60+ 平方英里</li>
+                          <li>预估日均包裹量：2,200-2,400件</li>
+                          <li>特色：高端住宅社区、世界级休闲设施</li>
                         </ul>
                       </div>
                     </div>
@@ -845,7 +851,7 @@ export default function FedexGroundPage() {
                       $<AnimatedNumber value={2520795} />
                     </span>
                     <div className="text-sm opacity-90">
-                      <p>上一财年总收入</p>
+                      <p>2024财年总收入</p>
                       <p>17条线路</p>
                     </div>
                   </div>
