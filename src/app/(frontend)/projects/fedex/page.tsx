@@ -48,7 +48,7 @@ export default function FedexGroundPage() {
                   shadow-lg"
                 variant="outline"
               >
-                <Link href="#project-overview">查看详情</Link>
+                <Link href="/projects/fedex#project-overview">查看详情</Link>
               </Button>
             </div>
           </div>
