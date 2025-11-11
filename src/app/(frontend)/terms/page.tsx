@@ -99,7 +99,7 @@ export default function TermsPage() {
             <div className="space-y-6 pl-1">
               <div className="flex items-center gap-4 text-muted-foreground">
                 <MapPin className="h-5 w-5 shrink-0" />
-                <p className="text-base">19800 MacArthur Blvd Ste 420, Irvine CA 92612</p>
+                <p className="text-base">19800 MacArthur Blvd Ste 570, Irvine CA 92612</p>
               </div>
               <div className="flex items-center gap-4 text-muted-foreground">
                 <Phone className="h-5 w-5 shrink-0" />
