@@ -120,7 +120,7 @@ export async function Footer() {
             <div className="space-y-4">
               <div className="flex items-start gap-3 text-sm text-white/70">
                 <MapPin className="h-5 w-5 shrink-0" />
-                <p>19800 MacArthur Blvd Ste 420, Irvine CA 92612</p>
+                <p>19800 MacArthur Blvd Ste 570, Irvine CA 92612</p>
               </div>
               <div className="flex items-center gap-3 text-sm text-white/70">
                 <Phone className="h-5 w-5" />
@@ -146,7 +146,7 @@ export async function Footer() {
                 </a>
               </div>
               <div className="text-sm text-white/70">
-                <p>微信：LA9499547996</p>
+                <p>微信：LA9499786699</p>
                 <p>周一至周五 当地时间: 9:30 AM - 5:30 PM (PST)</p>
               </div>
               <Link

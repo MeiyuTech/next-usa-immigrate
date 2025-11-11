@@ -13,7 +13,7 @@ export default function ContactPage() {
       },
       hours: '周一至周五: 9:30 AM - 5:30 PM (PST) 当地时间',
       email: ['ca2@aet21.com'],
-      wechat: 'LA9499547996',
+      wechat: 'LA9499786699',
       address: '19800 MacArthur Blvd Ste 420, Irvine CA 92612',
     },
     {
