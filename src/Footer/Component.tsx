@@ -146,7 +146,7 @@ export async function Footer() {
                 </a>
               </div>
               <div className="text-sm text-white/70">
-                <p>微信：LA9499547996</p>
+                <p>微信：LA9499786699</p>
                 <p>周一至周五 当地时间: 9:30 AM - 5:30 PM (PST)</p>
               </div>
               <Link

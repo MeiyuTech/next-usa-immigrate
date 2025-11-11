@@ -132,7 +132,7 @@ export default function PrivacyPage() {
                 </a>
               </div>
               <div className="ml-9 space-y-2">
-                <p className="text-base text-muted-foreground">微信：LA9499547996</p>
+                <p className="text-base text-muted-foreground">微信：LA9499786699</p>
                 <p className="text-base text-muted-foreground">
                   周一至周五 当地时间: 9:30 AM - 5:30 PM (PST)
                 </p>
