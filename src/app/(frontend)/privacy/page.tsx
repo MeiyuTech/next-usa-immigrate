@@ -117,7 +117,7 @@ export default function PrivacyPage() {
                   <p className="text-base">
                     美国电话：
                     <a href="tel:9499547996" className="hover:text-foreground hover:underline">
-                      (949)954-7996
+                      (949)978-6699
                     </a>
                   </p>
                 </div>
@@ -125,10 +125,10 @@ export default function PrivacyPage() {
               <div className="flex items-center gap-4 text-muted-foreground">
                 <Mail className="h-5 w-5 shrink-0" />
                 <a
-                  href="mailto:ca2@aet21.com"
+                  href="mailto:service@meiyugroup.org"
                   className="text-base hover:text-foreground hover:underline"
                 >
-                  ca2@aet21.com
+                  service@meiyugroup.org
                 </a>
               </div>
               <div className="ml-9 space-y-2">
