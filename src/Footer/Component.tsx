@@ -134,15 +134,15 @@ export async function Footer() {
                   <p>
                     美国电话：
                     <a href="tel:9499547996" className="hover:text-white">
-                      (949)954-7996
+                      (949)978-6699
                     </a>
                   </p>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-sm text-white/70">
                 <Mail className="h-5 w-5" />
-                <a href="mailto:ca2@aet21.com" className="hover:text-white">
-                  ca2@aet21.com
+                <a href="mailto:service@meiyugroup.org" className="hover:text-white">
+                  service@meiyugroup.org
                 </a>
               </div>
               <div className="text-sm text-white/70">
