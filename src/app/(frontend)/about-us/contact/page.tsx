@@ -11,10 +11,10 @@ export default function ContactPage() {
         cn: '167-6208-4336',
         us: ['(949)978-6699'],
       },
-      hours: '周一至周五: 9:30 AM - 5:30 PM (PST) 当地时间',
+      hours: '周一至周五: 8:30 AM - 5:00 PM (PST) 当地时间',
       email: ['service@meiyugroup.org'],
       wechat: 'LA9499786699',
-      address: '19800 MacArthur Blvd Ste 420, Irvine CA 92612',
+      address: '19800 MacArthur Blvd Ste 570, Irvine CA 92612',
     },
     {
       name: '迈阿密办公室',
@@ -34,7 +34,7 @@ export default function ContactPage() {
       phones: {
         us: ['(781)605-1970', '(781)712-0258'],
       },
-      hours: '周一至周五: 9:00 AM - 5:30 PM (EST) 当地时间',
+      hours: '周一至周五: 9:00 AM - 5:00 PM (EST) 当地时间',
       address: '6 Pleasant Street, Suite 418, Malden, MA 02148 USA',
     },
     {
