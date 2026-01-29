@@ -7,7 +7,7 @@ interface MegaMenuWrapperProps {
 function MegaMenuWrapper({ children }: MegaMenuWrapperProps) {
   return (
     <div className="absolute left-0 right-0 top-full">
-      <div className="absolute inset-0 bg-[#00808033] backdrop-blur-[12px]" />
+      <div className="absolute inset-0 bg-[#00666666] backdrop-blur-[12px]" />
       <div className="relative mega-menu-enter">
         <div className="container mx-auto grid grid-cols-3 gap-8 py-8 text-[15px] text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
           {children}
@@ -20,7 +20,7 @@ function MegaMenuWrapper({ children }: MegaMenuWrapperProps) {
 const linkStyles =
   'block text-[20px] font-medium text-white/80 hover:text-white transition-colors drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
 const headingStyles =
-  'mb-4 text-[14px] font-semibold uppercase tracking-wide text-white/60 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
+  'mb-4 text-[22px] font-bold uppercase tracking-wide text-white/60 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]'
 const featureHeadingStyles =
   'text-[28px] font-semibold leading-tight text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]'
 export function ServiceMegaMenu() {
@@ -32,13 +32,13 @@ export function ServiceMegaMenu() {
         </h3>
         <div className="space-y-3">
           <Link href="/posts/eb-5-introduction" className={linkStyles}>
-            政策介绍
+            EB-5 政策介绍
           </Link>
           <Link href="/posts/eb-5-application" className={linkStyles}>
-            申请条件
+            EB-5 申请条件
           </Link>
           <Link href="/posts/eb-5-application" className={linkStyles}>
-            申请流程
+            EB-5 申请流程
           </Link>
         </div>
       </div>

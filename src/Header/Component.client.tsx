@@ -44,7 +44,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ _data }) => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="absolute inset-0 bg-[#00808033] backdrop-blur-[12px]" />
+      <div className="absolute inset-0 bg-[#00666666] backdrop-blur-[12px]" />
       <div className="relative container mx-auto h-[70px] flex items-center justify-between text-white">
         <Link href="/" className="flex items-center">
           <div className="flex items-center gap-3">
