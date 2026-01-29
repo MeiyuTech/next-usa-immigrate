@@ -34,11 +34,11 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <div className="ml-auto max-w-2xl pr-8 md:pr-0">
               <h1
-                className="mb-6 text-5xl font-medium text-white md:text-7xl 
+                className="mb-6 text-3xl font-medium text-white md:text-6xl 
                 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] transition-all duration-300
                 text-right"
               >
-                开启您的美国梦之旅
+                您的美国移民解决方案
               </h1>
               <p
                 className="mb-8 max-w-lg text-lg text-white 
