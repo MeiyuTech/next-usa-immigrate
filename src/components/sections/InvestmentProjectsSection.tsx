@@ -54,8 +54,8 @@ export function InvestmentProjectsSection() {
                 <AnimatedCard className="transition-all duration-300 hover:scale-[1.02] hover:border-[#008080]/30 border border-transparent">
                   <div className="relative w-full aspect-[16/9] overflow-hidden rounded-t-lg">
                     <Image
-                      src="/taste-of-beauty.jpg"
-                      alt="taste-of-beauty"
+                      src="/west-hollywood.jpg"
+                      alt="Taste of Beauty 好莱坞主店所在区域"
                       fill
                       className="object-cover"
                     />
@@ -70,7 +70,7 @@ export function InvestmentProjectsSection() {
                     <h4 className="font-semibold mb-2">项目亮点：</h4>
                     <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-4">
                       <li>依托团队20年餐饮经验，打造高端素食品牌</li>
-                      <li>总店位于加州橙县，分店位于洛杉矶好莱坞，市场潜力巨大</li>
+                      <li>主店位于洛杉矶好莱坞核心区域，汇聚高端客群与国际游客</li>
                       <li>符合当下健康饮食趋势，稳健回报与品牌溢价并存</li>
                     </ul>
                     <p className="text-[#008080] font-medium">创新餐饮投资，把握健康潮流新机遇</p>

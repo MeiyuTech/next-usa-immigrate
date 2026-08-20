@@ -78,7 +78,8 @@ export default function VegetarianRestaurantPage() {
                 </a>{' '}
                 是美域集团旗下的高端素食餐厅品牌，以独特的植物性（plant-based）美食理念，
                 融合亚洲风味与艺术烹饪，带来视觉与味觉的双重享受。餐厅秉持健康、环保、动物福利三大核心理念，
-                为食客提供更加均衡、适度且富有生命力的餐饮体验。
+                为食客提供更加均衡、适度且富有生命力的餐饮体验。目前，品牌以洛杉矶好莱坞主店为运营核心，
+                持续打造兼具创意料理、艺术氛围与精致服务的高端用餐体验。
               </p>
 
               <div className="grid md:grid-cols-3 gap-8">
@@ -301,52 +302,13 @@ export default function VegetarianRestaurantPage() {
         </div>
       </section>
 
-      {/* Service Area Section */}
+      {/* Hollywood Flagship Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">服务区域</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">好莱坞主店</h2>
 
           <div className="max-w-7xl mx-auto">
-            {/* Current Location - Fountain Valley */}
-            <div className="grid md:grid-cols-2 gap-12 mb-24">
-              <div className="space-y-6">
-                <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/Fountain-Valley.jpeg"
-                    alt="Fountain Valley"
-                    fill
-                    className="object-cover hover:scale-110 transition-transform duration-700"
-                    priority
-                  />
-                </div>
-              </div>
-
-              <div className="flex items-center">
-                <AnimatedCard className="transition-all duration-300 hover:scale-[1.02]">
-                  <CardContent className="p-8">
-                    <div className="space-y-6">
-                      <h3 className="text-3xl font-bold text-[#008080] flex items-center gap-3">
-                        <span className="w-4 h-4 rounded-full bg-[#008080]"></span>
-                        芳泉谷 （Fountain Valley）
-                      </h3>
-                      <p className="text-lg leading-relaxed text-muted-foreground">
-                        最近十年来，尔湾的华人居住人口剧增，相应的华人超市、书局、各种面向华人子弟的才艺学校如中文、舞蹈、音乐、绘画等都在尔湾市安家，给华人创造了更好更优的居住环境。
-                      </p>
-                      <p className="text-lg leading-relaxed text-muted-foreground">
-                        除此之外，尔湾也是众多知名公司、企业的总部所在地。选择在尔湾附近开设素食中餐馆，绝对是个不错的选择。
-                      </p>
-                      <div className="p-4 bg-[#008080]/5 rounded-lg">
-                        <p className="text-sm text-muted-foreground">
-                          随着素食在尔湾市的普及，以及加州外州新移民日趋增多，而当地中式素菜馆数量少之又少的情况下，一家中高档中式素食馆必将产生巨大的发展潜力。
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </AnimatedCard>
-              </div>
-            </div>
-
-            {/* West Hollywood */}
+            {/* Hollywood Main Restaurant */}
             <div className="grid md:grid-cols-3 gap-12 mb-24">
               <div className="md:col-span-2">
                 <AnimatedCard className="h-full transition-all duration-300 hover:scale-[1.02]">
@@ -354,12 +316,14 @@ export default function VegetarianRestaurantPage() {
                     <div className="space-y-6">
                       <h3 className="text-3xl font-bold text-[#008080] flex items-center gap-3">
                         <span className="w-4 h-4 rounded-full bg-[#008080]"></span>
-                        西好莱坞 （West Hollywood）
+                        洛杉矶好莱坞主店（Hollywood）
                       </h3>
                       <div className="grid md:grid-cols-2 gap-8">
                         <div className="space-y-4">
                           <p className="text-lg leading-relaxed text-muted-foreground">
-                            西好莱坞地区有着富裕和艺术氛围的社区，这意味着高端素食餐厅可以吸引到富有和有品味的客户，包括名人、艺术家、文化爱好者和游客。高端素食餐厅可以提供更多的创意和独特性，从而吸引那些追求不寻常的用餐体验的顾客。此外，这种餐厅可以建立高品质、高利润环保的品牌形象，吸引注重健康和可持续性的客户。高端素食餐厅还可以提供更高水平的客户体验，包括优质的服务、精致的用餐环境和特别的餐饮活动，如主题晚宴、美食品鉴活动等。
+                            Taste of Beauty 好莱坞主店坐落于洛杉矶极具国际影响力的文化与娱乐中心，
+                            周边汇聚名人、艺术家、文化爱好者和世界各地游客。主店以创意植物料理、
+                            精致用餐环境和高品质服务，呈现品牌独特的高端素食体验。
                           </p>
                           <div className="p-4 bg-[#008080]/5 rounded-lg">
                             <h4 className="font-semibold mb-2">目标客群</h4>
@@ -373,7 +337,9 @@ export default function VegetarianRestaurantPage() {
                         </div>
                         <div className="space-y-4">
                           <p className="text-lg leading-relaxed text-muted-foreground">
-                            此外，高端素食餐厅可以采用更高的定价策略，实现更高的盈利能力，因为顾客通常愿意为高品质的素食美食支付更高的价格。随着素食主义和纯素主义在全球范围内的兴起，高端素食餐厅也有望获得增长机会。最后，西好莱坞作为名人和社交媒体影响者聚集的地方，高端素食厅可以成为名人光顾的场所，从而增加知名度和社交影响力。虽然开设高端素食厅需要更多的资源和努力，但如果能够成功执行，它在西好莱坞这样的地区可能会有很大的商业潜力。
+                            好莱坞主店不仅是餐厅的核心经营场所，也是 Taste of Beauty
+                            展示品牌理念、研发创新菜品和连接高端客群的重要窗口。借助好莱坞的全球知名度、
+                            多元文化环境与社交媒体影响力，品牌将进一步提升市场认知与国际影响力。
                           </p>
                           <div className="p-4 bg-[#008080]/5 rounded-lg">
                             <h4 className="font-semibold mb-2">特色服务</h4>
@@ -391,20 +357,11 @@ export default function VegetarianRestaurantPage() {
                 </AnimatedCard>
               </div>
               <div className="relative">
-                <div className="sticky top-24 space-y-6">
-                  <div className="relative h-[300px] rounded-2xl overflow-hidden shadow-xl">
+                <div className="sticky top-24">
+                  <div className="relative h-[624px] rounded-2xl overflow-hidden shadow-xl">
                     <Image
                       src="/west-hollywood.jpg"
-                      alt="West Hollywood"
-                      fill
-                      className="object-cover hover:scale-110 transition-transform duration-700"
-                      priority
-                    />
-                  </div>
-                  <div className="relative h-[300px] rounded-2xl overflow-hidden shadow-xl">
-                    <Image
-                      src="/taste-of-beauty.jpg"
-                      alt="Taste of Beauty"
+                      alt="Taste of Beauty 好莱坞主店所在区域"
                       fill
                       className="object-cover hover:scale-110 transition-transform duration-700"
                       priority
@@ -420,8 +377,8 @@ export default function VegetarianRestaurantPage() {
                 <div className="max-w-3xl mx-auto text-center space-y-8">
                   <h3 className="text-3xl font-bold text-[#008080]">未来扩展蓝图</h3>
                   <p className="text-lg leading-relaxed text-muted-foreground">
-                    计划在洛杉矶 Hollywood 或 Pasadena
-                    等地区开设分店，进一步覆盖更多城市核心商圈，拓展高端市场。
+                    以洛杉矶好莱坞主店为品牌核心，未来将结合运营成果与市场需求，
+                    逐步覆盖更多城市核心商圈，拓展高端素食餐饮市场。
                   </p>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="p-6 bg-[#008080]/5 rounded-xl">
