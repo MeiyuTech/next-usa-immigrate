@@ -1269,17 +1269,21 @@ export default function FedexGroundPage() {
         </div>
       </section>
 
-      {/* Ongoing Projects Section */}
+      {/* Representative Projects Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16">正在进行的项目</h2>
+          <h2 className="mb-4 text-center text-4xl font-bold">代表性项目与运营实绩</h2>
+          <p className="mx-auto mb-16 max-w-3xl text-center leading-relaxed text-muted-foreground">
+            以下数据反映美域佳华团队过往在 FedEx
+            线路收购、运营管理与资源整合方面的代表性项目经验，项目当前运营安排以实际情况为准。
+          </p>
 
           {/* Summary Cards */}
           <div className="mb-16">
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <AnimatedCard className="bg-[#008080] text-white">
                 <CardHeader>
-                  <CardTitle>项目概览</CardTitle>
+                  <CardTitle>项目经验概览</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
@@ -1307,7 +1311,7 @@ export default function FedexGroundPage() {
 
               <AnimatedCard>
                 <CardHeader>
-                  <CardTitle>2023年度表现</CardTitle>
+                  <CardTitle>历史运营表现</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
@@ -1339,7 +1343,7 @@ export default function FedexGroundPage() {
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <p className="font-medium">收购价格</p>
+                      <p className="font-medium">历史收购价格</p>
                       <p className="text-muted-foreground">$840K</p>
                     </div>
                     <div>
@@ -1350,7 +1354,7 @@ export default function FedexGroundPage() {
 
                   {/* Financial Chart */}
                   <div className="pt-4">
-                    <p className="text-sm font-medium mb-3">近三年财务状况</p>
+                    <p className="text-sm font-medium mb-3">历史财务表现</p>
                     <FinancialChart
                       data={[
                         {
@@ -1390,7 +1394,7 @@ export default function FedexGroundPage() {
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <p className="font-medium">收购价格</p>
+                      <p className="font-medium">历史收购价格</p>
                       <p className="text-muted-foreground">$690K</p>
                     </div>
                     <div>
@@ -1401,7 +1405,7 @@ export default function FedexGroundPage() {
 
                   {/* Financial Chart */}
                   <div className="pt-4">
-                    <p className="text-sm font-medium mb-3">近两年财务状况</p>
+                    <p className="text-sm font-medium mb-3">历史财务表现</p>
                     <FinancialChart
                       data={[
                         {
@@ -1431,7 +1435,7 @@ export default function FedexGroundPage() {
                 <div className="space-y-4">
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <p className="font-medium">收购价格</p>
+                      <p className="font-medium">历史收购价格</p>
                       <p className="text-muted-foreground">$1400K</p>
                     </div>
                     <div>
@@ -1442,7 +1446,7 @@ export default function FedexGroundPage() {
 
                   {/* Financial Chart */}
                   <div className="pt-4">
-                    <p className="text-sm font-medium mb-3">近两年财务状况</p>
+                    <p className="text-sm font-medium mb-3">历史财务表现</p>
                     <FinancialChart
                       data={[
                         {
