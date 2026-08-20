@@ -13,9 +13,7 @@ import { cn } from '@/utilities/cn'
 import { Button } from '@/components/ui/button'
 import {
   ServiceMegaMenu,
-  SuccessStoriesMegaMenu,
   ProjectShowcaseMegaMenu,
-  ImmigrationResourcesMegaMenu,
   AboutUsMegaMenu,
 } from '@/components/NavBar/mega-menu'
 import { MobileNav } from '@/components/NavBar/mobile-nav'
@@ -63,7 +61,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ _data }) => {
         <nav className="flex items-center justify-end">
           <div className="flex items-center gap-4">
             <div className="hidden items-center gap-4 lg:flex">
-              {['移民服务', '成功案例', '项目展示', '移民知识', '关于我们'].map((item) => (
+              {['移民服务', '项目展示', '关于我们'].map((item) => (
                 <div
                   key={item}
                   onMouseEnter={() => handleMouseEnter(item)}
@@ -83,9 +81,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ _data }) => {
                   {activeMenu === item && (
                     <>
                       {item === '移民服务' && <ServiceMegaMenu />}
-                      {item === '成功案例' && <SuccessStoriesMegaMenu />}
                       {item === '项目展示' && <ProjectShowcaseMegaMenu />}
-                      {item === '移民知识' && <ImmigrationResourcesMegaMenu />}
                       {item === '关于我们' && <AboutUsMegaMenu />}
                     </>
                   )}

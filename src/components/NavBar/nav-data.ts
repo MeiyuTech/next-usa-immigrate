@@ -56,38 +56,6 @@ export const navigationData: NavItem[] = [
     ],
   },
   {
-    title: '成功案例',
-    items: [
-      {
-        title: '成功案例',
-        items: [
-          { title: '投资移民案例', href: '/cases/investment' },
-          { title: '职业移民案例', href: '/cases/employment' },
-          { title: '家庭移民案例', href: '/cases/family' },
-        ],
-      },
-      {
-        title: '客户反馈',
-        items: [
-          { title: '服务评价', href: '/testimonials/service-reviews' },
-          { title: '客户推荐', href: '/testimonials/client-recommendations' },
-          { title: '成功数据', href: '/testimonials/success-metrics' },
-        ],
-      },
-      {
-        title: '了解更多',
-        description: '探索我们的成功故事，了解客户如何实现移民梦想。',
-        items: [
-          {
-            title: '查看所有案例',
-            href: '/cases',
-            description: '深入了解我们的成功案例',
-          },
-        ],
-      },
-    ],
-  },
-  {
     title: '项目展示',
     items: [
       {
@@ -133,38 +101,6 @@ export const navigationData: NavItem[] = [
             title: '了解更多项目',
             href: '/projects#investment-projects',
             description: '探索更多投资机会',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: '移民知识',
-    items: [
-      {
-        title: '移民百科',
-        items: [
-          { title: '签证类别介绍', href: '/' },
-          { title: '申请流程指南', href: '/' },
-          { title: '材料清单', href: '/' },
-        ],
-      },
-      {
-        title: '政策解析',
-        items: [
-          { title: '最新政策动态', href: '/' },
-          { title: '政策影响分析', href: '/' },
-          { title: '常见问题解答', href: '/' },
-        ],
-      },
-      {
-        title: '专业文章',
-        description: '深入了解美国移民，获取最新资讯与专业指导。',
-        items: [
-          {
-            title: '阅读更多',
-            href: '/posts',
-            description: '浏览更多移民知识文章',
           },
         ],
       },
