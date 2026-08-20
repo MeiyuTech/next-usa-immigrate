@@ -903,7 +903,7 @@ export default function FedexGroundPage() {
               <AnimatedCard className="h-full bg-[#008080] text-white">
                 <CardHeader className="border-b border-white/20">
                   <div className="space-y-2">
-                    <CardTitle className="text-2xl">橙县 FedEx 项目</CardTitle>
+                    <CardTitle className="text-2xl">密苏里 FedEx 项目</CardTitle>
                     <div className="space-y-1 text-sm opacity-90">
                       <p className="flex items-center gap-2">
                         <svg
@@ -925,7 +925,7 @@ export default function FedexGroundPage() {
                             d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                           />
                         </svg>
-                        洛杉矶橙县
+                        密苏里州圣路易斯
                       </p>
                       <p className="flex items-center gap-2">
                         <svg
@@ -941,7 +941,7 @@ export default function FedexGroundPage() {
                             d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                           />
                         </svg>
-                        服务邮编：3个橙县邮编
+                        服务邮编：63031、63042、63141、63146
                       </p>
                     </div>
                   </div>
@@ -1020,7 +1020,7 @@ export default function FedexGroundPage() {
                 <CardContent>
                   <div className="space-y-2">
                     <div>
-                      <p className="text-2xl font-bold text-[#008080]">12</p>
+                      <p className="text-2xl font-bold text-[#008080]">20</p>
                       <p className="text-muted-foreground">全职司机</p>
                     </div>
                     <div>
