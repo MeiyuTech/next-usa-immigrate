@@ -31,6 +31,9 @@ export default function FedexGroundPage() {
         <div className="relative z-10 flex min-h-screen items-center pt-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center text-white">
+              <div className="mb-6 inline-flex items-center rounded-full border border-white/40 bg-black/20 px-5 py-2 text-sm font-medium tracking-[0.18em] backdrop-blur-sm">
+                2026 MISSOURI 新项目
+              </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-4">
                 Fedex Ground 联邦快递 <br /> 独立投资项目
               </h1>
@@ -48,12 +51,110 @@ export default function FedexGroundPage() {
                   shadow-lg"
                 variant="outline"
               >
-                <Link href="/projects/fedex#project-overview">查看详情</Link>
+                <Link href="/projects/fedex#missouri-project">查看 Missouri 最新项目</Link>
               </Button>
             </div>
           </div>
         </div>
       </main>
+
+      {/* Missouri Project Section */}
+      <section
+        id="missouri-project"
+        className="relative overflow-hidden bg-[#006f72] py-24 text-white"
+      >
+        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute -bottom-40 -left-24 h-96 w-96 rounded-full bg-[#00a0a0]/30 blur-3xl" />
+
+        <div className="container relative mx-auto px-4">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <span className="mb-5 inline-flex rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-medium tracking-wide">
+              2026 最新重点项目
+            </span>
+            <h2 className="mb-5 text-4xl font-bold md:text-5xl">Missouri 密苏里项目</h2>
+            <p className="text-lg leading-relaxed text-white/80 md:text-xl">
+              密苏里州运营主体已于 2026 年 6
+              月取得州级经营授权。项目围绕圣路易斯区域两组优化服务片区推进，覆盖 4
+              个核心邮编，进一步扩大美域佳华的 FedEx Ground 运营版图。
+            </p>
+          </div>
+
+          <div className="mb-8 grid gap-5 md:grid-cols-3">
+            <div className="rounded-2xl border border-white/15 bg-white/10 p-6 text-center backdrop-blur-sm">
+              <p className="text-4xl font-bold md:text-5xl">63,228</p>
+              <p className="mt-2 text-sm text-white/70">预计每周包裹量</p>
+            </div>
+            <div className="rounded-2xl border border-white/15 bg-white/10 p-6 text-center backdrop-blur-sm">
+              <p className="text-4xl font-bold md:text-5xl">19,885</p>
+              <p className="mt-2 text-sm text-white/70">预计每周停靠点</p>
+            </div>
+            <div className="rounded-2xl border border-white/15 bg-white/10 p-6 text-center backdrop-blur-sm">
+              <p className="text-4xl font-bold md:text-5xl">173-191</p>
+              <p className="mt-2 text-sm text-white/70">预计周度车辆需求</p>
+            </div>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-white/15 bg-black/10 p-7">
+              <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+                <h3 className="text-2xl font-semibold">圣路易斯服务片区 A</h3>
+                <span className="rounded-full bg-white/10 px-3 py-1 text-sm text-white/75">
+                  63031 · 63042
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <p className="text-2xl font-semibold">26,432</p>
+                  <p className="text-sm text-white/65">每周包裹量</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold">8,306</p>
+                  <p className="text-sm text-white/65">每周停靠点</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold">67-76</p>
+                  <p className="text-sm text-white/65">周度车辆需求</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold">67 英里</p>
+                  <p className="text-sm text-white/65">预计单车日均里程</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/15 bg-black/10 p-7">
+              <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+                <h3 className="text-2xl font-semibold">圣路易斯服务片区 B</h3>
+                <span className="rounded-full bg-white/10 px-3 py-1 text-sm text-white/75">
+                  63141 · 63146
+                </span>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <p className="text-2xl font-semibold">36,796</p>
+                  <p className="text-sm text-white/65">每周包裹量</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold">11,579</p>
+                  <p className="text-sm text-white/65">每周停靠点</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold">106-115</p>
+                  <p className="text-sm text-white/65">周度车辆需求</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold">56 英里</p>
+                  <p className="text-sm text-white/65">预计单车日均里程</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="mt-6 text-center text-xs leading-relaxed text-white/55">
+            数据为最新线路优化方案中的运营预测，实际线路、车辆配置及业务量以最终运营安排为准。
+          </p>
+        </div>
+      </section>
 
       {/* Project Overview Section */}
       <section id="project-overview" className="py-24">
@@ -757,7 +858,7 @@ export default function FedexGroundPage() {
                   <div className="space-y-4">
                     <div>
                       <h4 className="text-lg font-medium text-[#008080] mb-2">
-                        圣地亚哥北郡 (2026 Q3)
+                        圣地亚哥北郡 (2027 Q3)
                       </h4>
                       <div className="text-sm text-muted-foreground">
                         <ul className="list-disc pl-4 space-y-2">
@@ -772,7 +873,7 @@ export default function FedexGroundPage() {
                     {/* Lake Forest Area */}
                     <div>
                       <h4 className="text-lg font-medium text-[#008080] mb-2">
-                        南加州森林湖 (2026 Q4)
+                        南加州森林湖 (2027 Q4)
                       </h4>
                       <div className="text-sm text-muted-foreground">
                         <ul className="list-disc pl-4 space-y-2">
