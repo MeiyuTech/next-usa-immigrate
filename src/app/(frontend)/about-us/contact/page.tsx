@@ -14,7 +14,7 @@ export default function ContactPage() {
       hours: '周一至周五: 8:30 AM - 5:00 PM (PST) 当地时间',
       email: ['service@meiyugroup.org'],
       wechat: 'LA9499786699',
-      address: '19800 MacArthur Blvd Ste 570, Irvine CA 92612',
+      address: '17802 Sky Park Circle, Suite 205, Irvine, CA 92614',
     },
     {
       name: '迈阿密办公室',
