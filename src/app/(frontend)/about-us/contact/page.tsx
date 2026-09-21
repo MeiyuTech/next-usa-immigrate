@@ -78,7 +78,7 @@ export default function ContactPage() {
       },
       qq: ['510302331'],
       email: ['510302331@qq.com'],
-      address: '江苏·常州新北区汉江西路91号，拔云科技园 B305',
+      address: '江苏常州新北区现代传媒中心3号楼1802',
     },
   ]
 
